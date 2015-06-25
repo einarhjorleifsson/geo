@@ -1,3 +1,24 @@
+#' Performs an orthogonal projection to a curve.
+#' 
+#' Finds curve coordinates of points, given points and a curve it returns the
+#' length of the points orhogonal projection and the distance traveled to the
+#' projection from a given origin on the curve.
+#' 
+#' 
+#' @param pts A list containing the points as \$lat and \$lon, you may also use
+#' geolocator.
+#' @param curve The curve to be used for projection.
+#' @return Returns a dataframe with vectors pardist (length of orthogonal
+#' projection) and perdist (how far traveled alongst the curve).
+#' @section Side Effects: None.
+#' @seealso \code{\link{geocurve}}, \code{\link{geolocator}}.
+#' @examples
+#' 
+#'        
+#' \dontrun{       geoplot(my.curve)     # Plot curve and initialize plot.
+#'        geocurve(geolocator(),my.curve)         # Mark points.
+#' }
+#' @export orthproj
 orthproj <-
 function(pts, curve)
 {

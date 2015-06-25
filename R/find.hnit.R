@@ -1,3 +1,15 @@
+#' Find coordinate(s) ??
+#' 
+#' Find coordinates with some sort of interpolation (??).
+#' 
+#' 
+#' @param pt Point(s) ??
+#' @param poly Polygon (??)
+#' @return Returns list with components: \item{x, y }{of coordinates}
+#' @note ~~further notes~~ Needs elaboration.
+#' @seealso Called by \code{\link{findcut}}
+#' @keywords manip
+#' @export find.hnit
 find.hnit <-
 function(pt, poly)
 {

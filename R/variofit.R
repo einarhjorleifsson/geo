@@ -1,3 +1,32 @@
+#' Function that fits a model to a variogram.
+#' 
+#' Function that fits a model to a variogram.  The fitting occurs either
+#' automatically or interactively.  The function is called after the function
+#' variogram which calculates the variogram to which the model is fitted.
+#' Currently only spherical model is supported.  Later other models will be
+#' added.
+#' 
+#' 
+#' @param vagram List with the calculated variogram. Components of the list
+#' are: \$dist mean distance of the interval.  <s-example> \$vario calculated
+#' value of the variogram.  \$number number of datapoints in the interval.
+#' </s-example> In nearly all cases vagram will be the output from the program
+#' variogram.
+#' @param model Type of model.  Default is spherical.  It is currently the only
+#' model supported.
+#' @param option Method to use in automatic fitting.  Allowed values are 1,2,3
+#' and 4.  Default value is 2.  For further information see below.
+#' @param interactivt If T the fitting is done interactively by plotting the
+#' variogram on the screen and asking the user to select sill, range and nugget
+#' by the locator function.
+#' @param sill Sill of the variogram, or: Limit of the variogram tending to
+#' infinity lag distances (wikipedia).
+#' @section Value: <s-example> A list with the following components.  \$nugget
+#' : Estimated nugget effect \$sill : Estimated sill \$range : Estimated range
+#' \$dist : mean distance of the interval.  \$vario : calculated value of the
+#' variogram.  \$number : number of datapoints in the interval. </s-example>
+#' @seealso \code{\link{variogram}}, \code{\link{pointkriging}}.
+#' @export variofit
 variofit <-
 function(vagram, model = 1, option = 2, interactivt = F, sill = 0)
 {

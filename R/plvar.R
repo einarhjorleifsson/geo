@@ -1,3 +1,19 @@
+#' Plots a variogram estimated by variofit.
+#' 
+#' Plot a variogram and a spherical model fit to it.
+#' 
+#' 
+#' @param vagram List from the program variogram with the following components.
+#' <s-example> \$range: range of data.  \$nugget: nugget effect.  \$sill: sill.
+#' \$vario: z values of the variogram.  \$xh: mean distance for each class.
+#' 
+#' </s-example>
+#' @param n The plot covers n times the range.  Default value is all the data.
+#' @param fit
+#' @param type
+#' @return No values returned.
+#' @seealso \code{\link{pointkriging}}, \code{\link{grid}}.
+#' @export plvar
 plvar <-
 function(vagram, n = 4, fit = T, type = "p")
 {

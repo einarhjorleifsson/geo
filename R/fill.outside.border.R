@@ -1,3 +1,27 @@
+#' Fills space outside the border of a plot.
+#' 
+#' When programs like geopolygon are used they sometimes fills space outside
+#' the border of their plots, to refill that space white we use
+#' fill.outside.border.
+#' 
+#' 
+#' @param col The color of the fill, default is 0 (usually white).
+#' @param rat Ratio between the size of the current plot and the size of the
+#' fill, if you want to allow the program to draw 5\% outside the plot you set
+#' rat =1.05.  Default rat = 1.
+#' @return No Value.
+#' @section Side Effects: Fill outside of the border of the current plot.
+#' @seealso \code{\link{geoworld}}, \code{\link{geopolygon}}.
+#' @keywords <!--Put one or more s-keyword tags here-->
+#' @examples
+#' 
+#'        \dontrun{
+#' 	geoplot(xlim=c(-50,20),ylim=c(50,70))       # Initialize plot.
+#'        geoworld(fill=T,color=120)                  # Colour countries.
+#'        fill.outside.border()                       # Clear outside of border.
+#'        geoplot(xlim=c(-50,20),ylim=c(50,70),new=T) # Relabel.
+#' }
+#' @export fill.outside.border
 fill.outside.border <-
 function(col = 0, rat = 1)
 {

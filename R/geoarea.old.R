@@ -1,3 +1,20 @@
+#' Old method for calculating geographical area
+#' 
+#' Calculates the area inside a geographical region by splitting it into a
+#' grid, determining which gridpoints are inside the region and then finds the
+#' area.
+#' 
+#' 
+#' @param reg Region of interest, list with components \code{lat} and
+#' \code{lon}.
+#' @param n Numeber of gridpoints to use for calculating the area.
+#' @param robust Robust or not, defaults to \code{TRUE}.
+#' @return Geographical area in square nautical miles.
+#' @note Difference between old and new \code{geoarea}-method might be
+#' explained better, if indeed it is necessary to keep the old method.
+#' @seealso \code{\link{geoarea}.}
+#' @keywords arith
+#' @export geoarea.old
 "geoarea.old"<-
 function(reg, n,robust=T) {
   reg$lat <- (reg$lat * pi)/180

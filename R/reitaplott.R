@@ -1,3 +1,70 @@
+#' Function that fills rectangles or sub-rectangles according to the amount of
+#' fish calculated in them.
+#' 
+#' Function that fills rectangles or sub-rectangles according to the amount of
+#' fish calculated in them, or some other quantity.
+#' 
+#' Geoplot has to be called before to set the parameter geopar.  If geoplot is
+#' called with the parameter cont = TRUE labels are plotted on the left hand
+#' side of the plot. If a color plot is to be made litaps has to be called
+#' before.
+#' 
+#' @param reitur Number of square.  If number of square >1000 the last digit
+#' means subsquare.  For example 5604 means square 560, subsquare 4.
+#' @param z Values for each square and subsquare.
+#' @param smareitur Number of subsquare if they are used.  Default is that
+#' subsquare is not used.
+#' @param levels Values between colors or different density of lines.  Default
+#' is to let the program find it. A small example shows how levels are given.
+#' <s-example>
+#' 
+#' levels <- c(0, 100, 1000, 2000, 4000, 5000, 8000)
+#' 
+#' </s-example> Then the groups are <100, 100-1000, 2000-4000, 4000-5000 &
+#' >5000, i.e.  the program more or less ignores the first and the last values
+#' given.
+#' @param colors Number of color or shading pattern for each level.  Colours
+#' can go from 0 thru 155.  They go from white = 0, black = 1, blue = 2, green,
+#' yello, red = 155.  Density goes from 10 thru 130.  Everything above 130 is
+#' completely black.  If colors is not given the program determines it from the
+#' data.  Default maximum density is set to 70 but everything above that is
+#' very black.
+#' @param density If density is 0 coloured plot is made else different desity
+#' of lines is used.
+#' @param maxcol Maximum color ( or density) Default value is 155 for colors 70
+#' for shading.  All density of lines > 130 are black.
+#' @param nlevels Number of levels.  Default value is 6.
+#' @param white If white = TRUE the lowest color or density is zero.  Default
+#' value is white.
+#' @param border If border of polygon is to be drawn.  Default value is FALSE.
+#' @param angle Angle of lines used for hatching.  Default value is 45 degrees.
+#' @param rotate Rotation of hatcing lines between each level.  Default value
+#' is zero or no rotation but rotate = 90 is very useful.
+#' @param digits Number of digits in labels.  Default value is zero.
+#' @param cex Charcter expansion of digits in labels.  Default value is the
+#' current size when the program is called.
+#' @param label.location location of labels, default is no labels are plotted.
+#' @param labels.only if true only labels are plotted.
+#' @param col the color of lines, default is 1 (black).
+#' @param outside if true squares outside plot area are plotted, default is
+#' true.
+#' @param mincol the color number of the first color to be used, colors are
+#' taken from the range mincol to maxcol.
+#' @return No values returned.
+#' @section Side Effects: No side effects.
+#' @seealso \code{\link{geoplot}}.
+#' @examples
+#' 
+#'        geoplot(reitur = TRUE)
+#'        reitur <- c(560, 560, 560, 560, 561, 561, 561, 561)
+#'        smareitur <-c(1, 2, 3, 4, 1, 2, 3, 4)
+#'        lab.loc <- list(lat = c(63.95, 65.4), lon = c(-19.8, -17.3))
+#'        z <- c(100, 200, 300, 222, 345, 453, 232, 212)
+#'        geopolygon(island); geolines(island)
+#'        reitaplott(reitur, smareitur, z, rotate = 90, label.location = lab.loc)
+#'        # All subsuares in square 560 and 561.
+#' 
+#' @export reitaplott
 reitaplott <-
 function(reitur, smareitur = NULL, z, levels = NULL, colors = NULL, density = 1,
 	maxcol = 155, nlevels = 6, white = FALSE, border = FALSE, angle = 45, rotate = 

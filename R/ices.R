@@ -1,3 +1,26 @@
+#' ICES Areas
+#' 
+#' Draw a map showing ICES areas 1--14.
+#' 
+#' 
+#' @param labels is how to annotate areas: \code{"roman"} (I--XIV),
+#' \code{FALSE} (no labels), vector (custom), otherwise 1--14.
+#' @param diagrams is whether to show diagrams on console.
+#' @param col is passed to \code{map}.
+#' @param lwd is passed to \code{lines}.
+#' @param col.lines is passed to \code{lines}.
+#' @param font is passed to \code{text}.
+#' @param col.text is passed to \code{text}.
+#' @param cex is passed to \code{text}.
+#' @return Invisible data frame with coordinates.
+#' @note The coordinates were inferred from official ICES maps.
+#' @author Arni Magnusson.
+#' @keywords hplot spatial utilities
+#' @examples
+#' 
+#' ices()
+#' 
+#' @export ices
 ices <-
 function(labels="roman", diagrams=FALSE, col="black", lwd=3, col.lines="grey80", font=2, col.text="orangered", cex=1)
 {

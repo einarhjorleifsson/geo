@@ -1,3 +1,39 @@
+#' Set up axes for a Lambert projected geoplot
+#' 
+#' Set up axes for a Lambert projected geoplot.
+#' 
+#' 
+#' @param limx Longitude limits
+#' @param limy Latitude limits
+#' @param scale Scale to supply to \code{Proj, invProj}
+#' @param b0 Base latitude for the Lambert projection.  Default value is 65
+#' (typical for Iceland)
+#' @param xyratio Unused argument (?)
+#' @param grid If grid is TRUE meridians and parallels are plotted, else not.
+#' Default TRUE
+#' @param col Color of gridlines
+#' @param reitur Should the grid show statistical rectangles?
+#' @param smareitur Should the grid show statistical sub--rectangles?
+#' @param axratio Parameter usually not changed by the user (?)
+#' @param axlabels If FALSE no numbers are plotted on the axes. Default TRUE
+#' @param b1 Second latitude to define Lambert projection
+#' @param l1 The longitude defining the Lambert projection, default is the
+#' \code{l1} defined in geopar
+#' @param projection Projection (but is the function meaningful for other than
+#' Lambert?)
+#' @param dlat Latitude axis increment between labels
+#' @param dlon Longitude axis increment between labels
+#' @param col1 Color of axes and labels, default 1 (but might be \code{col}
+#' @return No value, useful because of its side effect of adding axes to a
+#' Lambert geo--plot.
+#' @note May need further elaboration or simplification (referring to the
+#' general geoplot help). Coordinate with the geoaxes and gridaxes helpfiles
+#' (supply as one??).
+#' @seealso Called by \code{\link{init}}, calls \code{\link{adjust.grd}},
+#' \code{\link{cut_box.1}}, \code{\link{cut_box.2}}, \code{\link{fill.points}},
+#' \code{\link{invProj}}, \code{\link{Proj}}.
+#' @keywords aplot
+#' @export gridaxes.Lambert
 gridaxes.Lambert <-
 function(limx, limy, scale, b0, xyratio, grid, col, reitur, smareitur, axratio,
 	axlabels, b1, l1, projection, dlat, dlon, col1 = 1)

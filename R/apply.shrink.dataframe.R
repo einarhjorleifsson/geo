@@ -1,3 +1,25 @@
+#' Apply functions to columns in a dataframe
+#' 
+#' \code{apply.shrink} for a dataframe, different functions can be applied to
+#' different columns, one for each column (?).
+#' 
+#' 
+#' @param data Input dataframe
+#' @param name.x Input value columns
+#' @param name.ind Category columns
+#' @param FUNS Functions to apply
+#' @param NA.rm na-action, default FALSE
+#' @param resp.name ???
+#' @param full.data.frame ???
+#' @param Set ?
+#' @param name.res User selected values for the results columns
+#' @param \dots Additional arguments (to what???
+#' @return Dataframe of variouse outcomes.
+#' @note Needs elaboration, although \dots{} are included in the arguments list
+#' they don't seem to be used anywhere.
+#' @seealso \code{\link{apply.shrink}}, \code{\link{merge}}
+#' @keywords manip
+#' @export apply.shrink.dataframe
 apply.shrink.dataframe <-
 function(data, name.x, name.ind, FUNS = NULL, NA.rm = FALSE, resp.name = NULL,
 	full.data.frame = FALSE, Set = NA, name.res, ...)

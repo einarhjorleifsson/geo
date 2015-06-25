@@ -1,3 +1,72 @@
+#' interpolates regularly spaced data on a grid.
+#' 
+#' The function interpolates regularly spaced data on a grid.  The program uses
+#' inverse distance method that takes clustering into account.  Under certain
+#' conditions this method can be called kriging.  For each gridpoint the
+#' program looks for neighbourhood points according to certain criteria.  The
+#' program has a possibility to prevent smearing data out from one area to
+#' another where it is not wanted like between two fjords.  The program has the
+#' possibility of universal kriging with the drift in lat,lon or due to an
+#' external variable.
+#' 
+#' 
+#' @param lat Latitude of datapoints.
+#' @param lon Longitude of datapoints.
+#' @param z Values at datapoints.
+#' @param xgr Description of the grid. Can be output from program grid or just
+#' a list with components \$lat and \$lon.
+#' @param vagram Components of the variogram, a list with a least 3 components,
+#' \$sill, \$nugget & \$rang1.
+#' @param maxnumber Number of neighbourhood points used , default is 16.  In
+#' some cases 16 points are not found.
+#' @param scale Scale "km" or "miles", default is "miles".
+#' @param option Option used for selecting neighbourhood points.  Allowed
+#' values 1,2,3 and 4.  Default value is one.  For further information see
+#' below.
+#' @param maxdist If option = 4 all points within maxdist are used.  If option
+#' = 4 the default value of maxdist is the range of the variogram.  maxdist has
+#' also meaning when option = 1,2 or 3.  In those cases points further away
+#' from any datapoint than maxdist are set to zero, mean z or NA.
+#' @param rat The number of points in the first step of the search is
+#' rat*maxnumber.
+#' @param nb Parameter describing the extent of the area where neighbourhood
+#' points are searched in the first round.  Default value is 8 which means that
+#' and area of 16x16 gridpoints is searched.
+#' @param set Points outside region or further away than maxdist from any
+#' datapoint are set to either zero (set=0) or mean(z) set=1 or NA set =-1.
+#' @param areas A list defining a number of areas.  NA is between areas.
+#' Points in different areas are treated as independed.  Two neighbourhood
+#' fjords could be defined as different areas so the program does not
+#' interpolate between them.
+#' @param varcalc If varcalc is true the estimation variance at each datapoint
+#' is calculated. Default value is F.
+#' @param sill Sill in variance calculations.  Default value is the sill of the
+#' variogram.
+#' @param minnumber If number of neighbourhood points found is less than or
+#' equal to minnumber the point is considered outside the areas covered by the
+#' datapoints and set to NA,0 or mean(z)
+#' @param suboption If option = 4 and more than maxnumber points are found in
+#' the area the program switches to option 1, 2 or 3 in the point search.
+#' Default value is 1.
+#' @param outside If outside is T points further away from the area than nb*dx
+#' are excluded.  dx is the grid interval.  Too many points outside of the area
+#' can problems in the search because the grid is used to divide the area in
+#' squares and everything left and below the first gridpoint is for example one
+#' square.
+#' @param degree Degree of drift polynomial for universal kriging.  0, 1 or 2.
+#' Default 0.
+#' @param lognormal
+#' @param zeroset
+#' @return A vector with the calculated values at the gridpoints.
+#' @section Side Effects: The program is partly written in C so if it crashes
+#' Splus is exited.
+#' @seealso \code{\link{variogram}}, \code{\link{variofit}},
+#' \code{\link{grid}}, \code{\link{geocontour.fill}}.
+#' @examples
+#' 
+#' ##      See geocontour.fill
+#' 
+#' @export pointkriging
 pointkriging <-
 function(lat, lon, z, xgr, vagram, maxnumber = 16, scale = "km", option = 1,
 	maxdist = 0, rat = 3, nb = 8, set = 0, areas = 0, varcalc = F, sill = 0,

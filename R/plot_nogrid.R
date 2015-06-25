@@ -1,3 +1,17 @@
+#' Grid control ?
+#' 
+#' Grid or border control of some sort?
+#' 
+#' 
+#' @param o o, some outer boundary?
+#' @param xgr xgr ?
+#' @param ygr ygr ?
+#' @param col Color
+#' @return No value, some lines added to current geoplot.
+#' @note Needs elaboration.
+#' @seealso Called by \code{\link{gridaxes}}.
+#' @keywords aplot
+#' @export plot_nogrid
 plot_nogrid <-
 function(o, xgr, ygr, col)
 {

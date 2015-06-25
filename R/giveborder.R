@@ -1,3 +1,18 @@
+#' Define regions intteractively
+#' 
+#' Define regions interactively.
+#' 
+#' 
+#' @param nholes The number of holes in the data, number of regions - 1
+#' @return Returns a composite list of the following compents: \item{reg}{List
+#' with components number of components (?)} \item{x, y}{Coordinates when
+#' \code{geopar$projection == "none"}} \item{lat, lon}{Geographical coordinates
+#' for other projections (Mercator and Lambert (?)} \item{lxv}{ID of region
+#' (?)}
+#' @note Needs further elaboration.
+#' @seealso Called by \code{\link{geodefine}}, calls \code{\link{invProj}}.
+#' @keywords iplot
+#' @export giveborder
 giveborder <-
 function(nholes = 0)
 {

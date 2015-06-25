@@ -1,3 +1,26 @@
+#' Label plots
+#' 
+#' Label plots with categories.
+#' 
+#' 
+#' @param cont Contour ?
+#' @param digits Number of digits to use in labels
+#' @param colors Colors ?
+#' @param xlim,ylim Limits ?
+#' @param fill Fill with colors?
+#' @param minsym Minimum symbol (for lowest category?)?
+#' @param label.resolution Label resolution ?
+#' @param labtxt Label text ?
+#' @param first.color.trans Should first color be transparent? Default TRUE
+#' @param mai Margins in inches?
+#' @param leftrat Left ratio (giving space for labels??)??
+#' @return No value, labels added to current plot.
+#' @note Needs elaboration, merge documentation with \code{labels2}, and
+#' possibly others?
+#' @seealso Called by \code{\link{colsymbol}}, \code{\link{geocontour.fill}}
+#' and \code{\link{reitaplott}}.
+#' @keywords aplot
+#' @export labels1
 labels1 <-
 function(cont, digits, colors, xlim = c(0, 1), ylim = c(0, 1), fill = F, minsym
 	 = "<", label.resolution = 0, labtxt = NULL, first.color.trans = T,

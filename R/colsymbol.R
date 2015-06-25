@@ -1,3 +1,47 @@
+#' Plot colored symbols
+#' 
+#' Adds colored symbols in a variety of shapes to a geo-plot.
+#' 
+#' 
+#' @param lat Latitude
+#' @param lon Longitude
+#' @param z Value
+#' @param circles If not zero, use circles of this size.
+#' @param squares If not zero, use circles of this size
+#' @param rectangles If not zero, use circles of this size
+#' @param hbars If not zero, use circles of this size
+#' @param vbars If not zero, use circles of this size
+#' @param perbars If not zero, use circles of this size
+#' @param parbars If not zero, use circles of this size
+#' @param levels Levels used for determining symbols size
+#' @param nlevels Number of levels
+#' @param colors Colors to use
+#' @param white Logical, use white for lowest level if TRUE
+#' @param n Number of points used to make a circle (?)
+#' @param maxcol maxcolor?
+#' @param digits ??
+#' @param label.location Where to put legend
+#' @param labels Labels for legend
+#' @param fill.circles Should circles be filled?
+#' @param density Density of shading when applicable
+#' @param angle Slant of shading
+#' @param rotate Should text (??) be rotated?
+#' @param minsym minimum value for a symbol to be drawn?
+#' @param label.resolution Number of digits in label???
+#' @param col Colors to use
+#' @param labels.only TRUE when labels/legend is added in a sperate call
+#' @param open.circles Should circles be open??
+#' @param lwd Line width of symbols
+#' @param border Should a border be drawn on the symbol
+#' @param bordercol Color for border if drawn
+#' @return No value returned, utility lies in side effect off adding colored
+#' symbols to existing plot, generally used as internal function in geosymbols.
+#' @note Needs further elaboration, see documentation for \code{geosymbols}.
+#' @seealso Called by \code{\link{geosymbols}}, calls \code{\link{Proj}},
+#' \code{\link{geolocator}}, \code{\link{labels_size}}, \code{\link{labels1}},
+#' \code{\link{labels2}}, \code{\link{shading1}}, \code{\link{paint.window}}
+#' @keywords aplot
+#' @export colsymbol
 colsymbol <-
 function(lat, lon, z, circles, squares, rectangles, hbars, vbars, perbars,
 	parbars, levels, nlevels, colors, white, n, maxcol, digits, 

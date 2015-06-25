@@ -1,3 +1,30 @@
+#' GEBCO plot. Plots equidepth lines.
+#' 
+#' Plots lines of equal depths using a database from GEBCO.
+#' 
+#' 
+#' @param depth A vector of the depths which we want equidept lines plotted.
+#' @param col The colour of the lines, if the col vector is shorter than the
+#' depth vector it is repeated.  Default is all lines black.
+#' @param lty Linetype, if the lty vector is shorter than the depth vector it
+#' is repeated.  Default is all lines have linetype 1.
+#' @param lwd Linewidth, if the lwd vector is shorter than the depth vector it
+#' is repeated. Default is all lines have linewidth 1.
+#' @param depthlab A boolean variable determening whether labels should be
+#' printed on equidepth lines, default is false.
+#' @param depthlabcex The size of depthlabels.
+#' @return None
+#' @section Side Effects: Plots equidepth lines on current plot.
+#' @seealso \code{\link{geoplot}}, \code{\link{geolines}}.
+#' @examples
+#' 
+#'    geoplot()   # Set up plot.
+#'    
+#'    gbplot(c(100,500,1000),depthlab=T,depthlabcex=0.2)
+#'    # Plot depthlines for 100,500,1000,1500 m, showing the
+#'    # depth on the line.   
+#' 
+#' @export gbplot
 gbplot <-
 function(depth, col, lty, lwd, depthlab, depthlabcex)
 {

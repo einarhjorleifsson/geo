@@ -1,3 +1,18 @@
+#' Periodic spline
+#' 
+#' Fits periodic spline to data.
+#' 
+#' 
+#' @param x Data ?
+#' @param df Degrees of freedom ?
+#' @param knots Knots ?
+#' @param period Period, default \code{c(0, 2*pi)} ?
+#' @return \item{basis}{Basis of periodic spline ?}
+#' @note Needs elaboration.
+#' @seealso Called by \code{\link{Closed.curve}}, calls
+#' \code{\link[splines]{spline.des}}.
+#' @keywords smooth
+#' @export ps
 ps <-
 function(x, df = NULL, knots = NULL, period = c(0., 2. * pi))
   {

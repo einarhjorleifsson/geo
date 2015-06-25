@@ -1,3 +1,21 @@
+#' Inverse Mercator Projection
+#' 
+#' Inverse Mercator Projection.
+#' 
+#' 
+#' @param x,y The input data to be inversely projected as two vectors
+#' @param scale Scale of the input data, "km" default, all other values imply
+#' nautical miles.
+#' @param b0 Latitude defining the projection.
+#' @return List of components: \item{lat, lon }{Coordinates in latitude and
+#' longitude} \item{x, y}{Input coordinates (projected)} \item{scale}{Scale}
+#' \item{projection}{Projection (stated redunantly)} \item{b0, L0}{Defining lat
+#' and a null value ???} is returned invisibly.
+#' @note Needs elaboration and perhaps documenting with mercator in the same
+#' doc-file.
+#' @seealso Called by \code{\link{invProj}}.
+#' @keywords manip
+#' @export invmerc
 invmerc <-
 function(x, y, scale = "km", b0 = 65)
 {

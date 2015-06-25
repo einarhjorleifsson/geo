@@ -1,3 +1,23 @@
+#' Inverse Lambert projection
+#' 
+#' Inverse Lambert projection.
+#' 
+#' 
+#' @param x,y The input data to be inversely projected as two vectors
+#' @param lat0 First latitude defining of the projection
+#' @param lon0 Longitude defining the projection
+#' @param lat1 Second latitude defining the projection
+#' @param scale Scale of the input data, "km" default, redundant ??
+#' @param old Old method, seldom used???
+#' @return List of components: \item{lat, lon }{Coordinates in latitude and
+#' longitude} \item{x, y}{Input coordinates (projected)} \item{scale}{Scale}
+#' \item{projection}{Projection (stated redunantly)} \item{lat0, lon0,
+#' lat1}{Defining lats and lon} is returned invisibly.
+#' @note Needs elaboration and perhaps documenting with lambert in the same
+#' doc-file.
+#' @seealso Called by \code{\link{invProj}}.
+#' @keywords manip
+#' @export invlambert
 invlambert <-
 function(x, y, lat0, lon0, lat1, scale = "km", old = F)
 {

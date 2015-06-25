@@ -1,3 +1,15 @@
+#' Spherical??
+#' 
+#' 'Spherical' of a variogram?
+#' 
+#' 
+#' @param rang1,sill,nugget Parameters of a variogram.
+#' @param x The data.
+#' @return Fitted values?
+#' @note Needs elaboration, if this is a necessary function.
+#' @seealso Some variogram stuff.
+#' @keywords arith
+#' @export spherical
 "spherical" <-
 function(rang1, sill, nugget, x)
 {

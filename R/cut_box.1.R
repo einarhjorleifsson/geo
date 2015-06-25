@@ -1,3 +1,16 @@
+#' Cut box ?
+#' 
+#' Cut box in connection with overlaying a Lambert projected plot with a grid.
+#' 
+#' 
+#' @param x,y Longitude and latitude of gridlines
+#' @param xb,yb Longitude and latitude limits
+#' @return List with compoents: \item{x}{Longitudes??} \item{y}{Latitudes??}
+#' \item{ind}{Indices??}
+#' @note Internal in \code{gridaxes.Lambert}, needs elaboration.
+#' @seealso \code{\link{gridaxes.Lambert}}
+#' @keywords manip
+#' @export cut_box.1
 cut_box.1 <-
 function(x, y, xb, yb)
 {

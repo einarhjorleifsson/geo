@@ -1,3 +1,19 @@
+#' Fits a super-smoother to a variogram (?)
+#' 
+#' Fits a super-smoother to a variogram (?).
+#' 
+#' 
+#' @param vagram Variogram
+#' @param option What to do ?
+#' @param sill Sill for the variogram (?)
+#' @return Returns a list with components of the returned variogram:
+#' \item{nugget}{Nugget} \item{dist}{Distance} \item{range}{Range}
+#' \item{sill}{Sill} \item{error}{Does the function call return an error? Used
+#' in \code{variofit}}
+#' @note Needs further elaboration.
+#' @seealso Called by \code{\link{variofit}}.
+#' @keywords smooth
+#' @export fitspher.aut.1
 fitspher.aut.1 <-
 function(vagram, option, sill)
 {

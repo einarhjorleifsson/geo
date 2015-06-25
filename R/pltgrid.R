@@ -1,3 +1,18 @@
+#' Plots grid lines
+#' 
+#' Plots grid lines.
+#' 
+#' 
+#' @param xgrid Should x-grid be drawn, default NULL?
+#' @param ygrid Should y-grid be drawn, default NULL?
+#' @param xpos xpos ?, if missing taken from \code{par("xaxp")}
+#' @param ypos ypos ?, if missing taken from \code{par("yaxp")}
+#' @param \dots optional parameters to be sent to \code{lines}
+#' @return No value, draws grid lines on current plot.
+#' @note Needs elaboration. Prints ypos ??
+#' @seealso Neither called by nor calls any function in package geo.
+#' @keywords aplot
+#' @export pltgrid
 pltgrid <-
 function(xgrid=NULL, ygrid=NULL, xpos, ypos, ...)
 {

@@ -1,3 +1,18 @@
+#' Restores a zoomed plot.
+#' 
+#' Geodezoom restores a plot zoomed with geodezoom.
+#' 
+#' 
+#' @return none
+#' @section Side Effects: The limits of the current plot change back to its
+#' original size.
+#' @seealso \code{\link{geoplot}}, \code{\link{geozoom}}.
+#' @examples
+#' 
+#' ##    See examples in help(geozoom).
+#'    
+#' 
+#' @export geodezoom
 geodezoom <-
 function()
 {

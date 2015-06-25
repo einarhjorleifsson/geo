@@ -1,3 +1,19 @@
+#' Plot tows as line segments
+#' 
+#' The function gets 4 arguments i.e position of begininning and end of
+#' segments.  If the first argument is given col.names gives the column names
+#' in the data frame describing the position.
+#' 
+#' 
+#' @param lat %% ~~Describe \code{lat} here~~
+#' @param lon %% ~~Describe \code{lon} here~~
+#' @param lat1 %% ~~Describe \code{lat1} here~~
+#' @param lon1 %% ~~Describe \code{lon1} here~~
+#' @param col %% ~~Describe \code{col} here~~
+#' @param col.names %% ~~Describe \code{col.names} here~~
+#' @param \dots %% ~~Describe \code{\dots} here~~
+#' @keywords ~kwd1
+#' @export geotows
 geotows <-
 function(lat, lon, lat1, lon1, col=1,col.names = c("kastad.n.breidd", 
 	"kastad.v.lengd", "hift.n.breidd", "hift.v.lengd"), ...)

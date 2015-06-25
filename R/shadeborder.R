@@ -1,3 +1,21 @@
+#' Shade border ?
+#' 
+#' Shade border ?
+#' 
+#' 
+#' @param reg Region
+#' @param lat Latitude ?
+#' @param lon Longitude ?
+#' @param col Color, not used ?
+#' @param col.names Column names containing coordinates, default \code{lat} and
+#' \code{lon}.
+#' @return No value, addes shadedborder (with call to \code{\link{lines}}) to
+#' contoured geoplot.
+#' @note Needs elaboration. Color argument not used, but fixed values given to
+#' 2 calls to \code{lines}.
+#' @seealso Called by \code{\link{geocontour}}, calls \code{\link{Proj}}.
+#' @keywords aplot
+#' @export shadeborder
 shadeborder <-
 function(reg, lat, lon, col = 0, col.names = c("lon", "lat"))
 {

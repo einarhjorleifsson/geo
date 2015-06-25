@@ -1,3 +1,16 @@
+#' Translate characters in column names
+#' 
+#' Translate characters in column names
+#' 
+#' 
+#' @param txt Character vector of inputs
+#' @param char Character to be replaced
+#' @param replchar Character to replace with
+#' @return A character vector of the same length as \code{txt}.
+#' @note Could be deprecated, use \code{\link{chartr}} instead.
+#' @seealso Called by \code{\link{pre2s}}.
+#' @keywords manip
+#' @export skipta.texta
 skipta.texta <-
 function(txt, char = "_", replchar = ".")
 {

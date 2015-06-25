@@ -1,3 +1,25 @@
+#' Label symbols of given size
+#' 
+#' Labels of given size.
+#' 
+#' 
+#' @param cont Contours
+#' @param digits Number of digits to use in labels
+#' @param sizes Sizes (of what?)?
+#' @param xlim,ylim Limits
+#' @param fill Fill? Default FALSE
+#' @param n Number of ??
+#' @param rat Ratio of ??
+#' @param minsym Minimum symbol for lowest category in labels
+#' @param label.resolution Label resolution ?
+#' @param open Open legend/label, default FALSE
+#' @param lwd Line width
+#' @param col Color
+#' @return No value, labels added to current plot.
+#' @note Needs further elaboration, document with other labelling functions??
+#' @seealso Called by \code{\link{colsymbol}}.
+#' @keywords aplot
+#' @export labels_size
 labels_size <-
 function(cont, digits, sizes, xlim = c(0, 1), ylim = c(0, 1), fill = F, n,
         rat, minsym = "<", label.resolution = 0, open = F, lwd = 1, col = 1)

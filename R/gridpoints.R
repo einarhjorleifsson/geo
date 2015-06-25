@@ -1,3 +1,21 @@
+#' Produce gridpoints over an area
+#' 
+#' Produce gridpoints over an area.
+#' 
+#' 
+#' @param border Border of the area
+#' @param dx Resolution in each direction (?)
+#' @param grpkt ???
+#' @param nx Number of gridpoints in each direction (?)
+#' @param n Total number of gridpoints (?)
+#' @return List with components: \item{xgr}{List of gridpoints in components
+#' \code{lat, lon} or \code{x,y} depending on the projection.} \item{xgra}{List
+#' of those gridpoints within the area given in \code{border}}
+#' @note Needs further elaboration, check use with \code{find = TRUE} in
+#' \code{setgrid}.
+#' @seealso Called by \code{\link{setgrid}}.
+#' @keywords manip
+#' @export gridpoints
 gridpoints <-
 function(border, dx, grpkt, nx, n)
 {

@@ -1,3 +1,20 @@
+#' Finds a line (?)
+#' 
+#' Finds a line (?).
+#' 
+#' 
+#' @param x Coordinates 1 (?)
+#' @param xb Coordinates 2 (?)
+#' @param plot Plot or not, default TRUE
+#' @return If plot is TRUE, returns coordinates for plotting, if FALSE returns
+#' data.frame of with latitude and longitude.
+#' @note Needs further elaboration.
+#' @seealso Called by \code{\link{adjust.grd}}, \code{\link{geolines}},
+#' \code{\link{geolines.with.arrows}}, \code{\link{init}} and
+#' \code{link{reitaplott}}, calls \code{\link{invProj}},
+#' \code{\link{prepare.line}} and \code{\link{Proj}}.
+#' @keywords manip
+#' @export findline
 findline <-
 function(x, xb, plot = T)
 {

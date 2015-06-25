@@ -1,3 +1,21 @@
+#' Paint window for label?
+#' 
+#' Paint window for label based on lat and lon?.
+#' 
+#' 
+#' @param listi Label location ?
+#' @param col Color, not used ?
+#' @param border Should border be drawn?
+#' @param poly Should label be opaque ?
+#' @param col.names Column names containing label coordinates ?
+#' @return No value, lines and/or polygon added to current geoplot.
+#' @note Needs elaboration and possibly merging with paint.window doc-file.
+#' Argument \code{col} has no effect.
+#' @seealso Called by \code{\link{colsymbol}}, \code{\link{geocontour}},
+#' \code{\link{geocontour.fill}}, \code{\link{geosymbols}} and
+#' \code{\link{reitaplott}}; calls \code{\link{Proj}}.
+#' @keywords aplot
+#' @export paint.window
 paint.window <-
 function(listi, col = 0, border = T, poly = T, col.names = c("lon", "lat"))
 {

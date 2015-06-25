@@ -1,3 +1,22 @@
+#' Determine which bormicon (or gadget) region data belong to.
+#' 
+#' Determine which bormicon (or approximately gadget) region data belong to.
+#' 
+#' 
+#' @param data Data set with coordinates in components \code{lat, lon}.
+#' @param only.sv.1to10 Label only data belonging to areas 1 to 10 (depth < 500
+#' m). Default FALSE
+#' @param ignore.latlon Use rectangle resolution ???
+#' @param ignore.area0 Action for data not belonging to bc-areas, not used???
+#' @return Returns original data with area code as an added component
+#' \code{area}.
+#' @note Needs elaboration, esp. when based on rectangles, merge doc with
+#' inside.reg.bc1.
+#' @seealso Calls \code{\link{inside.reg.bc1}},
+#' \code{\link{Reitur2Svaedi1to10}}, \code{\link{sr2d}}. Data set
+#' \code{\link{reg.bc}} with bormicon-area outlines is used.
+#' @keywords manip
+#' @export inside.reg.bc
 inside.reg.bc <-
 function(data, only.sv.1to10 = F, ignore.latlon = F, ignore.area0 = T)
 {

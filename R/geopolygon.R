@@ -1,3 +1,71 @@
+#' Fill an area.
+#' 
+#' The program fills an area. The program is similar to the polygon function
+#' except the data is in lat, lon and the transform of the data specified in
+#' geoplot is used. Also there are some additional parameters. The graph has to
+#' be initialized by geoplot.
+#' 
+#' 
+#' @param lat,lon Latitude and longitude of data ( or x and y coordinates),
+#' negative for southern latitudes and western longitudes. May be supplied as
+#' two vectors or as a list lat (or x) including vectors lat\$lat and lat\$lon
+#' (x\$x and x\$y if projection = none).
+#' @param col Color number used.  Default value is 0 (often white).
+#' @param border If TRUE borders around the polygon are drawn. Default value is
+#' FALSE.
+#' @param exterior If TRUE everything that is outside the polygon is painted ,
+#' else everything inside. Default value is FALSE. If exterior = TRUE axes and
+#' grid often need refreshing by calling geoplot again with new = TRUE.
+#' @param nx See geolines for further details.
+#' @param outside If TRUE what is outside of the polygon is colored else what
+#' is inside. Default value is TRUE.
+#' @param plot if TRUE the polygon is plotted. Default is TRUE.
+#' @param save if TRUE the points plotted are returned. Default is FALSE.
+#' @param rat the ratio of the plot to what is plotted. Default is 0.005
+#' meaning that the plot is 0.5\% bigger than what is plotted.
+#' @param density see polygon.
+#' @param Projection the projection to be used. Default is the one defined by
+#' current plot.
+#' @param angle see polygon.
+#' @param allowed.size printers are limited to printing polygons of certain
+#' size, when the polygons size is actually too big for your printer you can
+#' enter the tedious task of splitting up the polygon. Default is 4000.
+#' @param option Some option. Default 1.
+#' @return The points plotted are returned if save = TRUE.
+#' @seealso \code{\link{polygon}}, \code{\link{geoplot}},
+#' \code{\link{geolines}}, \code{\link{geopoints}}, \code{\link{geotext}},
+#' \code{\link{geosymbols}}, \code{\link{geocontour.fill}},
+#' \code{\link{geogrid}}, \code{\link{geocontour}}.
+#' @examples
+#' 
+#' \dontrun{     geopolygon(island)              # Paint iceland with 
+#'                                      # color #0 (often white).
+#' 
+#'      geopolygon(island, col = 0, exterior = TRUE)
+#' 
+#'      geopolygon(geolocator(), col = 1)  # Paints a region defined 
+#'                                      # by pointing on map black.
+#' 
+#'      # Of the maps available island (iceland) is about the only that
+#'      # is correctly defined as closed polygon so it is the only one that 
+#'      # can be painted by geopolygon.
+#' 
+#'      geoplot(grid = FALSE, type = "n")
+#'      # Star by setting up the plot.
+#'      geopolygon(gbdypif.500, col = 4, exterior = FALSE, r = 0)
+#'      # Use geopolygon to draw the 500 m area. 
+#'      geopolygon(gbdypif.100, col = 155, exterior = FALSE, r = 0)
+#'      # Draw 100 m are over the 500 m. 
+#'      geolines(eyjar, col = 115)
+#'      # Add islands around Iceland.
+#'      gbplot(c(100, 500), depthlab = TRUE)
+#'      # Draw the depth lines, labels on lines.
+#'      geopolygon(island, col = 115, outside = TRUE, r = 0)
+#'      # Draw Iceland over.
+#'      geoplot(grid = FALSE, new = TRUE)
+#'      # Draw lines around Iceland, could also use geolines.
+#' }
+#' @export geopolygon
 geopolygon <-
 function(lat, lon = NULL, col = "white", border = FALSE, exterior = FALSE, nx = 1,
 	outside = FALSE, plot = TRUE, save = FALSE, rat = 0.005, density = -1, Projection

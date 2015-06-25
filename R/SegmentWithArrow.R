@@ -1,3 +1,16 @@
+#' Plot line segment with arrow at the end.
+#' 
+#' Plot line segment with arrow at the end.
+#' 
+#' 
+#' @param pos Segment positions.
+#' @param angle (Half-)Angle (< 90) determining arrow sharpness.
+#' @param size Size of arrow.
+#' @param col Color of arrow.
+#' @param lwd Line width of segment.
+#' @note Needs further checking and elaboration.
+#' @keywords aplot
+#' @export SegmentWithArrow
 SegmentWithArrow <-
 function(pos,angle=15,size=0.2,col="blue",lwd=2){
   geopar <- getOption("geopar")

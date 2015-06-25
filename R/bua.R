@@ -1,3 +1,18 @@
+#' Makes a list used in \code{pointkriging}
+#' 
+#' Makes a list of four components sequences based on input number for use in
+#' \code{pointkriging}.
+#' 
+#' 
+#' @param nm A number
+#' @return Returns a list with components: \item{rrt}{sequence 1 of length
+#' \code{4*nm^2}} \item{crt}{sequence 2, same length as \code{rrt}}
+#' \item{rrt}{sequence 3, same length as \code{rrt}} \item{crt}{sequence 4 of
+#' length \code{nm + 1}} for use in \code{pointkriging}.
+#' @note Needs further elaboration.
+#' @seealso \code{\link{pointkriging}}
+#' @keywords manip
+#' @export bua
 bua <-
 function(nm = 10)
 {

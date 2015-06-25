@@ -1,3 +1,19 @@
+#' Adapts geographical positions
+#' 
+#' Adapts geographical positions for further geo-use.
+#' 
+#' 
+#' @param reg.lat Latitude or y-coordinate
+#' @param reg.lon Longitude or x-coordinate
+#' @param projection Projection, default "Mercator", "none" denotes x/y
+#' coordinates
+#' @return Returns a list of either: \item{x, y}{x- and y-positions} or:
+#' \item{lat, lon}{Latitude and longitude} and: \item{lxv}{index of
+#' uninterupted/contiguous positions}
+#' @note Needs further elaboration, this function is called by
+#' \code{geoarea.old}, \code{geoinside}, \code{inside} and \code{pointkriging}.
+#' @keywords manip
+#' @export adapt
 adapt <-
 function(reg.lat, reg.lon, projection = "Mercator")
 {

@@ -1,3 +1,23 @@
+#' Setup axes for a geoplot
+#' 
+#' Set up axes for a geoplot.
+#' 
+#' 
+#' @param side On which side should the axis be drawn?
+#' @param pos Positions of labels (?)
+#' @param dist Distance from plot of axes labels (?)
+#' @param dlat Latitude resolution of labels (?)
+#' @param dlon Longitude resolution of labels (?)
+#' @param csi Character size inches, default 0.12
+#' @param cex Character size expansion, default 0.7
+#' @param inside Whether or not stay inside ??????????
+#' @param r yet another setting ?????????
+#' @param \dots Additional arguments to \code{geotext}
+#' @return Adds labels to a geoplot, no value returned.
+#' @note Needs further elaboration.
+#' @seealso Calls \code{\link{geotext}}, called by \code{\link{init}}.
+#' @keywords aplot
+#' @export geoaxis
 geoaxis <-
 function(side, pos, dist, dlat = 0.5, dlon = 1,csi=0.12, cex = 0.7, inside = T, r = 1,
 	...)

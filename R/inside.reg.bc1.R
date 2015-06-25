@@ -1,3 +1,17 @@
+#' Determine which bormicon (or gadget) region data belong to.
+#' 
+#' Determine which bormicon (or approximately gadget) region data belong to.
+#' 
+#' 
+#' @param data Data set with coordinates in components \code{lat, lon}.
+#' @return Returns original data with area code as an added component
+#' \code{area}.
+#' @note Needs further elaboration ?
+#' @seealso Calls \code{\link{geoinside}}, called by
+#' \code{\link{inside.reg.bc}} and \code{\link{Reitur2Svaedi1to10}}. Data set
+#' \code{\link{reg.bc}} with bormicon-area outlines is used.
+#' @keywords manip
+#' @export inside.reg.bc1
 inside.reg.bc1 <-
 function(data)
 {

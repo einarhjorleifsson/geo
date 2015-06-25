@@ -1,3 +1,23 @@
+#' Lambert projection
+#' 
+#' Lambert projection.
+#' 
+#' 
+#' @param lat,lon Coordinates as latitude and longitude vectors
+#' @param lat0 First latitude defining of the projection
+#' @param lon0 Longitude defining the projection
+#' @param lat1 Second latitude defining the projection
+#' @param scale Scale, default "km", redundant ??
+#' @param old Old method ?
+#' @return List of components: \item{lat, lon }{Coordinates in latitude and
+#' longitude} \item{x, y}{Input coordinates (projected)} \item{scale}{Scale}
+#' \item{projection}{Projection (stated redunantly)} \item{lat0, lon0,
+#' lat1}{Defining lats and lon} is returned invisibly.
+#' @note Needs elaboration, might be merged with docs for other proj-functions.
+#' @seealso Called by \code{\link{geoarea}}, \code{\link{orthproj}} and
+#' \code{\link{Proj}}.
+#' @keywords manip
+#' @export lambert
 lambert <-
 function(lat, lon, lat0, lon0, lat1, scale = "km", old = F)
 {

@@ -1,3 +1,21 @@
+#' Add subplot
+#' 
+#' Add subplot.
+#' 
+#' 
+#' @param fun Graphcical function to call
+#' @param x,y Coordinates
+#' @param size Subplot size (inches?)
+#' @param vadj Vertical adjustment
+#' @param hadj Horizontal adjustment
+#' @param pars Parameters to set?
+#' @return Returns parameter list invisibly, side effect subplot added to
+#' current plot.
+#' @note Needs elaboration.
+#' @seealso Called by \code{\link{geosubplot}}, calls
+#' \code{\link{selectedpar}}.
+#' @keywords aplot
+#' @export subplot
 subplot <-
 function(fun, x, y, size = c(1, 1), vadj = 0.5, hadj = 0.5, pars)
 {

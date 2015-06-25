@@ -1,3 +1,22 @@
+#' Mercator projection
+#' 
+#' Mercator projection.
+#' 
+#' 
+#' @param lat,lon Coordinates as latitude and longitude vectors
+#' @param scale Scale of the output, "km" default, all other values imply
+#' nautical miles.
+#' @param b0 Latitude defining the projection.
+#' @return List of components: \item{lat, lon }{Coordinates in latitude and
+#' longitude} \item{x, y}{Input coordinates (projected)} \item{scale}{Scale}
+#' \item{projection}{Projection (stated redunantly)} \item{b0, L0}{Defining lat
+#' and a null value ???} is returned invisibly.
+#' @note Needs elaboration, could/should (?) be documented with other
+#' projection functions.
+#' @seealso Called by \code{\link{geoarea}}, \code{\link{gridaxes}} and
+#' \code{\link{Proj}}.
+#' @keywords manip
+#' @export mercator
 mercator <-
 function(lat, lon, scale = "km", b0 = 65)
 {

@@ -1,3 +1,44 @@
+#' Calculates the distance between each pair of datapoints.
+#' 
+#' The program calculates the distance between each pair of datapoints.  The
+#' distances are grouped in groups such that even number of pairs is in each
+#' group.  Then the estimated variogram for each group is calculated either by
+#' taking the mean or by a method from Cressie and Hawkins (1980).  The latter
+#' method does in essence take the sum of the values^0.25. Only pair of points
+#' with distance less than certain distance are used. Zero - Zero pairs are not
+#' used if zzp is F.
+#' 
+#' 
+#' @param lat Latitude of datapoints.  If lon=0 lat is a list with components
+#' \$lat and \$lon.
+#' @param z Values at datapoints.
+#' @param lon longitude of datapoints.
+#' @param nbins Number of distance intervals used.
+#' @param maxdist maximum distance of interest.  Default value is range of
+#' data*0.7.
+#' @param Hawk If true the method from Cressie and Hawkins (1980) is used, else
+#' the mean.  Default value is T
+#' @param throwout If T datapoints with value zero are not used at all.
+#' Default value is F which means that they are used.  In all cases zero-zero
+#' pairs are not used when the variogram is estimated.
+#' @param scale "km" or "nmi". Default is "km".
+#' @param evennumber If T distance classes are chosen so approximately the same
+#' number of points is in each distance class.  Else even distance increments
+#' are used.
+#' @param zzp If true zero-zero pairs are used else not.  Default value is F.
+#' @param minnumber Distance intervals with minnumber or less pairs are not
+#' included.  Default is zero.
+#' @param col.names if lat is a dataframe col.names should contain the names of
+#' the vectors containing the x and y coordinates, default is c("lat","lon")
+#' @section Value: A list with the following components: <s-example>
+#' 
+#' number: Number of pair in each distance class.  dist: Mean distance in each
+#' distance class.  vario: variogram for each distance class. </s-example> The
+#' list is suitable for the program variofit.  The variogram can also be
+#' plotted by plvar(vagram,fit=F)
+#' @seealso \code{\link{variofit}}, \code{\link{pointkriging}},
+#' \code{\link{plvar}}.
+#' @export variogram
 variogram <-
 function(lat, lon = 0, z, nbins = 100, maxdist = 0, Hawk = T, throwout = F,
 	scale = "km", evennumber = T, zzp = F, minnumber = 0, col.names = c(

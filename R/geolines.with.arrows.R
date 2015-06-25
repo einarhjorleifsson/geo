@@ -1,3 +1,22 @@
+#' Add arrowhead to plot
+#' 
+#' Adds arrowhead at the start or the end of a list of coordinates on a
+#' geoplot.
+#' 
+#' 
+#' @param data Dataframe with coordinates in columns \code{lat, lon}.
+#' @param start Start from beginning (i.e. arrow points at first coordinate),
+#' default TRUE.
+#' @param size Size of arrow
+#' @param \dots Additional arguments to \code{Arrow}
+#' @return Draws an Arrowhead at the start or the end of the coordinates given
+#' in \code{data}, returns invisibly the outline as four coordinate pairs in a
+#' dataframe.
+#' @note May need further elaboration and/or detail.
+#' @seealso Called by \code{\link{geocurve}}, calls \code{\link{findline}},
+#' \code{\link{invProj}} and \code{\link{Arrow}}.
+#' @keywords aplot
+#' @export geolines.with.arrows
 geolines.with.arrows <-
 function(data, start = T, size = 0.2, ...)
 {

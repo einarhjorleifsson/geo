@@ -1,3 +1,16 @@
+#' Split a polygon into a list
+#' 
+#' Split a 'polygon with NAs' into a list of true polygons before calculating
+#' its area.
+#' 
+#' 
+#' @param data A dataframe of coordinates in latitude and longitude
+#' @return Returns a list of true polygons as dataframes, each with coordinates
+#' \item{lat}{Latitude} \item{lon}{Longitude}
+#' @note Needs further elaboration.
+#' @seealso Called by \code{\link{geoarea}}.
+#' @keywords manip
+#' @export geo.Split.poly
 geo.Split.poly <-
 function(data)
 {

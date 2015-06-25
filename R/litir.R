@@ -1,3 +1,17 @@
+#' Display palette in effect
+#' 
+#' A grid of colors is plotted.
+#' 
+#' Palette in effect gets repeated for \code{n} greater than
+#' \code{length(palette())}.
+#' 
+#' @param n Number of columns and rows of colors to display
+#' @return No value returned, plots an \code{n} by \code{n} grid of colors.
+#' @note Simpler version of \code{\link{Rlitir}}, one of those should do,
+#' possibly with a name change.
+#' @seealso \code{\link{Rlitir}}
+#' @keywords colors
+#' @export litir
 litir <-
 function(n)
 {

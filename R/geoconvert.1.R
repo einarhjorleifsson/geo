@@ -1,3 +1,13 @@
+#' Convert to decimal degrees
+#' 
+#' Convert to decimal degrees.
+#' 
+#' 
+#' @param x Vector of decimal-minute-decimal minutes
+#' @return Returns converted value in decimal degrees.
+#' @seealso Called by \code{\link{geoconvert}}
+#' @keywords manip
+#' @export geoconvert.1
 geoconvert.1 <-
 function(x)
 {

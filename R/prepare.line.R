@@ -1,3 +1,15 @@
+#' Prepare a line ?
+#' 
+#' Prepare a line for some action ?
+#' 
+#' 
+#' @param x Line vector ?
+#' @return Returns a list with components: \item{lx1}{lx1 ?} \item{lx2}{lx2 ?}
+#' \item{nlx}{nlx ?}
+#' @note Needs elaboration.
+#' @seealso Called by \code{\link{cut_multipoly}} and \code{\link{findline}}.
+#' @keywords manip
+#' @export prepare.line
 prepare.line <-
 function(x)
 {

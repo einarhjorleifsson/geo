@@ -1,3 +1,18 @@
+#' Plots rectangle codes
+#' 
+#' Adds codes for statistical rectangles to the current plot
+#' 
+#' 
+#' @param cexrt Character expansion of the codes on the plot.
+#' @param lwd Grid line width
+#' @return No value, adds the codes for statistical rectangles to the current
+#' geoplot. The codes are added for all rectangles visible on the plot.
+#' @note Might be extended to plotting 'smareitur' codes? Grid line setting
+#' affects bounding box of the plot could be fixed/extended as well(?).
+#' @seealso Called by \code{\link{geoplot}}, calls \code{\link{d2r}},
+#' \code{\link{geotext}} and \code{\link{invProj}}.
+#' @keywords aplot
+#' @export plot_reitnr
 plot_reitnr <-
 function(cexrt, lwd = 0)
 {

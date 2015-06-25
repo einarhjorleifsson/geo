@@ -1,3 +1,23 @@
+#' Shading of geoplots?
+#' 
+#' Shading of geoplots?
+#' 
+#' 
+#' @param cont Contours?
+#' @param digits Number of digits?
+#' @param colors Colors?
+#' @param xlim,ylim Limits?
+#' @param fill Fill?
+#' @param angle Angle?
+#' @param rotate Rotate?
+#' @param cex Character expansion?
+#' @param rat Ratio?
+#' @param minsym Minimum symbol on label?
+#' @return No value, shades current geoplot (label?) in some way?
+#' @note Needs elaboration.
+#' @seealso Called by \code{\link{colsymbol}} and \code{\link{reitaplott}}.
+#' @keywords aplot
+#' @export shading1
 shading1 <-
 function(cont, digits, colors, xlim = c(0, 1), ylim = c(0, 1), fill = F, angle,
 	rotate, cex, rat, minsym = "<")

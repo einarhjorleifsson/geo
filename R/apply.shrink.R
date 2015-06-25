@@ -1,3 +1,27 @@
+#' Apply a function to a vector for a combination of categories.
+#' 
+#' Apply a function to a vector for a combination of categories.
+#' 
+#' 
+#' @param X Input data to \code{FUN}
+#' @param INDICES list of categories to be combined
+#' @param FUN Function to be applied
+#' @param names Column names for the resulting dataframe
+#' @param \dots Additional arguments to \code{FUN}
+#' @return Dataframe of outcomes applying \code{FUN} to \code{X} for the
+#' combination of categories in \code{INDICES}
+#' @note Needs elaboration, or could be dropped/hidden, use merge instead.
+#' @seealso \code{\link{apply.shrink.dataframe}}, \code{\link{merge}}
+#' @keywords manip
+#' @examples
+#' 
+#' ## stupid example, showing naming of results
+#' names(apply.shrink(depthloc$z, 
+#'   list(a=round(depthloc$lat), b=round(depthloc$lon)), mean))
+#' names(apply.shrink(depthloc$z, list(round(depthloc$lat), 
+#'   round(depthloc$lon)), mean, names = c("a", "b", "z")))
+#' 
+#' @export apply.shrink
 apply.shrink <-
 function(X, INDICES, FUN = NULL, names, ...)
 {

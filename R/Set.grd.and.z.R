@@ -1,3 +1,17 @@
+#' Manipulate grid and z-values for contouring.
+#' 
+#' Manipulate grid and z-values for contouring.
+#' 
+#' 
+#' @param grd grid
+#' @param z z-value
+#' @param mask mask
+#' @param set set
+#' @param col.names column names, defaults to \code{lat} and \code{lon}
+#' @return Returns a list of: \item{grd}{grid} \item{z}{value over grid}
+#' @note Used in \code{geocontour}-functions.
+#' @keywords manip
+#' @export Set.grd.and.z
 Set.grd.and.z <-
 function(grd, z, mask, set = NA, col.names = c("lon", "lat"))
 {

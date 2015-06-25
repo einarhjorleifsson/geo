@@ -1,3 +1,20 @@
+#' Extract a grid (?)
+#' 
+#' Extract a grid (?).
+#' 
+#' 
+#' @param grd Grid
+#' @param z Value
+#' @param maxn Max number
+#' @param limits Limits
+#' @param col.names Defaults to \code{lat, lon}
+#' @return Returns a list with components: \item{grd1}{A grid} \item{z}{Values
+#' over the grid}
+#' @note Internal to the geo-contour-functions, needs elaboration.
+#' @seealso Called by \code{\link{geocontour}} and
+#' \code{\link{geocontour.fill}}.
+#' @keywords ~kwd1
+#' @export extract
 extract <-
 function(grd, z, maxn = 10000, limits = NULL, col.names = c("lon", "lat"))
 {

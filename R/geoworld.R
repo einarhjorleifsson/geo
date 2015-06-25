@@ -1,3 +1,68 @@
+#' Plots rough outline of the world.
+#' 
+#' Plots roughly the outlines of those countries which have borders
+#' intersecting the current plot initialized by geoplot.  The countries can
+#' also be filled.
+#' 
+#' 
+#' @param regions Allows plotting only a certain part of the world to speed up
+#' the function, such as regions = "iceland". Default is plotting what is
+#' insidie the map.
+#' @param exact Draws a more exact plot.
+#' @param boundary If true country boundaries are drawn.  Default is false.
+#' @param fill If true countries are filled with a color.  Default is false.
+#' @param color Default is 1 (usually black).
+#' @param lwd Linewidth, default is 1.
+#' @param lty Linetype, default is 1.
+#' @param plot If false a plot is not drawn.  Default is true.
+#' @param type If lines or points should be potted, see type for geoplot.
+#' @param pch The character to be used for plotting, see par.
+#' @param database The database the world plot is to be taken from.  Currently
+#' there are two possible databases world and worldHires.  world is in the map
+#' library and worlHires in the mapdata library and is much more precies.
+#' @param return.data If true those points used to make the in the plot are
+#' return, default is FALSE. Can be used to save the coastlines of specified
+#' countries.
+#' @param outside If TRUE data are plotted outside the borders.  Default is
+#' FALSE.
+#' @param allowed.size Maximum size of polygon that can be filled.  Default is
+#' 80 000 which is rather large polygon but this value is rapidly changing by
+#' more powerful hardware.
+#' @return default none, see option return data.
+#' @section Side Effects: the outlines of all countries who intersect current
+#' plot are drawn.
+#' @seealso \code{\link{geoplot}}, \code{\link{fill.outside.border}},
+#' \code{\link{geopolygon}}, \code{\link{par}}.
+#' @examples
+#' 
+#' \dontrun{     geoplot(xlim = c(0, -53), ylim = c(53, 75))
+#'      geoworld()
+#' 
+#'      # Should plot in all countries who intersect the plot draw
+#'      # with geoplot.
+#' 
+#' # The packages maps and mapdata need to be installed
+#' # worldHires is a very detailed database of coastlines from the 
+#' # package mapdata.  Could be problematic if used with fill = TRUE)
+#' # Allowed.size is the maximum allowed size of polygons.  
+#' library(map) # world coastlines and programs 
+#' library(mapdata) # more detailed coastlines
+#' geoplot(xlim = c(20, 70), ylim = c(15, 34))
+#' geoworld(database = "worldHires", fill = TRUE, col = 30, allowed.size = 1e5)
+#' 
+#' geoplot(xlim = c(20, 70), ylim = c(15, 34), dlat = 10, dlon = 10)
+#' geoworld(database = "world", fill = TRUE, col = 30) #
+#' 
+#' geoplot(xlim = c(-10, 70), ylim = c(71, 81), b0 = 80, 
+#'   dlat = 2, dlon = 10) # 0 must be high here else
+#' geoworld(database = "world", fill = TRUE, col = 30) #the plot fails.  
+#' 
+#' # Lambert projection, 
+#' geoplot(xlim = c(-10, 70), ylim = c(71, 81), 
+#'   dlat = 2, dlon = 10, projection = "Lambert")
+#' geoworld(database = "world", fill = TRUE, col = 30) 
+#' }
+#' @export geoworld
 geoworld <-
 function(regions = ".", exact = FALSE, boundary = TRUE, fill = FALSE, color = 1, lwd = 1, 
 	lty = 1, plot = TRUE, type = "l", pch = ".", database = "world", 

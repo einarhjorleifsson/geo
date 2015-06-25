@@ -1,3 +1,19 @@
+#' Fill points (thicken)
+#' 
+#' Fill points (thicken) for drawing continous lines in Lambert projection.
+#' 
+#' 
+#' @param x,y Coordinates
+#' @param nx Thickening factor
+#' @param option Deals with NAs in the coordinates when not 1, the default
+#' @return List of thickened values with components: \item{x, y}{of
+#' coordinates}
+#' @note Internal, needs elaboration.
+#' @seealso The function is called by \code{\link{geopolygon}},
+#' \code{\link{geolines}}, \code{\link{reitaplott}} and
+#' \code{\link{gridaxes.Lambert}}
+#' @keywords manip
+#' @export fill.points
 fill.points <-
 function(x, y, nx, option = 1)
 {

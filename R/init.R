@@ -1,3 +1,56 @@
+#' Initiate a geoplot (??)
+#' 
+#' Initiate a geoplot (??).
+#' 
+#' 
+#' @param lat,lon Latitude and longitude
+#' @param type Plot method
+#' @param pch Plot character
+#' @param xlim,ylim Plot limits
+#' @param b0 Base latitude
+#' @param r Plot ratio, multiplier on \code{diff(x_or_ylim)}
+#' @param country Country to be plotted, default \code{island}
+#' @param xlab,ylab Labels for x- and y-axes, default \code{"Longitude",
+#' "Latitude"}
+#' @param option Method of determining plot extent, default \code{"cut"}
+#' @param grid Should a grid be drawn, default \code{TRUE}
+#' @param new Plot control, default \code{FALSE} adds plot to current plot
+#' @param cont For use with contours: should space be reserved for contour
+#' labels? Default \code{FALSE}
+#' @param cex Character size expansion
+#' @param col Color, default 1, usually black
+#' @param lcont Contour lable space allocation, default c(0.13, 0.21)
+#' @param plotit If FALSE plot is only initialized but not plotted. If used
+#' other programs are used to fill the plot (geolines, geocontour, geopolygon
+#' etc). Most often used in multiple plots.
+#' @param reitur Should the grid be that of statistical rectangles?
+#' @param smareitur Should the grid be that of statistical sub--rectangles?
+#' @param reittext Should the rectangles be labelled?
+#' @param axratio Parameter usually not changed by the user.
+#' @param lwd Line width
+#' @param axlabels If FALSE no numbers are plotted on the axes. Default value
+#' is TRUE.
+#' @param oldpar The old par--list, from the parent geoplot--call
+#' @param projection Projection, default \code{Mercator}
+#' @param b1 Second latitude for Lambert projection
+#' @param dlat,dlon Defines the grid, to make a grid on the axes, 1 is a number
+#' on axis and a line at every deg. Not usualy set by user.
+#' @param command The parent \code{geoplot} command is included, although for
+#' what purpose isn't quite clear??
+#' @param jitter Random jitter to accentuate repeated values. Default no jitter
+#' (\code{jitter = 0})
+#' @param xaxdist,yaxdist Distance from plot to the labels on axes (dist or r
+#' argument to geoaxis).  Default values \code{0.2, 0.3} but higher values mean
+#' that axlabels are further away from the plot.  Further flexibility with axes
+#' can be reached by calling geoplot with axlabels = FALSE and geoaxis
+#' aferwards.
+#' @return No value, side effect plotted.
+#' @note Needs further elaboration, alternatively hide the function.
+#' @seealso Called by \code{\link{geoplot}} calls \code{\link{Elimcomp}},
+#' \code{\link{findline}}, \code{\link{geoaxis}}, \code{\link{gridaxes}},
+#' \code{\link{gridaxes.Lambert}}, \code{\link{invProj}}, \code{\link{Proj}}.
+#' @keywords hplot
+#' @export init
 init <-
 function(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0), ylim = c(0, 0),
 	b0 = 65, r = 1.05, country = island, xlab = "Longitude", ylab = 

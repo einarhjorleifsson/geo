@@ -1,3 +1,18 @@
+#' Cut box type 2???
+#' 
+#' Cut box type 2???.
+#' 
+#' 
+#' @param x Longtude ?
+#' @param y Latitude ?
+#' @param xb Limits of longitude?
+#' @param yb Limits of latitude?
+#' @return List with components: \item{x, y}{Longitude and latitude of ???}
+#' \item{x1, y1}{Some other Longitude and latitude of ???}
+#' @note Internal to \code{gridaxes.Lambert}, needs elaboration.
+#' @seealso \code{\link{gridaxes.Lambert}}
+#' @keywords manip
+#' @export cut_box.2
 cut_box.2 <-
 function(x, y, xb, yb)
 {

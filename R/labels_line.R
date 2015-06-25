@@ -1,3 +1,21 @@
+#' Labels line ?
+#' 
+#' Labels line ?.
+#' 
+#' 
+#' @param cont Contours?
+#' @param digits Number of digits
+#' @param colors Colors
+#' @param lty Line types
+#' @param lwd Line widths
+#' @param xlim,ylim Limit
+#' @param linew Linewidth for some reason not lwd?
+#' @return No value, labels added to current plot.
+#' @note Needs elaboration, possibly merge documentation with others label
+#' functions?
+#' @seealso Called by \code{\link{geocontour}}.
+#' @keywords aplot
+#' @export labels_line
 labels_line <-
 function(cont, digits, colors, lty, lwd, xlim = c(0, 1), ylim = c(0, 1), linew = F)
 {

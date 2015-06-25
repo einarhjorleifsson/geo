@@ -1,3 +1,20 @@
+#' Label plots
+#' 
+#' Label plots with categories.
+#' 
+#' 
+#' @param cont Contour ?
+#' @param digits Number of digits to use in labels
+#' @param colors Colors ?
+#' @param xlim,ylim Limits ?
+#' @param nx ??. Default 4
+#' @param fill Fill ?
+#' @return No value, labels added to current plot.
+#' @note Needs elaboration, merge documentation with \code{labels1}, and
+#' possibly others?
+#' @seealso alled by \code{\link{colsymbol}} and \code{\link{geocontour.fill}}.
+#' @keywords aplot
+#' @export labels2
 labels2 <-
 function(cont, digits, colors, xlim = c(0, 1), ylim = c(0, 1), nx = 4, fill = F
 	)

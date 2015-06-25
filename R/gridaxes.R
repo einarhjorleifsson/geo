@@ -1,3 +1,38 @@
+#' Set up axes for a geoplot
+#' 
+#' Set up axes for a geoplot.
+#' 
+#' 
+#' @param limx Longitude limits
+#' @param limy Latitude limits
+#' @param scale Scale to supply to \code{Proj, invProj}
+#' @param b0 Base latitude for the Mercator projection.  Default value is 65
+#' (typical for Iceland)
+#' @param xyratio Argument that can be used to set the aspect ratio (?)
+#' @param grid If grid is TRUE meridians and parallels are plotted, else not.
+#' Default TRUE
+#' @param col Color of gridlines
+#' @param reitur Should the grid show statistical rectangles?
+#' @param smareitur Should the grid show statistical sub--rectangles?
+#' @param axratio Parameter usually not changed by the user (?)
+#' @param axlabels If FALSE no numbers are plotted on the axes. Default TRUE
+#' @param b1 Second latitude to define Lambert projection (?, as there's a
+#' Lambert version of this function)
+#' @param l1 The longitude defining the Lambert projection, default is the
+#' \code{l1} defined in geopar, ditto ??
+#' @param projection Projection ?, other than Mercator ??)
+#' @param dlat Latitude axis increment between labels
+#' @param dlon Longitude axis increment between labels
+#' @return No value, useful because of its side effect of adding axes to a
+#' geoplot.
+#' @note May need further elaboration or simplification (referring to the
+#' general geoplot help). Coordinate with the geoaxes.Lambert and gridaxes
+#' helpfiles (supply as one??). Why are the \code{dlat} and \code{dlim}
+#' returned for this one?
+#' @seealso Called by \code{\link{init}}, calls \code{\link{invProj}},
+#' \code{\link{Proj}}, \code{\link{mercator}} and \code{\link{plot_nogrid}}.
+#' @keywords aplot
+#' @export gridaxes
 gridaxes <-
 function(limx, limy, scale, b0, xyratio, grid, col, reitur, smareitur, axratio,
 	axlabels, b1, l1, projection, dlat, dlon)
