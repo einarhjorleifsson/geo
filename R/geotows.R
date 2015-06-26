@@ -5,14 +5,20 @@
 #' in the data frame describing the position.
 #' 
 #' 
-#' @param lat %% ~~Describe \code{lat} here~~
-#' @param lon %% ~~Describe \code{lon} here~~
-#' @param lat1 %% ~~Describe \code{lat1} here~~
-#' @param lon1 %% ~~Describe \code{lon1} here~~
-#' @param col %% ~~Describe \code{col} here~~
-#' @param col.names %% ~~Describe \code{col.names} here~~
-#' @param \dots %% ~~Describe \code{\dots} here~~
-#' @keywords ~kwd1
+#' @param lat Vector of start position latitudes, dataframe of start positions 
+#'  given in columns \code{lat} and \code{lon} or dataframe with start and end 
+#'  positions given as columns \code{col.names}.
+#' @param lon When given, vector of start position longitudes. 
+#' @param lat1 When given, vector of end position latitudes or a data frame 
+#'  of end positions given in columns \code{lat} and \code{lon}.
+#' @param lon1 When given, vector of end position longitudes.
+#' @param col Color of line segments.
+#' @param col.names  Column names of start lat and lon and end lat and lon 
+#'  when  \code{tows} are given in a single dataframe. Defaults to column
+#'  names in the Hafro/MRI database table \code{fiskar.stodvar}.
+#' @param \dots Additional arguments to \code{geolines}.
+#' @seealso \code{\link{geolines}}
+#' @keywords aplot
 #' @export geotows
 geotows <-
 function(lat, lon, lat1, lon1, col=1,col.names = c("kastad.n.breidd", 

@@ -1,13 +1,19 @@
 #' Plot different kinds of symbols at the data points.
 #' 
 #' The function plots different kinds of symbols at the data points defined by
-#' lat, lon. There are four categories of symbols: \enumerate{ \itemDefault.
-#' Shapes whose size is proportional to z or sqrt(z).  \itemShapes where
-#' certain color, shading or size represents certain range of z. Similar to
-#' contour program.  \itemFilled circles where certain size represents certain
-#' range of z, specified with fill.circles = TRUE.  \itemCharacters or
-#' character strings represent the different ranges of z, specified with
-#' characters = TRUE. } There are seven types of shapes: circles, squares,
+#' lat, lon. There are four categories of symbols: 
+#'
+#' \describe{
+#'  \item{\strong{Default}}{Shapes whose size is proportional to z or sqrt(z).}
+#'  \item{\strong{Categories}}{Shapes where certain color, shading or size
+#'   represents certain range of z. Similar to contour program.}
+#'  \item{\strong{Filled circles}}{Certain size represents certain range of z,
+#'   specified with fill.circles = TRUE.}
+#'  \item{\strong{Characters}}{Characters or character strings represent the
+#'   different ranges of z, specified with characters = TRUE.}
+#' }
+#'
+#' There are seven types of shapes: circles, squares,
 #' rectangles, vbars (vertical bars), hbars(horisontal bars) , perbars
 #' (perpendicular bars), parbars (parallel bars)
 #' 

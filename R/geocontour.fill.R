@@ -86,7 +86,7 @@
 #' @param bcrat bordercheck ratio, how much outside the border we will allow to
 #' be plotted, default is bcrat = 0.05 meaning that we will allow the plot to
 #' go 5\% off the border.
-#' @param limits
+#' @param limits To be described.
 #' @param col.names the names of the columns in grid, the first argument will
 #' be plotted on the x-axes and the second on the y-axes.  Default is col.names
 #' = c("lat", "lon").
@@ -98,12 +98,12 @@
 #' 1, 1-2, 2 <, if label.resolution = 0.1 labels will be presented < 1, 1.1-2,
 #' 2.1<, see also minsym.  If label.resolution = "none", the labels will
 #' present the lowest number of the interval with each color.
-#' @param labtxt
-#' @param boxcol
-#' @param first.color.trans
-#' @param mai
-#' @param leftrat
-#' @param labbox
+#' @param labtxt To be described.
+#' @param boxcol Colour of box around labels (legend?).
+#' @param first.color.trans To be described.
+#' @param mai \code{par} argument 'margin in inches'?
+#' @param leftrat To be described.
+#' @param labbox should a box be drawn around labels (legend?).
 #' @param csi Size of character.  This parameter can not be set in R but for
 #' compatibility with old Splus scripts the parameter cex is readjusted by cex
 #' = cex*csi/0.12.  Use of this parameter is not recommended.  Default value is
