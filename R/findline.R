@@ -15,6 +15,7 @@
 #' \code{\link{prepare.line}} and \code{\link{Proj}}.
 #' @keywords manip
 #' @export findline
+#' @useDynLib geo define_multiline
 findline <-
 function(x, xb, plot = T)
 {

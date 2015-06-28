@@ -5,9 +5,11 @@ Title: Draw and Annotate Maps, Especially Charts of the North Atlantic
 Author: Hoskuldur Bjornsson, Sigurdur Thor Jonsson, Arni Magnusson, and Bjarki
   Thor Elvarsson
 Maintainer: Sigurdur Thor Jonsson <sigurdur@hafro.is>
-Depends: maps, mapdata, splines, R (>= 2.10.0)
+Depends: maps, mapdata, R (>= 2.10.0)
+Imports: splines
 LazyData: yes
 Description: Used by Hafro staff to draw maps showing the distribution of
   fishing intensity and catches, and of survey data for Icelandic fish stocks.
   Potentially useful for others.
 License: GPL (>= 2)
+Encoding: UTF-8
