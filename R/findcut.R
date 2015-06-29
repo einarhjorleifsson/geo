@@ -15,6 +15,7 @@
 #' \code{\link{geoinside}}.
 #' @keywords manip logic
 #' @export findcut
+#' @useDynLib geo define_poly
 findcut <-
 function(x, xb, in.or.out)
 {

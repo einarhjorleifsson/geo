@@ -56,6 +56,7 @@
 #' \code{\link{geocontour.fill}}.
 #' @keywords <!--Put one or more s-keyword tags here-->
 #' @export combine.rt
+#' @useDynLib geo combinert
 combine.rt <-
 function(lat, lon, z, grlat, grlon = 0, fun, fill = F, reg = 0, minnumber = 2,
 	wsp = 0, wz = 0, wlat = 0, xy = F, rat = 0.2, type)

@@ -43,7 +43,7 @@ function(labels="roman", diagrams=FALSE, col="black", lwd=3, col.lines="grey80",
                          -4.6,-4.6,-18,-18,-9.3,-9.3,-18,-18,-5.6,-42,-18,-18,-42,-42,-27,-15,-15,-18,-18,-42,-42,-27,
                          -27,-40,-40,-11,-11,-27,-27,-44,-44))
   chunks <- lapply(split(coords,coords$Area), function(x) split(x,x$Line))
-  map(xlim=c(-55,55), ylim=c(30,90), fill=TRUE, col=col)
+  maps::map(xlim=c(-55,55), ylim=c(30,90), fill=TRUE, col=col)
   sapply(1:12, function(i) areaLines(chunks[[i]], lwd=lwd, col=col.lines))
   if(!identical(labels, FALSE))
   { #             I    II   III    IV      V     VI    VII   VIII     IX    X  XII   XIV
