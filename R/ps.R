@@ -44,7 +44,7 @@ nknots + 2.)[
         Aknots <- sort(c(rep(xrange, 4.), knots))
         derivs <- c(2., 2., 1., 1., integer(length(x)))
         x <- c(period, period, x)
-        junk <- spline.des(Aknots, x, sorder, derivs)$design
+        junk <- splines::spline.des(Aknots, x, sorder, derivs)$design
         secondder <- junk[1.:2.,  ]
         firstder <- junk[3.:4.,  ]
         junk <- junk[,  - c(1., ncol(junk))]

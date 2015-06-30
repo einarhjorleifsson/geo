@@ -55,8 +55,8 @@
 #' square.
 #' @param degree Degree of drift polynomial for universal kriging.  0, 1 or 2.
 #' Default 0.
-#' @param lognormal
-#' @param zeroset
+#' @param lognormal To be described.
+#' @param zeroset To be described.
 #' @return A vector with the calculated values at the gridpoints.
 #' @section Side Effects: The program is partly written in C so if it crashes
 #' Splus is exited.

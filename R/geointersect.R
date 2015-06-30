@@ -3,11 +3,12 @@
 #' Find intersection of 2 polygons
 #' 
 #' 
-#' @param data %% ~~Describe \code{data} here~~
-#' @param border %% ~~Describe \code{border} here~~
-#' @param in.or.out %% ~~Describe \code{in.or.out} here~~
+#' @param data Polygon.
+#' @param border Polygon to intersect with/complement from.
+#' @param in.or.out Whether to take intersect of ‘x’ and ‘xb’ (0) 
+#' or complement of ‘x’ in ‘xb’ (1). Default 0.
 #' @seealso \code{\link{findcut}}, \code{\link{invProj}}, \code{\link{Proj}}
-#' @keywords ~kwd1
+#' @keywords logic manip 
 #' @export geointersect
 geointersect <-
 function(data, border, in.or.out)

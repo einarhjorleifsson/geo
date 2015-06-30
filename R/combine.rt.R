@@ -22,7 +22,7 @@
 #' @param grlat Latitude of defined grid.
 #' @param grlon Longitude of defined grid.  If 0 grlat is a list with
 #' components \$lat and \$lon.
-#' @param fun
+#' @param fun Function (?).
 #' @param fill If fill is T the center points of squares where the number of
 #' points does not reach the minimum is set to zero.  Good for data like
 #' trawlers report where it can be assumed that there is little fish where they
@@ -38,11 +38,11 @@
 #' the weight is zero within a square unweighed mean is used.
 #' @param wlat Weighing to find the mean latitude and mean longitude.  It is
 #' often reasonable to weigh the latitude and the longitude by the catch.
-#' @param xy
+#' @param xy Projected? Default unprojected (lat/lon) values, \code{FALSE}.
 #' @param rat Ratio for "rm.outliers".  If rat is for example 0.2 20\% of the
 #' points on each side are moved.  i.e. the middle 60\% are kept.  Default
 #' value is 0.6.
-#' @param type
+#' @param type Only value with description \code{rm.outliers}.
 #' @section Value: <s-example> List with components \$lat,\$lon,\$z,\$n and
 #' \$fill.  \$lat mean latitude of points within each square.  \$lon mean
 #' longitude of points within each square \$z sum, mean, variance or median of

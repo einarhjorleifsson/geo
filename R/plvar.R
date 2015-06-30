@@ -9,8 +9,9 @@
 #' 
 #' </s-example>
 #' @param n The plot covers n times the range.  Default value is all the data.
-#' @param fit
-#' @param type
+#' @param fit Also plot lines and fitted values (\code{TRUE}, the default, 
+#' or plot variogram only as points (\code{FALSE}). 
+#' @param type Plot type, given to \code{plot}, defaults to points.
 #' @return No values returned.
 #' @seealso \code{\link{pointkriging}}, \code{\link{grid}}.
 #' @export plvar
