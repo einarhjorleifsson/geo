@@ -9,4 +9,5 @@
 #' @author Höskuldur Björnsson
 #' @importFrom splines spline.des
 #' @import maps mapdata
+#' @useDynLib geo
 NULL
