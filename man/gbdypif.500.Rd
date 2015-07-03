@@ -3,28 +3,16 @@
 \docType{data}
 \name{gbdypif.500}
 \alias{gbdypif.500}
-\title{~~ data name/kind ... ~~}
-\format{The format is: List of 2 $ reg1:'data.frame': 435 obs. of 2
-variables: ..$ lat: num [1:435] 63.2 63.2 63.2 63.2 63.2 ...  ..$ lon: num
-[1:435] -20.0 -20.0 -20.1 -20.2 -20.2 ...  $ reg2:'data.frame': 255 obs. of
-2 variables: ..$ lat: num [1:255] 64.8 64.8 64.8 64.9 64.9 ...  ..$ lon: num
-[1:255] -11.3 -11.2 -11.2 -11.1 -11.0 ...}
-\source{
-~~ reference to a publication or URL from which the data were
-obtained ~~
-}
+\title{GEBCO 500 m isobath around Iceland.}
+\format{A list of 2 data.frames of the following 2 variables:
+\describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
+vector} }}
 \description{
-~~ A concise (1-5 lines) description of the dataset. ~~
-}
-\details{
-~~ If necessary, more details than the __description__ above ~~
+Given as 2 polygons.
 }
 \examples{
 data(gbdypif.500)
 ## maybe str(gbdypif.500) ; plot(gbdypif.500) ...
-}
-\references{
-~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}
 

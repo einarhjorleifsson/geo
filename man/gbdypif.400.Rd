@@ -3,39 +3,16 @@
 \docType{data}
 \name{gbdypif.400}
 \alias{gbdypif.400}
-\title{~~ data name/kind ... ~~}
-\format{The format is: List of 4 $ reg1:'data.frame': 434 obs. of 2
-variables: ..$ lat: num [1:434] 64.1 64.1 64.2 64.3 64.3 ...  ..$ lon: num
-[1:434] -13.0 -12.9 -12.7 -12.6 -12.4 ...  ..- attr(*, "reg2")='data.frame':
-32 obs. of 2 variables: .. ..$ lat: num [1:32] 63.5 63.6 63.6 63.6 63.6 ...
-.. ..$ lon: num [1:32] -24.7 -24.7 -24.8 -24.8 -24.9 ...  ..- attr(*,
-"reg3")='data.frame': 120 obs. of 2 variables: .. ..$ lat: num [1:120] 63.6
-63.6 63.6 63.7 63.7 ...  .. ..$ lon: num [1:120] -11.9 -11.9 -11.9 -12.0
--12.0 ...  ..- attr(*, "reg4")='data.frame': 27 obs. of 2 variables: .. ..$
-lat: num [1:27] 63.3 63.3 63.3 63.4 63.4 ...  .. ..$ lon: num [1:27] -10.0
--10.1 -10.2 -10.3 -10.3 ...  $ reg2:'data.frame': 32 obs. of 2 variables:
-..$ lat: num [1:32] 63.5 63.6 63.6 63.6 63.6 ...  ..$ lon: num [1:32] -24.7
--24.7 -24.8 -24.8 -24.9 ...  $ reg3:'data.frame': 120 obs. of 2 variables:
-..$ lat: num [1:120] 63.6 63.6 63.6 63.7 63.7 ...  ..$ lon: num [1:120]
--11.9 -11.9 -11.9 -12.0 -12.0 ...  $ reg4:'data.frame': 27 obs. of 2
-variables: ..$ lat: num [1:27] 63.3 63.3 63.3 63.4 63.4 ...  ..$ lon: num
-[1:27] -10.0 -10.1 -10.2 -10.3 -10.3 ...}
-\source{
-~~ reference to a publication or URL from which the data were
-obtained ~~
-}
+\title{GEBCO 400 m isobath around Iceland.}
+\format{A list of 4 data.frames of the following 2 variables:
+\describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
+vector} }}
 \description{
-~~ A concise (1-5 lines) description of the dataset. ~~
-}
-\details{
-~~ If necessary, more details than the __description__ above ~~
+Given as 4 polygons.
 }
 \examples{
 data(gbdypif.400)
 ## maybe str(gbdypif.400) ; plot(gbdypif.400) ...
-}
-\references{
-~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}
 

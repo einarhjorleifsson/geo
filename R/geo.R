@@ -7,7 +7,6 @@
 #' @name geo-package
 #' @aliases geo
 #' @author Höskuldur Björnsson
-#' @importFrom splines spline.des
-#' @import maps mapdata
+#' @import maps mapdata splines methods utils grDevices graphics stats
 #' @useDynLib geo
 NULL

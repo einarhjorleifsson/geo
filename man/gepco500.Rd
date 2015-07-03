@@ -3,26 +3,16 @@
 \docType{data}
 \name{gepco500}
 \alias{gepco500}
-\title{~~ data name/kind ... ~~}
+\title{GEBCO 500 m isobath extending around the Faroes.}
 \format{A data frame with 679 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
 vector} }}
-\source{
-~~ reference to a publication or URL from which the data were
-obtained ~~
-}
 \description{
-~~ A concise (1-5 lines) description of the dataset. ~~
-}
-\details{
-~~ If necessary, more details than the __description__ above ~~
+GEBCO 500 m isobath extending around the Faroes.
 }
 \examples{
 data(gepco500)
 ## maybe str(gepco500) ; plot(gepco500) ...
-}
-\references{
-~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}
 

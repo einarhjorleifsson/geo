@@ -10,9 +10,6 @@ vector} }}
 \source{
 Unknown.
 }
-\usage{
-island
-}
 \description{
 Icelandic coastline from unknown source.
 }

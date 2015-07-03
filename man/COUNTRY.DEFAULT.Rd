@@ -5,14 +5,8 @@
 \alias{COUNTRY.DEFAULT}
 \title{Default country for \code{geo}.}
 \format{The format is: chr "island"}
-\usage{
-COUNTRY.DEFAULT
-}
 \description{
 Default country, \code{island}, given as a character string.
-}
-\details{
-~~ If necessary, more details than the __description__ above ~~
 }
 \keyword{datasets}
 

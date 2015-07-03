@@ -3,15 +3,11 @@
 \docType{data}
 \name{geopar.std}
 \alias{geopar.std}
-\title{A standard set of parameters for \code{geo}.}
+\title{Parameters for the geo plot functions.}
 \format{The format is: List of 5 $ xlim: num [1:2] -30 -10 $ ylim: num [1:2]
 62.2 67.9 $ plt : num [1:4] 0.0816 0.9534 0.1218 0.9004 $ fig : num [1:4] 0
 1 0 1 $ mex : num 1}
-\usage{
-geopar.std
-}
 \description{
-A dataset for use in \code{\link{geoplot}}.
+Parameters for the geo plot functions.
 }
-\keyword{datasets}
 

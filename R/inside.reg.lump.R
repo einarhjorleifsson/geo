@@ -108,7 +108,7 @@
 inside.reg.lump <-
 function (data) 
 {
-    if (nrow(data) > 1) 
+    if (nrow(data) > 1)
         tmpdata <- data[, c("lat", "lon")]
     else tmpdata <- as.data.frame(data[, c("lat", "lon")])
     tmpdata$area <- rep(0, nrow(tmpdata))

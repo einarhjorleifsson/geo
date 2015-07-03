@@ -10,9 +10,6 @@ at 100 m intervals in the range 200 to 5500 m.}
 \source{
 IBCAO and/or GEBCO
 }
-\usage{
-gbdypi
-}
 \description{
 An list of isobaths from IBCAO and/or GEBCO for selected depths.
 }

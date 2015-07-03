@@ -7,12 +7,6 @@
 \format{A data frame with 88 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
 vector} }}
-\source{
-Some official source hopefully.
-}
-\usage{
-twohmiles
-}
 \description{
 Outline of the Icelandic EEZ established somehow.
 }
@@ -20,8 +14,4 @@ Outline of the Icelandic EEZ established somehow.
 Needs checking, e.g. has recent agreement with Faroes been
 implemented. Compare with what's on \url{www.marineregions.org}.
 }
-\references{
-Needed.
-}
-\keyword{datasets}
 

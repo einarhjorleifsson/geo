@@ -10,9 +10,6 @@ vector} }}
 \source{
 Possibly from package \code{mapdata}.
 }
-\usage{
-faeroes
-}
 \description{
 Old version of the coastline of the Faroes, with legacy typo.
 }

@@ -3,28 +3,15 @@
 \docType{data}
 \name{nonsetpar}
 \alias{nonsetpar}
-\title{~~ data name/kind ... ~~}
+\title{Some parameter settings.}
 \format{The format is: chr [1:8] "omd" "oma" "omi" "fin" "fig" "mfcol"
 "mfrow" ...}
-\source{
-~~ reference to a publication or URL from which the data were
-obtained ~~
-}
-\usage{
-nonsetpar
-}
 \description{
-~~ A concise (1-5 lines) description of the dataset. ~~
-}
-\details{
-~~ If necessary, more details than the __description__ above ~~
+Needs elaboration or to be removed.
 }
 \examples{
 data(nonsetpar)
 ## maybe str(nonsetpar) ; plot(nonsetpar) ...
-}
-\references{
-~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}
 

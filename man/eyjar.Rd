@@ -14,9 +14,6 @@ given as decimal degrees.  }}
 GSHHS - A Global Self-consistent, Hierarchical, High-resolution
 Shoreline Database, version 2.2.
 }
-\usage{
-eyjar
-}
 \description{
 Islands around Iceland with area greater than 0.25 square km
 }

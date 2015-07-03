@@ -3,26 +3,12 @@
 \docType{data}
 \name{gbdypi.400}
 \alias{gbdypi.400}
-\title{~~ data name/kind ... ~~}
+\title{GEBCO 400 m isobath in the N-Atlantic.}
 \format{A data frame with 7201 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
 vector} }}
-\source{
-~~ reference to a publication or URL from which the data were
-obtained ~~
-}
 \description{
-~~ A concise (1-5 lines) description of the dataset. ~~
-}
-\details{
-~~ If necessary, more details than the __description__ above ~~
-}
-\examples{
-data(gbdypi.400)
-## maybe str(gbdypi.400) ; plot(gbdypi.400) ...
-}
-\references{
-~~ possibly secondary sources and usages ~~
+GEBCO 400 m isobath in the N-Atlantic.
 }
 \keyword{datasets}
 

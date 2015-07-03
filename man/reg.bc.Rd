@@ -40,12 +40,6 @@ obs. of 2 variables: ..$ lat: num [1:188] 63 63 63 63 63 ...  ..$ lon: num
 -4 -21 -21 -27 -8 - attr(*, "area")= num [1:16] 50437 31953 22803 10501
 16024 ...  - attr(*, "txtloc")=List of 2 ..$ lat: num [1:16] 64.6 66.6 67
 66.3 67 ...  ..$ lon: num [1:16] -25.6 -24.2 -19.2 -19.4 -15.6 ...}
-\source{
-taken from 'fjolst' on 17.12.12
-}
-\usage{
-reg.bc
-}
 \description{
 A list of the Bormicon regions
 }
@@ -56,8 +50,4 @@ Used in \code{\link{inside.reg.bc}} to assign region numbers to data.
 data(reg.bc)
 ## maybe str(reg.bc) ; plot(reg.bc) ...
 }
-\references{
-Bormicon/gadget fjorit
-}
-\keyword{datasets}
 

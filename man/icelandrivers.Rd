@@ -7,13 +7,6 @@
 \format{A data frame with 1124 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
 vector} }}
-\source{
-~~ reference to a publication or URL from which the data were
-obtained ~~
-}
-\usage{
-icelandrivers
-}
 \description{
 Icelandic rivers, from gshhg probably.
 }
@@ -23,9 +16,6 @@ Icelandic rivers, from gshhg probably.
 \examples{
 data(icelandrivers)
 ## maybe str(icelandrivers) ; plot(icelandrivers) ...
-}
-\references{
-~~ possibly secondary sources and usages ~~
 }
 \keyword{datasets}
 
