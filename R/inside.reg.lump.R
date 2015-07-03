@@ -113,7 +113,7 @@ function (data)
     else tmpdata <- as.data.frame(data[, c("lat", "lon")])
     tmpdata$area <- rep(0, nrow(tmpdata))
     i <- 1
-    ind <- geoinside(tmpdata, reg = reg.lump[[i]], option = 0, 
+    ind <- geoinside(tmpdata, reg = geo::reg.lump[[i]], option = 0, 
         robust = FALSE)
     if (length(ind) > 0) 
         tmpdata[ind, "area"] <- i
@@ -122,7 +122,7 @@ function (data)
     j1 <- c(1:length(j))
     j1 <- j1[j == T]
     if (length(j1) > 0) {
-        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+        ind <- geoinside(tmpdata[j1, ], reg = geo::reg.lump[[i]], 
             option = 0, robust = FALSE)
         if (length(ind) > 0) 
             tmpdata[j1[ind], "area"] <- i
@@ -132,7 +132,7 @@ function (data)
     j1 <- c(1:length(j))
     j1 <- j1[j == T]
     if (length(j1) > 0) {
-        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+        ind <- geoinside(tmpdata[j1, ], reg = geo::reg.lump[[i]], 
             option = 0, robust = FALSE)
         if (length(ind) > 0) 
             tmpdata[j1[ind], "area"] <- i
@@ -142,7 +142,7 @@ function (data)
     j1 <- c(1:length(j))
     j1 <- j1[j == T]
     if (length(j1) > 0) {
-        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+        ind <- geoinside(tmpdata[j1, ], reg = geo::reg.lump[[i]], 
             option = 0, robust = FALSE)
         if (length(ind) > 0) 
             tmpdata[j1[ind], "area"] <- i
@@ -152,7 +152,7 @@ function (data)
     j1 <- c(1:length(j))
     j1 <- j1[j == T]
     if (length(j1) > 0) {
-        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+        ind <- geoinside(tmpdata[j1, ], reg = geo::reg.lump[[i]], 
             option = 0, robust = FALSE)
         if (length(ind) > 0) 
             tmpdata[j1[ind], "area"] <- i
@@ -162,7 +162,7 @@ function (data)
     j1 <- c(1:length(j))
     j1 <- j1[j == T]
     if (length(j1) > 0) {
-        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+        ind <- geoinside(tmpdata[j1, ], reg = geo::reg.lump[[i]], 
             option = 0, robust = FALSE)
         if (length(ind) > 0) 
             tmpdata[j1[ind], "area"] <- i
@@ -172,7 +172,7 @@ function (data)
     j1 <- c(1:length(j))
     j1 <- j1[j == T]
     if (length(j1) > 0) {
-        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+        ind <- geoinside(tmpdata[j1, ], reg = geo::reg.lump[[i]], 
             option = 0, robust = FALSE)
         if (length(ind) > 0) 
             tmpdata[j1[ind], "area"] <- i
@@ -182,7 +182,7 @@ function (data)
     j1 <- c(1:length(j))
     j1 <- j1[j == T]
     if (length(j1) > 0) {
-        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+        ind <- geoinside(tmpdata[j1, ], reg = geo::reg.lump[[i]], 
             option = 0, robust = FALSE)
         if (length(ind) > 0) 
             tmpdata[j1[ind], "area"] <- i

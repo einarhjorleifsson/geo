@@ -348,13 +348,13 @@ function(lat = NULL, lon = 0, type = "p", pch = "*", xlim = c(0, 0),
 	if(is.null(lat) && xlim[2] == xlim[1] && ylim[2] == ylim[1] && !locator
 		) {
 		#std plot
-		if(!multfig) par(fig = geopar.std$fig)
+		if(!multfig) par(fig = geo::geopar.std$fig)
 		if(!multfig)
-			par(plt = geopar.std$plt)
-		xlim <- geopar.std$xlim
-		ylim <- geopar.std$ylim
+			par(plt = geo::geopar.std$plt)
+		xlim <- geo::geopar.std$xlim
+		ylim <- geo::geopar.std$ylim
 		if(!multfig)
-			par(mex = geopar.std$mex)
+			par(mex = geo::geopar.std$mex)
 	}
 	if(is.null(lat)) {
 		lat <- c(65, 66)
@@ -383,10 +383,10 @@ function(lat = NULL, lon = 0, type = "p", pch = "*", xlim = c(0, 0),
 	else {
 		if(length(country) == 1)
                   if(country == "default")
-                    eval(parse(text = paste("country <- ",COUNTRY.DEFAULT)))
+                    eval(parse(text = paste("country <- ",geo::COUNTRY.DEFAULT)))
 	}
 	init(lat, lon = lon, type = type, pch = pch, xlim = xlim, ylim = ylim,
-		b0 = b0, r = r, country = country, xlab = xlab, ylab = ylab,
+		b0 = b0, r = r, xlab = xlab, ylab = ylab,
 		option = option, grid = grid, new = new, cont = cont, cex = cex,
 		col = col, lcont = lcont, plotit = plotit, reitur = reitur,
 		smareitur = smareitur, reittext = reittext, axratio = axratio,

@@ -41,10 +41,10 @@
 #' \tabular{ll}{ \samp{***1} \tab \samp{***2}\cr \samp{***3} \tab
 #' \samp{***4}\cr }
 #' @author Arni Magnusson.
-#' @seealso \code{\link[geo]{geoplot}} and \code{\link[geo]{reitaplott}} are
+#' @seealso \code{\link{geoplot}} and \code{\link{reitaplott}} are
 #' the underlying drawing functions.
 #' 
-#' \code{\link[grDevices]{colorRampPalette}} can be used to create a ramp of
+#' \code{\link{colorRampPalette}} can be used to create a ramp of
 #' level-specific colors.
 #' @keywords hplot spatial
 #' @examples
@@ -79,6 +79,6 @@ geoSR <- function(sr, z, levels, grid=FALSE, ...)
 
   geoplot(grid=grid, ...)
   invisible(capture.output(reitaplott(reitur=sr, smareitur=NULL, z=z, levels=levels, colors=seq(levels), density=0)))
-  geopolygon(island)
-  geolines(island)
+  geopolygon(geo::island)
+  geolines(geo::island)
 }

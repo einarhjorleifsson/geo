@@ -9,7 +9,6 @@
 #' @param xlim,ylim Plot limits
 #' @param b0 Base latitude
 #' @param r Plot ratio, multiplier on \code{diff(x_or_ylim)}
-#' @param country Country to be plotted, default \code{island}
 #' @param xlab,ylab Labels for x- and y-axes, default \code{"Longitude",
 #' "Latitude"}
 #' @param option Method of determining plot extent, default \code{"cut"}
@@ -53,7 +52,7 @@
 #' @export init
 init <-
 function(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0), ylim = c(0, 0),
-	b0 = 65, r = 1.05, country = island, xlab = "Longitude", ylab = 
+	b0 = 65, r = 1.05, xlab = "Longitude", ylab = 
 	"Latitude", option = "cut", grid = T, new = F, cont = F, cex =0.7,
 	col = 1, lcont = c(0.13, 0.21), plotit = T, reitur = F, smareitur = F,
 	reittext = F, axratio = 1, lwd = 0, axlabels = T, oldpar, projection = 

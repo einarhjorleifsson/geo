@@ -10,7 +10,7 @@
 #' @export geoplotpalette
 geoplotpalette <-
 function(){
-  x  <- hsv(postcol[,1],postcol[,2],postcol[,3])
+  x  <- hsv(geo::postcol[,1],geo::postcol[,2],geo::postcol[,3])
   palette(x)
 }
 

@@ -53,16 +53,16 @@ function(depth, col, lty, lwd, depthlab, depthlabcex)
 			txt <- paste("geolines(gbdypi.", dypi, 
 				",col=col[i],lwd=lwd[i],lty=lty[i])", sep = "")
 		else {
-			j <- match(dypi, names(gbdypi))
+			j <- match(dypi, names(geo::gbdypi))
 			txt <- paste("geolines(gbdypi[[", j, 
 				"]],col=col[i],lwd=lwd[i],lty=lty[i])", sep = 
 				"")
 		}
 		eval(parse(text = txt))
 		if(!missing(depthlab)) {
-			k <- !is.na(match(depthloc$z, dypi))
+			k <- !is.na(match(geo::depthloc$z, dypi))
 			if(any(k))
-				geotext(depthloc[k,  ], z = depthloc[k, "z"],
+				geotext(geo::depthloc[k,  ], z = geo::depthloc[k, "z"],
 					cex = depthlabcex)
 		}
 	}

@@ -25,8 +25,7 @@ Fits periodic spline to data.
 Needs elaboration.
 }
 \seealso{
-Called by \code{\link{Closed.curve}}, calls
-\code{\link[splines]{spline.des}}.
+\code{\link{Closed.curve}}, \code{\link{spline.des}}.
 }
 \keyword{smooth}
 

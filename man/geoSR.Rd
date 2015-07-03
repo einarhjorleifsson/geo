@@ -82,10 +82,10 @@ geoSR(724:715, z, lev)
 Arni Magnusson.
 }
 \seealso{
-\code{\link[geo]{geoplot}} and \code{\link[geo]{reitaplott}} are
+\code{\link{geoplot}} and \code{\link{reitaplott}} are
 the underlying drawing functions.
 
-\code{\link[grDevices]{colorRampPalette}} can be used to create a ramp of
+\code{\link{colorRampPalette}} can be used to create a ramp of
 level-specific colors.
 }
 \keyword{hplot}

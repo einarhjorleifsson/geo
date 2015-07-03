@@ -40,7 +40,7 @@
 #' @export setgrid
 setgrid <-
 function(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0), ylim = c(0, 0),
-	b0 = 65, r = 1.1, country = island, xlab = "default", ylab = "default",
+	b0 = 65, r = 1.1, country = geo::island, xlab = "default", ylab = "default",
 	option = "cut", reg = 0, dx = c(0, 0), nx = c(0, 0), grpkt = 0, scale
 	 = "km", find = F, new = F, grid = T, projection = "Mercator", n = 2500,
 	b1 = b0, nholes = 0)
