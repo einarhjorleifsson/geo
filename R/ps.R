@@ -9,7 +9,7 @@
 #' @param period Period, default \code{c(0, 2*pi)} ?
 #' @return \item{basis}{Basis of periodic spline ?}
 #' @note Needs elaboration.
-#' @seealso \code{\link{Closed.curve}}, \code{\link{spline.des}}.
+#' @seealso \code{\link{Closed.curve}}, \code{\link[splines]{spline.des}}.
 #' @keywords smooth
 #' @export ps
 ps <-
@@ -43,7 +43,7 @@ nknots + 2.)[
         Aknots <- sort(c(rep(xrange, 4.), knots))
         derivs <- c(2., 2., 1., 1., integer(length(x)))
         x <- c(period, period, x)
-        junk <- spline.des(Aknots, x, sorder, derivs)$design
+        junk <- splines::spline.des(Aknots, x, sorder, derivs)$design
         secondder <- junk[1.:2.,  ]
         firstder <- junk[3.:4.,  ]
         junk <- junk[,  - c(1., ncol(junk))]

@@ -6,7 +6,7 @@
 #' @param n Number of columns and rows of colors to display
 #' @param col A vector of colors
 #' @return No value returned, plots an \code{n} by \code{n} grid of colors.
-#' @seealso \code{\link{colorRampPalette}}
+#' @seealso \code{\link[grDevices]{colorRampPalette}}
 #' @keywords color
 #' @examples
 #' 
@@ -16,7 +16,7 @@
 #' 
 #' # Define a palette with some colors:
 #' 
-#' ramp <- colorRampPalette(c("khaki1", "gold", "orange", 
+#' ramp <- grDevices::colorRampPalette(c("khaki1", "gold", "orange", 
 #'   "darkorange2", "red", "darkred", "black"))
 #' 
 #' # number of columns and rows to display

@@ -44,7 +44,7 @@
 #' @seealso \code{\link{geoplot}} and \code{\link{reitaplott}} are
 #' the underlying drawing functions.
 #' 
-#' \code{\link{colorRampPalette}} can be used to create a ramp of
+#' \code{\link[grDevices]{colorRampPalette}} can be used to create a ramp of
 #' level-specific colors.
 #' @keywords hplot spatial
 #' @examples
@@ -63,7 +63,7 @@
 #' # Color ramp
 #' z <- (0:10) / 10
 #' lev <- (0:10) / 10
-#' ramp <- colorRampPalette(c("khaki1","gold","orange","darkorange2","red",
+#' ramp <- grDevices::colorRampPalette(c("khaki1","gold","orange","darkorange2","red",
 #'                            "darkred","black"))
 #' names(lev) <- ramp(length(lev))
 #' geoSR(724:715, z, lev)
