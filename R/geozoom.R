@@ -20,13 +20,11 @@
 #'     # Return to previous plot, here geoplot().
 #' 
 #' @export geozoom
-geozoom <-
-function()
+geozoom <- function()
 {
-	geopar <- getOption("geopar")
-	if(as.character(geopar$command[length(geopar$command)]) != "123")
-		com <- c(geopar$command, zoom = 123)
-	else com <- geopar$command
-	eval(com)
+  geopar <- getOption("geopar")
+  if (as.character(geopar$command[length(geopar$command)]) != "123") 
+    com <- c(geopar$command, zoom = 123) else com <- geopar$command
+  eval(com)
 }
-
+ 

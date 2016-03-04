@@ -10,9 +10,8 @@
 #' @seealso Called by \code{\link{variogram}}.
 #' @keywords manip
 #' @export pdistx
-pdistx <-
-function(y, x, y1, x1)
+pdistx <- function(y, x, y1, x1)
 {
-	return(sqrt((x - x1)^2. + (y - y1)^2.))
+  return(sqrt((x - x1)^2 + (y - y1)^2))
 }
-
+ 

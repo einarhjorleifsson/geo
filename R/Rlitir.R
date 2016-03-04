@@ -16,8 +16,8 @@
 #' 
 #' # Define a palette with some colors:
 #' 
-#' ramp <- grDevices::colorRampPalette(c("khaki1", "gold", "orange", 
-#'   "darkorange2", "red", "darkred", "black"))
+#' ramp <- grDevices::colorRampPalette(c('khaki1', 'gold', 'orange', 
+#'   'darkorange2', 'red', 'darkred', 'black'))
 #' 
 #' # number of columns and rows to display
 #' 
@@ -26,23 +26,23 @@
 #' Rlitir(n, ramp(n^2))
 #' 
 #' @export Rlitir
-Rlitir <-
-function(n,col)
+Rlitir <- function(n, col)
 {
-        x <- c(1:(n + 1))
-         plot(x, x)
-        y <- x
-        for(j in 1:(n - 1)) {
-                for(i in 1:(n + 1)) {
-                        polygon(c(x[i], x[i + 1], x[i + 1], x[i]), c(y[j],
-                                y[j], y[j + 1], y[j + 1]), col = col[((j - 1) *
-                                n + i - 1)])
-                        lines(c(x[i], x[i + 1], x[i + 1], x[i], x[i]), c(y[
-                                j], y[j], y[j + 1], y[j + 1], y[j]), col = 1)
-                        text((x[i] + x[i + 1])/2, (y[j] + y[j + 1])/2,
-                                as.character((j - 1) * n + i - 1))
-                }
-        }
-        return(invisible())
+  x <- c(1:(n + 1))
+  plot(x, x)
+  y <- x
+  for (j in 1:(n - 1))
+  {
+    for (i in 1:(n + 1))
+    {
+      polygon(c(x[i], x[i + 1], x[i + 1], x[i]), c(y[j], y[j], y[j + 
+        1], y[j + 1]), col = col[((j - 1) * n + i - 1)])
+      lines(c(x[i], x[i + 1], x[i + 1], x[i], x[i]), c(y[j], y[j], 
+        y[j + 1], y[j + 1], y[j]), col = 1)
+      text((x[i] + x[i + 1])/2, (y[j] + y[j + 1])/2, as.character((j - 
+        1) * n + i - 1))
+    }
+  }
+  return(invisible())
 }
-
+ 

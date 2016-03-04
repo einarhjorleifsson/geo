@@ -15,8 +15,8 @@
 #' @seealso \code{\link{geoarea}.}
 #' @keywords arith
 #' @export geoarea.old
-"geoarea.old"<-
-function(reg, n,robust=T) {
+"geoarea.old" <- function(reg, n, robust = T)
+{
   reg$lat <- (reg$lat * pi)/180
   reg$lon <- (reg$lon * pi)/180
   rlat <- range(reg$lat[!is.na(reg$lat)])
@@ -34,46 +34,32 @@ function(reg, n,robust=T) {
   longr <- c(t(matrix(lon, nlon, nlat)))
   area <- dlon * dlat * 40528473 * cos((rlat[2] + rlat[1])/2)
   border <- adapt(reg$lat, reg$lon)
-  inside<- rep(0, length(latgr))
-  if(robust) {
+  inside <- rep(0, length(latgr))
+  if (robust)
+  {
     a <- a1 <- rep(0, length(reg$lat))
     
-    inside<- .C("marghc",
-	       as.double(longr),
-	       as.double(latgr),
-	       as.integer(length(latgr)),
-	       as.double(border$lon),
-	       as.double(border$lat),
-	       as.integer(length(border$lat)),
-	       as.integer(border$lxv),
-	       as.integer(length(border$lxv)),
-	       as.integer(inside),
-	       as.double(a),
-	       as.double(a1))
-    inside<- inside[[9]]
-  }
-  else {
-    tmpinni <- rep(0,length(border$lxv))
-    inside<- .C("geomarghc",
-	       as.double(longr),
-	       as.double(latgr),
-	       as.integer(length(latgr)),
-	       as.double(border$lon),
-	       as.double(border$lat),
-	       as.integer(border$lxv),
-	       as.integer(length(border$lxv)),
-	       as.integer(inside),
-	       as.integer(tmpinni))
-    inside<- inside[[8]]
+    inside <- .C("marghc", as.double(longr), as.double(latgr), as.integer(length(latgr)), 
+      as.double(border$lon), as.double(border$lat), as.integer(length(border$lat)), 
+      as.integer(border$lxv), as.integer(length(border$lxv)), as.integer(inside), 
+      as.double(a), as.double(a1))
+    inside <- inside[[9]]
+  } else
+  {
+    tmpinni <- rep(0, length(border$lxv))
+    inside <- .C("geomarghc", as.double(longr), as.double(latgr), as.integer(length(latgr)), 
+      as.double(border$lon), as.double(border$lat), as.integer(border$lxv), 
+      as.integer(length(border$lxv)), as.integer(inside), as.integer(tmpinni))
+    inside <- inside[[8]]
   }
   ind <- c(1:length(inside))
-  ind <- ind[inside!= 0]
+  ind <- ind[inside != 0]
   mlat <- mean(latgr[ind])
   mlon <- mean(longr[ind])
   cmlat <- mean(cos(latgr[ind]))
   cl <- mean(cos(latgr))
-  rat <- length(ind)/length(inside)	# fraction outside
+  rat <- length(ind)/length(inside)  # fraction outside
   inside.area <- (rat * area * cmlat)/cl
   return(inside.area)
 }
-
+ 

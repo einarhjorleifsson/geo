@@ -15,31 +15,30 @@
 #' @param l1 The longitude defining the Lambert projection, default is the l1
 #' defined in geopar.
 #' @param projection The projection to be inversed, legal projections are
-#' "mercator", "Lambert" and "none". Default is the projection defined in
+#' 'mercator', 'Lambert' and 'none'. Default is the projection defined in
 #' geopar.
-#' @return The function returns a list containing if projection = "none" \$x
+#' @return The function returns a list containing if projection = 'none' \$x
 #' and \$y, if projection is mercator or Lambert it includes the projection
 #' (\$projection), the scale (\$scale), \$lat and \$lon and \$x and \$y.
 #' @seealso \code{\link{invProj}}, \code{\link{geopar}}, \code{\link{geoplot}}.
 #' @export invProj
-invProj <-
-function(x, y = NULL, scale = getOption("geopar")$scale,
-         b0 = getOption("geopar")$b0, b1 = getOption("geopar")$b1,
-         l1 = getOption("geopar")$l1,
-         projection = getOption("geopar")$projection)
-{
-	if(is.null(y)) {
-		y <- x$y
-		x <- x$x
-	}
-	if(projection == "Lambert") {
-		x <- invlambert(x, y, b0, l1, b1, scale, old = T)
-	}
-	else if(projection == "Mercator") {
-		x <- invmerc(x, y, scale, b0)
-	}
-	else if(projection == "none") {
-		x <- list(x = x, y = y)
-	}
+invProj <- function(x, y = NULL, scale = getOption("geopar")$scale, b0 = getOption("geopar")$b0, 
+  b1 = getOption("geopar")$b1, l1 = getOption("geopar")$l1, projection = getOption("geopar")$projection)
+  {
+  if (is.null(y))
+  {
+    y <- x$y
+    x <- x$x
+  }
+  if (projection == "Lambert")
+  {
+    x <- invlambert(x, y, b0, l1, b1, scale, old = T)
+  } else if (projection == "Mercator")
+  {
+    x <- invmerc(x, y, scale, b0)
+  } else if (projection == "none")
+  {
+    x <- list(x = x, y = y)
+  }
 }
-
+ 

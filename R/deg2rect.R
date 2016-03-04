@@ -56,40 +56,39 @@
 
 #' @export d2r
 #' @rdname deg2rect
-d2r <-
-function(lat, lon = NULL)
+d2r <- function(lat, lon = NULL)
 {
-	if(is.null(lon)) {
-		lon <- lat$lon
-		lat <- lat$lat
-	}
-	lat <- lat + 1e-06
-	lon <- lon - 1e-06
-	lon <-  - lon
-	r <- (floor(lat) - 60) * 100 + floor(lon)
-	ifelse(lat - floor(lat) > 0.5, r + 50, r)
-}
-
-#' @export d2sr
-#' @rdname deg2rect
-d2sr <-
-function(lat, lon = NULL)
-{
-  if(is.null(lon)) {
+  if (is.null(lon))
+  {
     lon <- lat$lon
     lat <- lat$lat
   }
   lat <- lat + 1e-06
   lon <- lon - 1e-06
-  lon <-  - lon
+  lon <- -lon
+  r <- (floor(lat) - 60) * 100 + floor(lon)
+  ifelse(lat - floor(lat) > 0.5, r + 50, r)
+}
+
+#' @export d2sr
+#' @rdname deg2rect
+d2sr <- function(lat, lon = NULL)
+{
+  if (is.null(lon))
+  {
+    lon <- lat$lon
+    lat <- lat$lat
+  }
+  lat <- lat + 1e-06
+  lon <- lon - 1e-06
+  lon <- -lon
   r <- (floor(lat) - 60) * 100 + floor(lon)
   r <- ifelse(lat - floor(lat) > 0.5, r + 50, r)
   deg <- r2d(r)
-  lon <-  - lon
-  dlat <-  - (lat - deg$lat)
-  dlon <-  - (lon - deg$lon)
-  dl <- sign(dlat + 1e-07) + 2 * sign(dlon + 
-    1e-07) + 4
+  lon <- -lon
+  dlat <- -(lat - deg$lat)
+  dlon <- -(lon - deg$lon)
+  dl <- sign(dlat + 1e-07) + 2 * sign(dlon + 1e-07) + 4
   sr <- c(2, 0, 4, 0, 1, 0, 3)
   sr <- sr[dl]
   floor(r * 10 + sr)
@@ -97,32 +96,32 @@ function(lat, lon = NULL)
 
 #' @export d2mr
 #' @rdname deg2rect
-d2mr <-
-function(lat, lon = NULL, dlat = 5, dlon = 10)
+d2mr <- function(lat, lon = NULL, dlat = 5, dlon = 10)
 {
-  if(is.null(lon)) {
+  if (is.null(lon))
+  {
     lon <- lat$lon
     lat <- lat$lat
   }
   lat <- lat + 1e-06
   lon <- lon - 1e-06
   lat <- geoconvert(lat, inverse = TRUE)
-  lon <-  - geoconvert(lon, inverse = TRUE)
-  mlat <- lat %% 10000 %/% 100
-  mlon <- lon %% 10000 %/% 100
-  mlat <- mlat %/% dlat
-  mlon <- mlon %/% dlon
-  lat <- lat %/% 10000
-  lon <- lon %/% 10000
-  lat * 1000000 + mlat * 10000 + lon * 100 + mlon
+  lon <- -geoconvert(lon, inverse = TRUE)
+  mlat <- lat%%10000%/%100
+  mlon <- lon%%10000%/%100
+  mlat <- mlat%/%dlat
+  mlon <- mlon%/%dlon
+  lat <- lat%/%10000
+  lon <- lon%/%10000
+  lat * 1e+06 + mlat * 10000 + lon * 100 + mlon
 }
 
 #' @export d2dr
 #' @rdname deg2rect
-d2dr <-
-function(lat, lon = NULL, dlat = 1, dlon = 2, startLat = 50)
+d2dr <- function(lat, lon = NULL, dlat = 1, dlon = 2, startLat = 50)
 {
-  if(is.null(lon)) {
+  if (is.null(lon))
+  {
     lon <- lat$lon
     lat <- lat$lat
   }
@@ -131,6 +130,6 @@ function(lat, lon = NULL, dlat = 1, dlon = 2, startLat = 50)
   hemi <- sign(lon)
   lat <- floor(lat)%%startLat
   lon <- floor(lon)
-  hemi*(100*lat%/%dlat + hemi*floor(lon/dlon))
+  hemi * (100 * lat%/%dlat + hemi * floor(lon/dlon))
 }
-
+ 
