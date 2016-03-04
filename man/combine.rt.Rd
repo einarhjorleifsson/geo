@@ -44,7 +44,7 @@ often reasonable to weigh the latitude and the longitude by the catch.}
 
 \item{xy}{Projected? Default unprojected (lat/lon) values, \code{FALSE}.}
 
-\item{rat}{Ratio for "rm.outliers".  If rat is for example 0.2 20\% of the
+\item{rat}{Ratio for 'rm.outliers'.  If rat is for example 0.2 20\% of the
 points on each side are moved.  i.e. the middle 60\% are kept.  Default
 value is 0.6.}
 
@@ -73,7 +73,7 @@ The program works quite fast even for very large datasets.
 longitude of points within each square \$z sum, mean, variance or median of
 data \$n Number of points behind point.
 
-If type = "rm.outliers" \$n this component stores the number of the square
+If type = 'rm.outliers' \$n this component stores the number of the square
 corresponding to each point. \$fill If 0 there are datapoints behind the
 points else it is an artificial point. (fill = T) </s-example>
 }

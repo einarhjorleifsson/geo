@@ -15,7 +15,7 @@ invlambert(x, y, lat0, lon0, lat1, scale = "km", old = F)
 
 \item{lat1}{Second latitude defining the projection}
 
-\item{scale}{Scale of the input data, "km" default, redundant ??}
+\item{scale}{Scale of the input data, 'km' default, redundant ??}
 
 \item{old}{Old method, seldom used???}
 }

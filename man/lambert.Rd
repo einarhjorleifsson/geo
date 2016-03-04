@@ -15,7 +15,7 @@ lambert(lat, lon, lat0, lon0, lat1, scale = "km", old = F)
 
 \item{lat1}{Second latitude defining the projection}
 
-\item{scale}{Scale, default "km", redundant ??}
+\item{scale}{Scale, default 'km', redundant ??}
 
 \item{old}{Old method ?}
 }

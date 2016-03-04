@@ -25,8 +25,8 @@ Rlitir(12, 1:144)
 
 # Define a palette with some colors:
 
-ramp <- grDevices::colorRampPalette(c("khaki1", "gold", "orange", 
-  "darkorange2", "red", "darkred", "black"))
+ramp <- grDevices::colorRampPalette(c('khaki1', 'gold', 'orange', 
+  'darkorange2', 'red', 'darkred', 'black'))
 
 # number of columns and rows to display
 

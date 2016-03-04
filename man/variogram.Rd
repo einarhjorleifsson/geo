@@ -28,7 +28,7 @@ the mean.  Default value is T}
 Default value is F which means that they are used.  In all cases zero-zero
 pairs are not used when the variogram is estimated.}
 
-\item{scale}{"km" or "nmi". Default is "km".}
+\item{scale}{'km' or 'nmi'. Default is 'km'.}
 
 \item{evennumber}{If T distance classes are chosen so approximately the same
 number of points is in each distance class.  Else even distance increments
@@ -40,7 +40,7 @@ are used.}
 included.  Default is zero.}
 
 \item{col.names}{if lat is a dataframe col.names should contain the names of
-the vectors containing the x and y coordinates, default is c("lat","lon")}
+the vectors containing the x and y coordinates, default is c('lat','lon')}
 }
 \description{
 The program calculates the distance between each pair of datapoints.  The

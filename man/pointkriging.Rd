@@ -25,7 +25,7 @@ a list with components \$lat and \$lon.}
 \item{maxnumber}{Number of neighbourhood points used , default is 16.  In
 some cases 16 points are not found.}
 
-\item{scale}{Scale "km" or "miles", default is "miles".}
+\item{scale}{Scale 'km' or 'miles', default is 'miles'.}
 
 \item{option}{Option used for selecting neighbourhood points.  Allowed
 values 1,2,3 and 4.  Default value is one.  For further information see

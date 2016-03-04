@@ -26,15 +26,15 @@ be closed again by dev.off()
 \examples{
 
 \dontrun{
-colps(file="map1.ps",height=6,width=5) 
+colps(file='map1.ps',height=6,width=5) 
 geoplot(xlim=c(-28,-10),ylim=c(64,69))
 geosymbols(data,z=data$value,circles=0.2,sqrt=T)
-geopolygon(island,col="white")# paint white over the symbols 
+geopolygon(island,col='white')# paint white over the symbols 
 geolines(island) # that are inside the country.  (island) 
 dev.off() 
 
 # same example in a different way.  
-colps(file="map1.ps",height=6,width=5,bg="white") 
+colps(file='map1.ps',height=6,width=5,bg='white') 
 geoplot(xlim=c(-28,-10),ylim=c(64,69))
 geosymbols(data,z=data$value,circles=0.2,sqrt=T)
 geopolygon(island,col=0)#col 0 is now white

@@ -11,7 +11,7 @@ pre2s(skr, rownames = F, dots.in.text = T)
 
 \item{rownames}{Should first column be used as row names? Default FALSE}
 
-\item{dots.in.text}{Should underscores in column names be replaced with "."?
+\item{dots.in.text}{Should underscores in column names be replaced with '.'?
 Default TRUE}
 }
 \value{

@@ -12,7 +12,7 @@ giveborder(nholes = 0)
 \value{
 Returns a composite list of the following compents: \item{reg}{List
 with components number of components (?)} \item{x, y}{Coordinates when
-\code{geopar$projection == "none"}} \item{lat, lon}{Geographical coordinates
+\code{geopar$projection == 'none'}} \item{lat, lon}{Geographical coordinates
 for other projections (Mercator and Lambert (?)} \item{lxv}{ID of region
 (?)}
 }

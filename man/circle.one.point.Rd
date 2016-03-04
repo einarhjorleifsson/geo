@@ -21,7 +21,7 @@ given in lat and lon is found
 
 ## draws a circle around Iceland
 geoplot()
-geolines(circle.one.point(65,-19,150,n=50),lwd=3,col="red")
+geolines(circle.one.point(65,-19,150,n=50),lwd=3,col='red')
 
 }
 \keyword{hplot}

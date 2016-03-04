@@ -28,7 +28,7 @@ data(eyjar)
 # islands in the Breidafjordur region
 geoplot(xlim = list(lat = c(64.85, 65.65), lon = c(-24.6, -21.7)),
   country = bisland, grid = FALSE)
-geolines(eyjar, col = "magenta")
+geolines(eyjar, col = 'magenta')
 ## maybe str(eyjar) ; plot(eyjar) ...
 
 }

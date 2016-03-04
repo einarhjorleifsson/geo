@@ -18,7 +18,7 @@ the scale defined in geopar (the scale defined when the plot is
 initialized).}
 
 \item{b0}{if projection = mercator b0 is the center of the mercator
-projection. If projection = "Lambert" b0 and b1 are lattitudes defining the
+projection. If projection = 'Lambert' b0 and b1 are lattitudes defining the
 Lambert projection. Default are the b0 and b1 defined in geopar.}
 
 \item{b1}{Second defining latitute for Lambert projection}
@@ -27,14 +27,14 @@ Lambert projection. Default are the b0 and b1 defined in geopar.}
 defined in geopar.}
 
 \item{projection}{The projection of the data, legal projections are
-"Mercator", "Lambert" and "none".}
+'Mercator', 'Lambert' and 'none'.}
 
-\item{col.names}{This has to be set to the default value of c("lon", "lat"),
-otherwise projection will be set to "none".}
+\item{col.names}{This has to be set to the default value of c('lon', 'lat'),
+otherwise projection will be set to 'none'.}
 }
 \value{
-The function returns a list containing if projection = "none" x and
-y, if projection is "Mercator" or "Lambert" it includes the projection
+The function returns a list containing if projection = 'none' x and
+y, if projection is 'Mercator' or 'Lambert' it includes the projection
 (\$projection), the scale (\$scale), \$lat and \$lon and \$x and \$y (the
 distance in \$scale from point (0,0) in spherical coordinates.
 }

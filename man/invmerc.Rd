@@ -9,7 +9,7 @@ invmerc(x, y, scale = "km", b0 = 65)
 \arguments{
 \item{x, y}{The input data to be inversely projected as two vectors}
 
-\item{scale}{Scale of the input data, "km" default, all other values imply
+\item{scale}{Scale of the input data, 'km' default, all other values imply
 nautical miles.}
 
 \item{b0}{Latitude defining the projection.}

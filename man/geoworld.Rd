@@ -11,7 +11,7 @@ geoworld(regions = ".", exact = FALSE, boundary = TRUE, fill = FALSE,
 }
 \arguments{
 \item{regions}{Allows plotting only a certain part of the world to speed up
-the function, such as regions = "iceland". Default is plotting what is
+the function, such as regions = 'iceland'. Default is plotting what is
 insidie the map.}
 
 \item{exact}{Draws a more exact plot.}
@@ -74,19 +74,19 @@ plot are drawn.
 library(map) # world coastlines and programs 
 library(mapdata) # more detailed coastlines
 geoplot(xlim = c(20, 70), ylim = c(15, 34))
-geoworld(database = "worldHires", fill = TRUE, col = 30, allowed.size = 1e5)
+geoworld(database = 'worldHires', fill = TRUE, col = 30, allowed.size = 1e5)
 
 geoplot(xlim = c(20, 70), ylim = c(15, 34), dlat = 10, dlon = 10)
-geoworld(database = "world", fill = TRUE, col = 30) #
+geoworld(database = 'world', fill = TRUE, col = 30) #
 
 geoplot(xlim = c(-10, 70), ylim = c(71, 81), b0 = 80, 
   dlat = 2, dlon = 10) # 0 must be high here else
-geoworld(database = "world", fill = TRUE, col = 30) #the plot fails.  
+geoworld(database = 'world', fill = TRUE, col = 30) #the plot fails.  
 
 # Lambert projection, 
 geoplot(xlim = c(-10, 70), ylim = c(71, 81), 
-  dlat = 2, dlon = 10, projection = "Lambert")
-geoworld(database = "world", fill = TRUE, col = 30) 
+  dlat = 2, dlon = 10, projection = 'Lambert')
+geoworld(database = 'world', fill = TRUE, col = 30) 
 }
 }
 \seealso{

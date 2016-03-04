@@ -55,7 +55,7 @@ geoplot(grid = FALSE)
 tmp <- island
 tmp$sr <- d2sr(island) 
 srects <- aggregate(. ~ sr, tmp, length)
-names(srects)[2] <- "count"
+names(srects)[2] <- 'count'
 srects$lev <- cut(srects$count, c(0, 1, 5, 10, 20, 50, 100))
 mycol <- heat.colors(length(unique(srects$lev)))
 srgrid(srects$sr, fill = TRUE, col = mycol[srects$lev])

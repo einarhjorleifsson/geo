@@ -84,7 +84,7 @@ lat\$grpt\$lon.  Only used in special cases.}
 Gives the lower left and upper right corner of the box where the labels are
 put.  Default value is 0 that means no labels are put on the drawing (except
 when geopar\$cont = TRUE).  l1 is best given by geolocator or directly by
-specifying label.location = "locator".}
+specifying label.location = 'locator'.}
 
 \item{labels.only}{If labels.only is true no contours are drawn but only
 labels.  Default value is false.  Order of the commands could be:
@@ -109,16 +109,16 @@ go 5\% off the border.}
 
 \item{col.names}{the names of the columns in grid, the first argument will
 be plotted on the x-axes and the second on the y-axes.  Default is col.names
-= c("lat", "lon").}
+= c('lat', 'lon').}
 
-\item{minsym}{minimum symbol, default is "<", meaning that if levels = c(1,
-2), labels will be presented as < 1, 1-2, 2 <, but if minsym = " " labels
+\item{minsym}{minimum symbol, default is '<', meaning that if levels = c(1,
+2), labels will be presented as < 1, 1-2, 2 <, but if minsym = ' ' labels
 will be presented as 1, 1-2, 2.  See also labels.resolution.}
 
 \item{label.resolution}{the resolution (precision) of the label numbers,
 default is 0, meaning that if levels = c(1, 2), labels will be presented <
 1, 1-2, 2 <, if label.resolution = 0.1 labels will be presented < 1, 1.1-2,
-2.1<, see also minsym.  If label.resolution = "none", the labels will
+2.1<, see also minsym.  If label.resolution = 'none', the labels will
 present the lowest number of the interval with each color.}
 
 \item{labtxt}{To be described.}
@@ -147,8 +147,8 @@ contains two different contour plot programs, geocontour and
 geocontour.fill.  Geocontour draws contour lines and geocontour.fill fills
 in between the lines.  Hardcopy of the plot can be done on a color
 postscript printer or on a black and white postscript printer.  In all cases
-the "postscript" driver included with Splus has to be used.  There is
-another postscript driver included with Splus called "pscript".  That driver
+the 'postscript' driver included with Splus has to be used.  There is
+another postscript driver included with Splus called 'pscript'.  That driver
 is used when a plot is on the screen and the print button is pressed.  That
 can not be done when the postscript driver is used as described here after.
 }
@@ -224,7 +224,7 @@ used to add things to the contourplot. </s-example>
 
   # Need the data.frame botnv.2004 to be able to compile this
   # example, if not attached use: 
-  # >attach("/usr/local/reikn/Splus5/Aflaskyrslur/Data")
+  # >attach('/usr/local/reikn/Splus5/Aflaskyrslur/Data')
 
   codgrd <-list(lat = seq(62, 68, by = 0.1), lon = seq(-30, -9, by = 0.25))
   # A grid is made.
@@ -232,7 +232,7 @@ used to add things to the contourplot. </s-example>
   # Location of the label.
 
   tmp <- combine.rt(botnv.2004$lat, botnv.2004$lon,
-                    botnv.2004$torskur, codgrd, fun = "sum", fill = TRUE)
+                    botnv.2004$torskur, codgrd, fun = 'sum', fill = TRUE)
   # The data is read into the grid with combine.rt.
 
   tmp$z <- tmp$z/(cos(tmp$lat*pi/180)*0.1*60*0.25*60)
@@ -246,7 +246,7 @@ used to add things to the contourplot. </s-example>
                     maxnumber = 80, maxdist = 30, set = -1) 
   # Dataset smoothened with pointkriging.
 
-  geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE, axlabels = TRUE, type = "n")
+  geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE, axlabels = TRUE, type = 'n')
   # Plot initialized
   level = c(160, 200, 320, 500, 700, 1000, 2000, 3000, 4000, 5000, 6000)
   # Levels for geocontour.fill
@@ -295,7 +295,7 @@ used to add things to the contourplot. </s-example>
 
   par(mfrow = c(1, 1),  mai = rep(0, 4))
   # Set up graphic parameters.
-  geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE, axlabels = FALSE, type = "n")
+  geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE, axlabels = FALSE, type = 'n')
   # Draw a background with Iceland with geoplot.
 
   geocontour.fill(zfj, levels = m.lev, col = m.col, working.space = 300000) 
@@ -304,7 +304,7 @@ used to add things to the contourplot. </s-example>
   geopolygon(gbdypif.500, col = 0, exterior = TRUE, r = 0)
   # Remove contours outside gbdypif.500.
   geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE,          # Replot.
-          axlabels = FALSE, type = "n", new = TRUE)
+          axlabels = FALSE, type = 'n', new = TRUE)
 
   geopolygon(island, col = 43)
   # Remove contours inside Iceland and color Iceland.

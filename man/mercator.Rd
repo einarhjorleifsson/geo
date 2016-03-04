@@ -9,7 +9,7 @@ mercator(lat, lon, scale = "km", b0 = 65)
 \arguments{
 \item{lat, lon}{Coordinates as latitude and longitude vectors}
 
-\item{scale}{Scale of the output, "km" default, all other values imply
+\item{scale}{Scale of the output, 'km' default, all other values imply
 nautical miles.}
 
 \item{b0}{Latitude defining the projection.}

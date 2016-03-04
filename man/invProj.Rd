@@ -25,11 +25,11 @@ Lambert projection. Default are the b0 and b1 defined in geopar.}
 defined in geopar.}
 
 \item{projection}{The projection to be inversed, legal projections are
-"mercator", "Lambert" and "none". Default is the projection defined in
+'mercator', 'Lambert' and 'none'. Default is the projection defined in
 geopar.}
 }
 \value{
-The function returns a list containing if projection = "none" \$x
+The function returns a list containing if projection = 'none' \$x
 and \$y, if projection is mercator or Lambert it includes the projection
 (\$projection), the scale (\$scale), \$lat and \$lon and \$x and \$y.
 }

@@ -9,9 +9,9 @@ s2pre(data, file = "splus.pre", na.replace = "")
 \arguments{
 \item{data}{Data.frame or matrix object.}
 
-\item{file}{Name of the output file ("Splus.pre" by default).}
+\item{file}{Name of the output file ('Splus.pre' by default).}
 
-\item{na.replace}{A character to replace NA with in the output file ("" by
+\item{na.replace}{A character to replace NA with in the output file ('' by
 default).}
 }
 \value{
@@ -23,7 +23,7 @@ Data.frame or matrix object is written to a prelude-file, that inherits
 names/dimnames attributes from the object.
 }
 \section{Side Effects}{
- No warning is given if the filename "file" already
+ No warning is given if the filename 'file' already
 exists -- it is simply over-written.
 }
 \examples{
@@ -41,7 +41,7 @@ exists -- it is simply over-written.
         8     18         NA       b
         9     19 0.06387665       b
        10     20 0.06607930       b
-       > s2pre(tmp.test.frame,file="prufa.pre",na.replace="-1")
+       > s2pre(tmp.test.frame,file='prufa.pre',na.replace='-1')
        >
 
        From UNIX:

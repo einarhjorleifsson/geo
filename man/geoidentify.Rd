@@ -46,7 +46,7 @@ point is identified by positioning the cursor over the point and pressing
 the left button.  To exit identify press the middle button (both buttons on
 a two button mouse) while the cursor is in the graphics window.  The same
 procedure is used under the suntools driver.  This function may also be used
-with the "tek" drivers.
+with the 'tek' drivers.
 
 Some devices that do not allow interaction prompt you for an x,y pair. The
 nearest point to the locator position is identified, but must be at most 0.5
