@@ -33,7 +33,7 @@ Needs elaboration, or could be dropped/hidden, use merge instead.
 names(apply.shrink(depthloc$z, 
   list(a=round(depthloc$lat), b=round(depthloc$lon)), mean))
 names(apply.shrink(depthloc$z, list(round(depthloc$lat), 
-  round(depthloc$lon)), mean, names = c("a", "b", "z")))
+  round(depthloc$lon)), mean, names = c('a', 'b', 'z')))
 
 }
 \seealso{

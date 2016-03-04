@@ -24,10 +24,10 @@ Adds arrow to a plot, given base and point position along with half angle.
 \examples{
 
 geoplot()
-Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=60,col="brown")
-Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=45,col="red")
-Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=30,col="green")
-Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=30,col="blue")
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=60,col='brown')
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=45,col='red')
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=30,col='green')
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=30,col='blue')
 
 }
 \seealso{

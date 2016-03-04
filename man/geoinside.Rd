@@ -23,9 +23,9 @@ option = 5: returns a vector of indexes to data, data[return[i],] is the
 i-th point in data inside reg.  option = 6: returns a vector of indexes to
 data, data[return[i],] is the i-th point in data outside reg. </s-example>}
 
-\item{col.names}{Default col.names = c("lat","lon"), determines the names of
+\item{col.names}{Default col.names = c('lat','lon'), determines the names of
 the base vectors of the space we are viewing.  May be replaced by for
-instance col.names = c("x","y")}
+instance col.names = c('x','y')}
 
 \item{na.rm}{If true values where \$lat or \$lon are NA are removed.
 Default is false.}
@@ -69,16 +69,16 @@ index vector.
    stations<-stations[!is.na(stations$lat),]
 
    geoplot(grid=F)
-   geopoints(stations,pch=".",col=25)
-   title(main="Before geoinside")
+   geopoints(stations,pch='.',col=25)
+   title(main='Before geoinside')
 
    sea.stations <- geoinside(stations,island,option=2)
    # Removes those datapoints from stations where
    # measurments took place inside Iceland (misspells).        
  
    geoplot(grid=F) 
-   geopoints(sea.stations,pch=".",col=25)       
-   title(main="After geoinside")
+   geopoints(sea.stations,pch='.',col=25)       
+   title(main='After geoinside')
 
    #######################################################
   

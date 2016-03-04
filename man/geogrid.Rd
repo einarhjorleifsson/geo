@@ -15,7 +15,7 @@ and \code{lat$lon} (\code{x$x} and \code{x$y} if projection = none).}
 
 \item{col}{Color number used, default value is 1 (black).}
 
-\item{type}{"l" means line and "p" points.  Default is "l".}
+\item{type}{'l' means line and 'p' points.  Default is 'l'.}
 
 \item{lwd}{Linewidth.  Default value is the value set when the program was
 called.}
@@ -23,7 +23,7 @@ called.}
 \item{lty}{Linetype.  Default value is the value set when the program was
 called.}
 
-\item{pch}{Type of symbol at gridpoints default is "+".}
+\item{pch}{Type of symbol at gridpoints default is '+'.}
 
 \item{nx}{sets smoothness of curved Lambert parallels}
 }

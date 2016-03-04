@@ -11,7 +11,7 @@ adapt(reg.lat, reg.lon, projection = "Mercator")
 
 \item{reg.lon}{Longitude or x-coordinate}
 
-\item{projection}{Projection, default "Mercator", "none" denotes x/y
+\item{projection}{Projection, default 'Mercator', 'none' denotes x/y
 coordinates}
 }
 \value{

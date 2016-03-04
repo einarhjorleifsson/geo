@@ -25,10 +25,10 @@ init(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0), ylim = c(0,
 
 \item{r}{Plot ratio, multiplier on \code{diff(x_or_ylim)}}
 
-\item{xlab, ylab}{Labels for x- and y-axes, default \code{"Longitude",
-"Latitude"}}
+\item{xlab, ylab}{Labels for x- and y-axes, default \code{'Longitude',
+'Latitude'}}
 
-\item{option}{Method of determining plot extent, default \code{"cut"}}
+\item{option}{Method of determining plot extent, default \code{'cut'}}
 
 \item{grid}{Should a grid be drawn, default \code{TRUE}}
 

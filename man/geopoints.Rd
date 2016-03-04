@@ -13,12 +13,12 @@ as lat, lon or x,y depending on the projection. The program plots the
 transformation of the data. Parameters for the projection are stored in the
 list geopar. Similar to the Splus function points.}
 
-\item{pch}{Type of symbol used options are for example. " ","*","+","." or
-anything else, letter, digit, or symbol. Default is "*"}
+\item{pch}{Type of symbol used options are for example. ' ','*','+','.' or
+anything else, letter, digit, or symbol. Default is '*'}
 
 \item{cex}{Relative size of character and symbols (see the help on the
 parameter cex).  The size of plotted characeters is cex time the parameter
-csi that can be seen by \code{par("csi")}.  In earlier versions of geoplot
+csi that can be seen by \code{par('csi')}.  In earlier versions of geoplot
 the parameter csi was set but csi is a parameter that can not be set in R.
 The parameter mkh should probably be used for symbols instead of cex, see
 help on graphical parameters.}
@@ -55,11 +55,11 @@ to the Splus function points.
 \dontrun{       geopoints(deg)                  # Plots * in the points
                                                 # defined by deg$lat,deg$lon.
 
-       geopoints(deg$lat,deg$lon,pch="*",col=5) # Same but uses color 5.
+       geopoints(deg$lat,deg$lon,pch='*',col=5) # Same but uses color 5.
 
        geopoints(fd$x,fd$y)                     # Points in x,y when
                                                 # projection in geoplot
-                                                # was "none".
+                                                # was 'none'.
 }
 }
 \seealso{

@@ -72,7 +72,7 @@ Default value is true.}
 \code{x},\code{y}) Gives the lower left and upper right corner of the box
 where the labels are put.  Default value is 0 that means no labels are put
 on the drawing (except when \code{geopar$cont = TRUE}).  l1 is best given by
-geolocator or directly by specifying label.location = "locator".}
+geolocator or directly by specifying label.location = 'locator'.}
 
 \item{lwd}{Line with.  Default value is the value set when the program was
 called.}
@@ -90,7 +90,7 @@ when the program was called.}
 \item{set}{Set something.}
 
 \item{col.names}{the names of the vectors containing the data in grd.
-Default is col.names = c("lon","lat").}
+Default is col.names = c('lon','lat').}
 
 \item{csi}{Size of character.  This parameter can not be set in R but for
 compatibility with old Splus scripts the parameter cex is readjusted by cex
@@ -104,7 +104,7 @@ No values returned.
 }
 \description{
 The function plots contour lines. It is based on the Splus function
-"contour" with some changes and extensions.  The main change is that
+'contour' with some changes and extensions.  The main change is that
 coordinates are in lat, lon instead of x, y. There are two additions : 1.
 Possibility to have many colors.  2.  Possibility to only plot lines within
 certain borders.  3.  Possibility to have labels in a box on the plot.
@@ -122,7 +122,7 @@ Note: to plot contour plots with fill between lines you use geocontour.fill
      geoplot(deg, cont = TRUE)                        # Plot initialized.
      geocontour(grd$lat,grd$lon,z,nlevels = 10,
                 neg = FALSE,reg = reg,colors = TRUE)          # Contour plot.
-     geoplot(deg,pch = " ",cont = TRUE,new = TRUE)           # Plot over contourplot.
+     geoplot(deg,pch = ' ',cont = TRUE,new = TRUE)           # Plot over contourplot.
 }
      ###################################################
      # Example 2 Sea Tempeture.                        #
@@ -180,7 +180,7 @@ Note: to plot contour plots with fill between lines you use geocontour.fill
      
      geoplot(grid = FALSE)
      my.data <- geoinside(my.data,island,robust = FALSE,option = 2)
-     geopoints(my.data,pch = ".")
+     geopoints(my.data,pch = '.')
 
      fit <- gam(temp~lo(lat,lon,span = 0.1),data = my.data)
      # see help(gam)

@@ -72,7 +72,7 @@ be initialized by geoplot.
      # is correctly defined as closed polygon so it is the only one that 
      # can be painted by geopolygon.
 
-     geoplot(grid = FALSE, type = "n")
+     geoplot(grid = FALSE, type = 'n')
      # Star by setting up the plot.
      geopolygon(gbdypif.500, col = 4, exterior = FALSE, r = 0)
      # Use geopolygon to draw the 500 m area. 

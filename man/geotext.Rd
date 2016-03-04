@@ -62,12 +62,12 @@ used.
 
 \dontrun{       geotext(deg,z=z)    # plot text at points deg$lat,deg$lon
        
-       geotext(deg$lat,deg$lon,z,csi=0.06) # Same, size of text 0.06".
+       geotext(deg$lat,deg$lon,z,csi=0.06) # Same, size of text 0.06'.
        
-       geotext(x$x,x$y,x$z,aftertext="km",pretext="distance")
-       # If geopar$projection="none"
+       geotext(x$x,x$y,x$z,aftertext='km',pretext='distance')
+       # If geopar$projection='none'
        
-       geotext(x,z=x$z,aftertext=" km",pretext="distance",angle =90) 
+       geotext(x,z=x$z,aftertext=' km',pretext='distance',angle =90) 
        # Same text written vertically.
 
 
@@ -88,15 +88,15 @@ used.
        # Sharpen lines around Iceland.
 
        num <- 1:10
-       lab <- paste("Nr.",num,sep="")
-       # Make string vector with "Nr.1".."Nr.10" for geotext.
+       lab <- paste('Nr.',num,sep='')
+       # Make string vector with 'Nr.1'..'Nr.10' for geotext.
 
-       geopoints(lat,lon,pch="*",col=5)
+       geopoints(lat,lon,pch='*',col=5)
        # Redraw the data in a new color the * mark at points.
 
        geotext(lon=lon,lat=lat,z=lab,col=155)
        # With geotext we put one element from lab at each data point.
-       title(main="10 Random Data Point")
+       title(main='10 Random Data Point')
        # Add title
 }
 }

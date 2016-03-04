@@ -35,7 +35,7 @@ more than one \code{r, sr, mr} or \code{dr}.
 }
 \examples{
 
-  geoplot(island, type = "n", grid = FALSE)
+  geoplot(island, type = 'n', grid = FALSE)
   geolines(rPeri(468))
   geolines(srPeri(4681))
 

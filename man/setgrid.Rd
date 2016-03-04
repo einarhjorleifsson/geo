@@ -30,7 +30,7 @@ setgrid(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0),
 
 \item{xlab, ylab}{Labels for x and y axes}
 
-\item{option}{Method for determining plotted area extent, default "cut" (to
+\item{option}{Method for determining plotted area extent, default 'cut' (to
 the range of the data)}
 
 \item{reg}{Region to be gridded, can be set interactively}
@@ -42,7 +42,7 @@ the range of the data)}
 \item{grpkt}{Gridpoints can also be supplied to the function for plotting
 (??????????)}
 
-\item{scale}{Projection scale (general \code{geo} default is "km")}
+\item{scale}{Projection scale (general \code{geo} default is 'km')}
 
 \item{find}{Should the gridpoints within \code{reg} be determined?}
 

@@ -65,7 +65,7 @@ geoSR(561:560, c(0.3,3), levels=c(0,1,10))
 
 # Pass colors along with levels
 lev <- c(0, 1, 10)
-names(lev) <- c("brown", "orange", NA)
+names(lev) <- c('brown', 'orange', NA)
 geoSR(561:560, c(0.3,3), lev)
 
 # Subsquares
@@ -74,8 +74,8 @@ geoSR(5611:5612, c(0.3,3), lev)
 # Color ramp
 z <- (0:10) / 10
 lev <- (0:10) / 10
-ramp <- grDevices::colorRampPalette(c("khaki1","gold","orange","darkorange2","red",
-                           "darkred","black"))
+ramp <- grDevices::colorRampPalette(c('khaki1','gold','orange','darkorange2','red',
+                           'darkred','black'))
 names(lev) <- ramp(length(lev))
 geoSR(724:715, z, lev)
 

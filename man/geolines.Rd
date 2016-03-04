@@ -44,7 +44,7 @@ No values returned.
 \description{
 Add lines to a plot initialized by geoplot. Data is stored as lat, lon or
 x,y. Lists are assumed to have the components \code{$x} and \code{$y} if
-projection in geoplot was "none", else \code{$lat},\code{$lon}. The program
+projection in geoplot was 'none', else \code{$lat},\code{$lon}. The program
 transforms the data as specified in geoplot. Similar to the Splus function
 lies.
 }
@@ -59,7 +59,7 @@ parameters for the transform in \code{geopar$b0, geopar$b1 and geopar$l1}.
 
        #######################################################
 
-       geoplot(xlim=c(0, -50), ylim=c(60, 75), projection = "Lambert")
+       geoplot(xlim=c(0, -50), ylim=c(60, 75), projection = 'Lambert')
        # Set up a Lambert plot.
 
        geolines(c(66, 66), c(-30, -10), nx = 50, col = 155, lwd = 2)

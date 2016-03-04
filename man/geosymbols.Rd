@@ -104,7 +104,7 @@ Gives the lower left and upper right corner of the box where the labels are
 put. Default value is 0 that means no labels are put on the drawing or if
 geoplot was initialized with cont = TRUE, then labels are put on the left
 side of the plot. label.location is best given by geolocator or directly by
-specifying label.location = "locator".}
+specifying label.location = 'locator'.}
 
 \item{labels}{Type of labels 1 or 2. One is default and is usually used
 except in color with very many colors (more than 10-20) .}
@@ -129,8 +129,8 @@ levels.}
 \item{outside}{If TRUE geosymbols will plot outside the specified limits set
 by geoplot(). If FALSE, which is default, outside points will be skipped.}
 
-\item{minsym}{Minimum symbol, default is "<", meaning that if levels = c(1,
-2), labels will be presented as < 1, 1-2, 2 <, but if minsym = " " labels
+\item{minsym}{Minimum symbol, default is '<', meaning that if levels = c(1,
+2), labels will be presented as < 1, 1-2, 2 <, but if minsym = ' ' labels
 will be presented as 1, 1-2, 2. See also labels.resolution.}
 
 \item{boundcheck}{If boundcheck != 0 those points which are out of bounds
@@ -142,7 +142,7 @@ default is boundcheck = 0.}
 \item{label.resolution}{the resolution (precision) of the label numbers,
 default is 0, meaning that if levels = c(1, 2), labels will be presented <
 1, 1-2, 2 <, if label.resolution = 0.1 labels will be presented < 1, 1.1-2,
-2.1<, see also minsym.  If label.resolution = "none", the labels will
+2.1<, see also minsym.  If label.resolution = 'none', the labels will
 present the lowest number of the interval with each color.}
 
 \item{characters}{A boolean variable determing whether characters are to be
@@ -152,7 +152,7 @@ plotted.}
 
 \item{marks}{Type of symbols for each level. The difference between marks
 and pch is becae when making points on a plot the user can either give pch =
-17 or pch = "A". The former type is called marks here but the latter pch.
+17 or pch = 'A'. The former type is called marks here but the latter pch.
 Marks have to be given for each level and set to -1 where pch is to be used.
 The length of the vector}
 
@@ -196,28 +196,28 @@ rectangles, vbars (vertical bars), hbars(horisontal bars) , perbars
 
       # Show points.
 
-      geoplot(lodna.2, type = "l", grid = FALSE)   # Begin by plotting Iceland.
-      geopoints(lodna.2, pch = "*", col = 150)     # See where the points are.
+      geoplot(lodna.2, type = 'l', grid = FALSE)   # Begin by plotting Iceland.
+      geopoints(lodna.2, pch = '*', col = 150)     # See where the points are.
 
       ####################################
       # Example 1, color parbars plot.   #
       ####################################
 
-      geoplot(lodna.2, type = "l", grid = TRUE)     # Begin by plotting Iceland.
+      geoplot(lodna.2, type = 'l', grid = TRUE)     # Begin by plotting Iceland.
       levels = c(0, 20, 50, 100, 500, 1000)
 
       geosymbols(lodna.2, z = lodna.2$z, colplot = TRUE, colors = seven.col,
                  levels = levels, parbars = 0.05, colors = seven.col,
-                 label.location = "locator")
+                 label.location = 'locator')
 
-      # "locator" click twice on the map where you want the contour index.
+      # 'locator' click twice on the map where you want the contour index.
       # Indicate firstly the upper left corner position then lower right.
 
       #######################################
       # Example 2, black/white perbars plot.#
       #######################################
 
-      geoplot(lodna.2, type = "l", grid = FALSE)
+      geoplot(lodna.2, type = 'l', grid = FALSE)
 
       geosymbols(lodna.2, z = lodna.2$z, perbars = 0.1)
 
@@ -228,7 +228,7 @@ rectangles, vbars (vertical bars), hbars(horisontal bars) , perbars
       #######################################
 
       # Set up data.
-      attach("/usr/local/reikn/SplusNamskeid")
+      attach('/usr/local/reikn/SplusNamskeid')
       i<-utbrteg$ar == 2004
 
       # Set up the plot.
@@ -237,7 +237,7 @@ rectangles, vbars (vertical bars), hbars(horisontal bars) , perbars
       colors = c(13, 55, 111, 153)
       labloc<-list(lat = c(63.95, 65.4), lon = c(-19.8, -17.3))
 
-      geosymbols(utbrteg[i, ], z = utbrteg[i, "torskur.kg"], circles = 0.05,
+      geosymbols(utbrteg[i, ], z = utbrteg[i, 'torskur.kg'], circles = 0.05,
                  sqrt = TRUE, colplot = TRUE, levels = levels, colors = colors,
                  label.location = labloc)
 
@@ -248,8 +248,8 @@ rectangles, vbars (vertical bars), hbars(horisontal bars) , perbars
 
       # Having done the set up data and plot in Example 3.
 
-      geoplot(utbrteg$lat, utbrteg$lon, pch = ".")
-      geosymbols(utbrteg[i, ], z = utbrteg[i, "torskur.kg"], circles = 0.2,
+      geoplot(utbrteg$lat, utbrteg$lon, pch = '.')
+      geosymbols(utbrteg[i, ], z = utbrteg[i, 'torskur.kg'], circles = 0.2,
                  sqrt = TRUE, label.location = labloc)
 
       # Circles can be replaced with squares, rectangles, vbars, hbars or

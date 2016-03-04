@@ -27,7 +27,7 @@ fill.outside.border.
 \examples{
 
        \dontrun{
-	geoplot(xlim=c(-50,20),ylim=c(50,70))       # Initialize plot.
+\\tgeoplot(xlim=c(-50,20),ylim=c(50,70))       # Initialize plot.
        geoworld(fill=T,color=120)                  # Colour countries.
        fill.outside.border()                       # Clear outside of border.
        geoplot(xlim=c(-50,20),ylim=c(50,70),new=T) # Relabel.

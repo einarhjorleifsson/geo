@@ -7,10 +7,10 @@
 locdist(scale = "nmi", type = "p")
 }
 \arguments{
-\item{scale}{Unit of returned distance, default "nmi" for nautical miles,
+\item{scale}{Unit of returned distance, default 'nmi' for nautical miles,
 all other values return kilometers}
 
-\item{type}{Display points "p" or lines "l" between clicks, "n" for nothing}
+\item{type}{Display points 'p' or lines 'l' between clicks, 'n' for nothing}
 }
 \value{
 Returns distance between two point clicks on a geoplot.

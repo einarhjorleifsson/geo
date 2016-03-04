@@ -72,9 +72,9 @@ d2ir(c(50,60), c(-20,-10))
 
 ir2d(d2ir(54, 3))
 ## center positions for bottom left and approx top right rects
-ir2d("01A0")
-ir2d("99M7")
-ir2d(c("01A0","99M7"))
+ir2d('01A0')
+ir2d('99M7')
+ir2d(c('01A0','99M7'))
 ## note that ICES CM1977/Gen:3 indicates half-size rects on eastern margin!
 
 }

@@ -39,9 +39,9 @@ Unit \code{nmi} is used for historical/acoustical (sA) reasons.
 \examples{
 
   srA(7121)
-  srA(7121, "km")
-  srA(7121, "km")/1.852^2
-  srA(7121, "km")
+  srA(7121, 'km')
+  srA(7121, 'km')/1.852^2
+  srA(7121, 'km')
   rA(712)
   srA(7121) + srA(7122) + srA(7123) + srA(7124)
 

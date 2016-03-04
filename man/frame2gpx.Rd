@@ -26,8 +26,8 @@ Requires \code{gpsbabel} installation working from the command line.
 # some positions
 pos <- rPeri(323)
 frame2gpx(pos)
-system("more tmp.gpx")
-system("rm tmp.gpx")
+system('more tmp.gpx')
+system('rm tmp.gpx')
 }
 
 }
