@@ -4,10 +4,12 @@
 \alias{geoconvert.1}
 \title{Convert to decimal degrees}
 \usage{
-geoconvert.1(x)
+geoconvert.1(x, suppressWarnings = FALSE)
 }
 \arguments{
-\item{x}{Vector of decimal-minute-decimal minutes}
+\item{x}{Vector of concatenation of degrees-minutes-decimal minutes}
+
+\item{suppressWarnings}{Suppress warnings??}
 }
 \value{
 Returns converted value in decimal degrees.

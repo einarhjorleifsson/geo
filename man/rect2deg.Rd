@@ -18,13 +18,13 @@ dr2d(dr, dlat = 1, dlon = 2, startLat = 50)
 }
 \arguments{
 \item{r}{Rectangle code \code{r} in the 'tillkynningaskyldu-system', e.g
-from \code{\link{deg2rect}}.}
+from \code{\link{d2r}}.}
 
 \item{sr}{Rectangle code \code{sr} for subrectangle in
-'tilkynningaskyldu-system', e.g. from \code{\link{deg2rect}}.}
+'tilkynningaskyldu-system', e.g. from \code{\link{d2sr}}.}
 
 \item{mr}{Rectangle code \code{mr} based on minutes, e.g. from
-\code{\link{deg2rect}}.}
+\code{\link{d2mr}}.}
 
 \item{dlat}{Rectangle height in minutes or degrees latitude for \code{mr2d}
 and \code{dr2d} respectively.}
@@ -32,7 +32,7 @@ and \code{dr2d} respectively.}
 \item{dlon}{As \code{dlat} except now width in longitude.}
 
 \item{dr}{Rectangle code \code{dr} based on degrees, e.g. from
-\code{\link{deg2rect}}.}
+\code{\link{d2dr}}.}
 
 \item{startLat}{Starting latitude for coding the rectangles.}
 }

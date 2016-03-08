@@ -29,13 +29,13 @@
 #' @name rect2deg
 #' @aliases r2d sr2d mr2d dr2d
 #' @param r Rectangle code \code{r} in the 'tillkynningaskyldu-system', e.g
-#' from \code{\link{deg2rect}}.
+#' from \code{\link{d2r}}.
 #' @param sr Rectangle code \code{sr} for subrectangle in
-#' 'tilkynningaskyldu-system', e.g. from \code{\link{deg2rect}}.
+#' 'tilkynningaskyldu-system', e.g. from \code{\link{d2sr}}.
 #' @param mr Rectangle code \code{mr} based on minutes, e.g. from
-#' \code{\link{deg2rect}}.
+#' \code{\link{d2mr}}.
 #' @param dr Rectangle code \code{dr} based on degrees, e.g. from
-#' \code{\link{deg2rect}}.
+#' \code{\link{d2dr}}.
 #' @param dlat Rectangle height in minutes or degrees latitude for \code{mr2d}
 #' and \code{dr2d} respectively.
 #' @param dlon As \code{dlat} except now width in longitude.
