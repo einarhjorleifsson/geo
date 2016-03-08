@@ -5,7 +5,7 @@
 \title{Aggregate data on square grid, pad with zeros.  Faster than tapply.}
 \usage{
 combine.rt(lat, lon, z, grlat, grlon = 0, fun, fill = F, reg = 0,
-  minnumber = 2, wsp = 0, wz = 0, wlat = 0, xy = F, rat = 0.2, type)
+  minnumber = 2, wsp = 0, wz = 0, wlat = 0, rat = 0.2, type)
 }
 \arguments{
 \item{lat}{Latitude of datapoints. ( or x coordinates)}
@@ -41,8 +41,6 @@ the weight is zero within a square unweighed mean is used.}
 
 \item{wlat}{Weighing to find the mean latitude and mean longitude.  It is
 often reasonable to weigh the latitude and the longitude by the catch.}
-
-\item{xy}{Projected? Default unprojected (lat/lon) values, \code{FALSE}.}
 
 \item{rat}{Ratio for 'rm.outliers'.  If rat is for example 0.2 20\% of the
 points on each side are moved.  i.e. the middle 60\% are kept.  Default

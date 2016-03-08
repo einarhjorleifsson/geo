@@ -38,7 +38,6 @@
 #' the weight is zero within a square unweighed mean is used.
 #' @param wlat Weighing to find the mean latitude and mean longitude.  It is
 #' often reasonable to weigh the latitude and the longitude by the catch.
-#' @param xy Projected? Default unprojected (lat/lon) values, \code{FALSE}.
 #' @param rat Ratio for 'rm.outliers'.  If rat is for example 0.2 20\% of the
 #' points on each side are moved.  i.e. the middle 60\% are kept.  Default
 #' value is 0.6.
@@ -57,28 +56,17 @@
 #' @keywords <!--Put one or more s-keyword tags here-->
 #' @export combine.rt
 combine.rt <- function(lat, lon, z, grlat, grlon = 0, fun, fill = F, reg = 0, 
-  minnumber = 2, wsp = 0, wz = 0, wlat = 0, xy = F, rat = 0.2, type)
+  minnumber = 2, wsp = 0, wz = 0, wlat = 0, rat = 0.2, type)
   {
   if (missing(fun) && !missing(type)) 
     fun <- type
   # for compatibility
   if (!missing(fun) && fun == "summa") 
     fun <- "sum"
-  # also for compatibility
-  if (xy)
+  if (length(grlon) < 2)
   {
-    if (length(grlon) < 2)
-    {
-      grlon <- grlat$y
-      grlat <- grlat$x
-    }
-  } else
-  {
-    if (length(grlon) < 2)
-    {
-      grlon <- grlat$lon
-      grlat <- grlat$lat
-    }
+    grlon <- grlat$lon
+    grlat <- grlat$lat
   }
   ndata <- length(lat)
   if (length(wz) != ndata) 
@@ -146,11 +134,9 @@ combine.rt <- function(lat, lon, z, grlat, grlon = 0, fun, fill = F, reg = 0,
   newlon <- outcome[[12]][1:nnewlat]
   newz <- outcome[[13]][1:nnewlat]
   fylla <- outcome[[18]][1:nnewlat]
-  if (xy) 
-    projection <- "none" else projection <- "Mercator"
   if (length(reg) > 1)
   {
-    inni <- inside(newlat, newlon, reg, option = 0, projection = projection)
+    inni <- geoinside(newlat, newlon, reg, option = 0)
     ind <- c(1:length(inni))
     ind <- ind[inni == 1]
     newlat <- newlat[ind]
@@ -161,8 +147,7 @@ combine.rt <- function(lat, lon, z, grlat, grlon = 0, fun, fill = F, reg = 0,
   if (option == 5) 
     fylla <- 0
   # not used
-  if (xy) 
-    z <- list(x = newlat, y = newlon, z = newz, n = newn, fill = fylla) else z <- list(lat = newlat, lon = newlon, z = newz, n = newn, fill = fylla)
+  z <- list(lat = newlat, lon = newlon, z = newz, n = newn, fill = fylla)
   z <- data.frame(z)
   attributes(z)$fun <- fun
   return(invisible(z))

@@ -35,7 +35,7 @@
 #' @note Needs elaboration, check use of \code{find = TRUE}
 #' @seealso Calls a number of functions, i.e. \code{\link{geodefine}},
 #' \code{\link{geoplot}}, \code{\link{geopoints}}, \code{\link{gridpoints}},
-#' \code{\link{inside}}, \code{\link{selectedpar}}
+#' \code{\link{geoinside}}, \code{\link{selectedpar}}
 #' @keywords aplot iplot
 #' @export setgrid
 setgrid <- function(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0), 
@@ -79,7 +79,7 @@ setgrid <- function(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0),
   # Find what is inside the borders.
   if (find)
   {
-    xgr <- inside(xgr, reg = reg)
+    xgr <- geoinside(xgr, reg = reg)
     geopoints(xgr, pch = "+")
     return(list(xgr = xgr, grpt = grpt, reg = reg, find = find))
   } else return(list(grpt = grpt, reg = reg, find = find))

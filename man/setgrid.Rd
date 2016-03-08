@@ -74,7 +74,7 @@ Needs elaboration, check use of \code{find = TRUE}
 \seealso{
 Calls a number of functions, i.e. \code{\link{geodefine}},
 \code{\link{geoplot}}, \code{\link{geopoints}}, \code{\link{gridpoints}},
-\code{\link{inside}}, \code{\link{selectedpar}}
+\code{\link{geoinside}}, \code{\link{selectedpar}}
 }
 \keyword{aplot}
 \keyword{iplot}
