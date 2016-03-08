@@ -1,4 +1,13 @@
 --------------------------------------------------------------------------------
+geo 1.4-5 (2016-03-07)
+--------------------------------------------------------------------------------
+o Remove functions 'inside' and 'geoinside.old', perform accompanying changes.
+o Fix links in rect2deg doc, add 'suppressWarnings' arg to geoconvert.1.
+o Run formatR::tidy_source on all functions.
+o Clean-up/format 'geo.c'.
+
+
+--------------------------------------------------------------------------------
 geo 1.4-4 (2016-03-01)
 --------------------------------------------------------------------------------
 o Move packages 'maps' and 'mapdata' from 'Depends' to 'Imports'.
