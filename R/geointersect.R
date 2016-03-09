@@ -10,10 +10,9 @@
 #' @seealso \code{\link{findcut}}, \code{\link{invProj}}, \code{\link{Proj}}
 #' @keywords logic manip 
 #' @export geointersect
-geointersect <-
-function(data, border, in.or.out)
+geointersect <- function(data, border, in.or.out)
 {
-	tmp <- invProj(findcut(Proj(data), Proj(border), in.or.out))
-	return(data.frame(lat = tmp$lat, lon = tmp$lon))
+  tmp <- invProj(findcut(Proj(data), Proj(border), in.or.out))
+  return(data.frame(lat = tmp$lat, lon = tmp$lon))
 }
-
+ 

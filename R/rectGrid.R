@@ -36,7 +36,7 @@
 #' tmp <- island
 #' tmp$sr <- d2sr(island) 
 #' srects <- aggregate(. ~ sr, tmp, length)
-#' names(srects)[2] <- "count"
+#' names(srects)[2] <- 'count'
 #' srects$lev <- cut(srects$count, c(0, 1, 5, 10, 20, 50, 100))
 #' mycol <- heat.colors(length(unique(srects$lev)))
 #' srgrid(srects$sr, fill = TRUE, col = mycol[srects$lev])
@@ -46,48 +46,43 @@
 
 #' @export rgrid
 #' @rdname rectGrid
-rgrid <-
-function(r, fill = FALSE, ...)
+rgrid <- function(r, fill = FALSE, ...)
 {
-	n <- length(r)
-	lat <- r2d(r)$lat
-	lon <- r2d(r)$lon
-	lat <- c(rep(lat, 5), rep(NA, n))
-	lon <- c(rep(lon, 5), rep(NA, n))
-	lat <- as.vector(matrix(matrix(lat, nrow = 6, byrow = T), ncol = 1))
-	lon <- as.vector(matrix(matrix(lon, nrow = 6, byrow = T), ncol = 1))
-	lat <- lat - c(-1/4, 1/4, 1/4, -1/4, -1/4, NA)
-	lon <- lon - c(-0.5, -0.5, 0.5, 0.5, -0.5, NA)
-	lat <- data.frame(lat = lat, lon = lon)
-	if(fill)
-		geopolygon(lat, ...)
-	else geolines(lat, ...)
+  n <- length(r)
+  lat <- r2d(r)$lat
+  lon <- r2d(r)$lon
+  lat <- c(rep(lat, 5), rep(NA, n))
+  lon <- c(rep(lon, 5), rep(NA, n))
+  lat <- as.vector(matrix(matrix(lat, nrow = 6, byrow = T), ncol = 1))
+  lon <- as.vector(matrix(matrix(lon, nrow = 6, byrow = T), ncol = 1))
+  lat <- lat - c(-1/4, 1/4, 1/4, -1/4, -1/4, NA)
+  lon <- lon - c(-0.5, -0.5, 0.5, 0.5, -0.5, NA)
+  lat <- data.frame(lat = lat, lon = lon)
+  if (fill) 
+    geopolygon(lat, ...) else geolines(lat, ...)
 }
 
 #' @export srgrid
 #' @rdname rectGrid
-srgrid <-
-function(sr, fill = FALSE, ...)
+srgrid <- function(sr, fill = FALSE, ...)
 {
-	n <- length(sr)
-	lat <- sr2d(sr)$lat
-	lon <- sr2d(sr)$lon
-	lat <- c(rep(lat, 5), rep(NA, n))
-	lon <- c(rep(lon, 5), rep(NA, n))
-	lat <- as.vector(matrix(matrix(lat, nrow = 6, byrow = T), ncol = 1))
-	lon <- as.vector(matrix(matrix(lon, nrow = 6, byrow = T), ncol = 1))
-	lat <- lat - c(-1/8, 1/8, 1/8, -1/8, -1/8, NA)
-	lon <- lon - c(-0.25, -0.25, 0.25, 0.25, -0.25, NA)
-	lat <- data.frame(lat = lat, lon = lon)
-	if(fill)
-		geopolygon(lat, ...)
-	else geolines(lat, ...)
+  n <- length(sr)
+  lat <- sr2d(sr)$lat
+  lon <- sr2d(sr)$lon
+  lat <- c(rep(lat, 5), rep(NA, n))
+  lon <- c(rep(lon, 5), rep(NA, n))
+  lat <- as.vector(matrix(matrix(lat, nrow = 6, byrow = T), ncol = 1))
+  lon <- as.vector(matrix(matrix(lon, nrow = 6, byrow = T), ncol = 1))
+  lat <- lat - c(-1/8, 1/8, 1/8, -1/8, -1/8, NA)
+  lon <- lon - c(-0.25, -0.25, 0.25, 0.25, -0.25, NA)
+  lat <- data.frame(lat = lat, lon = lon)
+  if (fill) 
+    geopolygon(lat, ...) else geolines(lat, ...)
 }
 
 #' @export mrgrid
 #' @rdname rectGrid
-mrgrid <-
-function(mr, dlat = 5, dlon = 10, fill = FALSE, ...)
+mrgrid <- function(mr, dlat = 5, dlon = 10, fill = FALSE, ...)
 {
   n <- length(mr)
   lat <- mr2d(mr, dlat = dlat, dlon = dlon)$lat
@@ -96,20 +91,18 @@ function(mr, dlat = 5, dlon = 10, fill = FALSE, ...)
   lon <- c(rep(lon, 5), rep(NA, n))
   lat <- as.vector(matrix(matrix(lat, nrow = 6, byrow = T), ncol = 1))
   lon <- as.vector(matrix(matrix(lon, nrow = 6, byrow = T), ncol = 1))
-  lat <- lat + c(dlat/120, dlat/120,  - dlat/120,  - dlat/120, dlat/
-  	120, NA)
-  lon <- lon + c(dlon/120,  - dlon/120,  - dlon/120, dlon/120, dlon/
-  	120, NA)
+  lat <- lat + c(dlat/120, dlat/120, -dlat/120, -dlat/120, dlat/120, 
+    NA)
+  lon <- lon + c(dlon/120, -dlon/120, -dlon/120, dlon/120, dlon/120, 
+    NA)
   lat <- data.frame(lat = lat, lon = lon)
-  if(fill)
-  	geopolygon(lat, ...)
-  else geolines(lat, ...)
+  if (fill) 
+    geopolygon(lat, ...) else geolines(lat, ...)
 }
 
 #' @export drgrid
 #' @rdname rectGrid
-drgrid <-
-function(dr, dlat = 1, dlon = 2, fill = FALSE, ...)
+drgrid <- function(dr, dlat = 1, dlon = 2, fill = FALSE, ...)
 {
   n <- length(dr)
   lat <- dr2d(dr, dlat = dlat, dlon = dlon)$lat
@@ -118,13 +111,10 @@ function(dr, dlat = 1, dlon = 2, fill = FALSE, ...)
   lon <- c(rep(lon, 5), rep(NA, n))
   lat <- as.vector(matrix(matrix(lat, nrow = 6, byrow = T), ncol = 1))
   lon <- as.vector(matrix(matrix(lon, nrow = 6, byrow = T), ncol = 1))
-  lat <- lat + c(dlat/2, dlat/2,  - dlat/2,  - dlat/2, dlat/
-  	2, NA)
-  lon <- lon + c(dlon/2,  - dlon/2,  - dlon/2, dlon/2, dlon/
-  	2, NA)
+  lat <- lat + c(dlat/2, dlat/2, -dlat/2, -dlat/2, dlat/2, NA)
+  lon <- lon + c(dlon/2, -dlon/2, -dlon/2, dlon/2, dlon/2, NA)
   lat <- data.frame(lat = lat, lon = lon)
-  if(fill)
-  	geopolygon(lat, ...)
-  else geolines(lat, ...)
+  if (fill) 
+    geopolygon(lat, ...) else geolines(lat, ...)
 }
-
+ 

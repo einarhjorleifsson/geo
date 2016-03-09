@@ -15,10 +15,9 @@
 #' sum(intra.point.dist(pos))
 #' 
 #' @export intra.point.dist
-intra.point.dist <-
-function(x)
+intra.point.dist <- function(x)
 {
-	n <- length(x$lat)
-	arcdist(x$lat[ - n], x$lon[ - n], x$lat[-1], x$lon[-1])
+  n <- length(x$lat)
+  arcdist(x$lat[-n], x$lon[-n], x$lat[-1], x$lon[-1])
 }
-
+ 

@@ -1,6 +1,6 @@
 #' Plots lat and lon coordinates using Mercator or Lambert transformation.
 #' 
-#' Creates a plot of given data, as the "plot" function but allows input data
+#' Creates a plot of given data, as the 'plot' function but allows input data
 #' to have latitude and longitude coordinates.Coordinates are latitude and
 #' longitude in degrees (default) or x, y in m (or other units).
 #' 
@@ -12,10 +12,10 @@
 #' geoimage and geocontour. The inputs to the program are decimal numbers
 #' negative for western longitudes e.g.lat = 65.75 lon = -25.8. Whether the
 #' program interprets data as lat, lon or x, y depends on the parameter
-#' projection. If projection is "none" data is interpreted as x, y else lat,
+#' projection. If projection is 'none' data is interpreted as x, y else lat,
 #' lon. When the data is interpreted as x, y lists are assumed to have the
 #' components \$x and \$y, else \$lat and \$lon.Geoplot is often used with type
-#' = "n" so the datapoints used to set up the drawing are not seen. Calling
+#' = 'n' so the datapoints used to set up the drawing are not seen. Calling
 #' geoplot with plotit = FALSE sets up the drawing without putting anything on
 #' the screen ( or page).
 #' 
@@ -25,14 +25,14 @@
 #' two vectors or as a list or dataframe lat (or x) including vectors lat\$lat
 #' and lat\$lon (x\$x and x\$y if projection = none). If xlim and ylim are
 #' given the arguments lat and lon are not required.
-#' @param type Options are the same as in the plot function i.e "l" for lines,
-#' "n" for not plotting the data, "p" for points etc. Default value is "p"
-#' @param pch Type of symbol drawn in points. Default is "*". Any other
+#' @param type Options are the same as in the plot function i.e 'l' for lines,
+#' 'n' for not plotting the data, 'p' for points etc. Default value is 'p'
+#' @param pch Type of symbol drawn in points. Default is '*'. Any other
 #' character or symbol can be used, seet the help on points.
 #' @param xlim x limits of drawing (longitudinal direction). If not given the
 #' program finds the limits as the range of the data times the parameter r
 #' (1.05 default).  xlim can be a list (dataframe) with components lat and lon
-#' (x and y if projection = "none").
+#' (x and y if projection = 'none').
 #' @param ylim y limits of drawing (latitudinal direction). If not given and
 #' xlim is not a list the program finds the ulimits as the range of the data
 #' times the parameter r (1.05).
@@ -50,24 +50,24 @@
 #' 6. none no country plotted } Which map is used depends on the size of the
 #' area plotted. If small part of the coast is seen bisland is used, else
 #' Iceland. Isands can be added later by geolines(eyjar). Default is set by a
-#' variable with the name COUNTRY.DEFAULT.  COUNTRY.DEFAULT <- "island" makes
+#' variable with the name COUNTRY.DEFAULT.  COUNTRY.DEFAULT <- 'island' makes
 #' iceland the default country.  The program geoworld can be used to add all
 #' coastlines that intersect the map and also to make new countries (see
 #' geoworld).
-#' @param xlab X-label. Default value is " "
-#' @param ylab Y-label. Default value is " "
-#' @param option Can be either "cut" or "nocut". If "nocut" the plot always
-#' fills the plotted area but if "cut" the plot does not fill it in the
+#' @param xlab X-label. Default value is ' '
+#' @param ylab Y-label. Default value is ' '
+#' @param option Can be either 'cut' or 'nocut'. If 'nocut' the plot always
+#' fills the plotted area but if 'cut' the plot does not fill it in the
 #' direction where the range of data is minimum. It has to be kept in mind that
 #' the program always keeps the same scale vertically and horizontally. Default
-#' value is "cut". Not effective when contourplots are plotted.
+#' value is 'cut'. Not effective when contourplots are plotted.
 #' @param grid If grid is TRUE meridians and paralells are plotted, else not.
 #' Default value is TRUE.
 #' @param new If new is FALSE the plot is added to the current plot otherwise a
 #' new plot is made. Default value is FALSE. Similar to the Splus command
-#' "par(new = TRUE)".
+#' 'par(new = TRUE)'.
 #' @param cont A parameter to reserve space for legend for contours besides the
-#' plot. Default value is "FALSE".  Rarely used at the legends are usually put
+#' plot. Default value is 'FALSE'.  Rarely used at the legends are usually put
 #' somewhere in the graph.
 #' @param cex Relative size of character and symbols (see the help on the
 #' parameter cex).  The size of plotted characeters is cex time the parameter
@@ -109,8 +109,8 @@
 #' a plot made by geoplot on the screen. Same as if zoom is used.
 #' @param axlabels If FALSE no numbers are plotted on the axes. Default value
 #' is TRUE.
-#' @param projection Projection used to make the plot. Options are "Mercator",
-#' "none" and "Lambert". Default value is "Mercator". If projection = "none"
+#' @param projection Projection used to make the plot. Options are 'Mercator',
+#' 'none' and 'Lambert'. Default value is 'Mercator'. If projection = 'none'
 #' data is assumed to be x, y.
 #' @param b1 Second latitude to define Lambert projection.
 #' @param dlat Defines the grid, to make a grid on the lat axis, 1 is a number
@@ -170,7 +170,7 @@
 #' col <- c(0, 30, 50, 70, 90, 150)
 #' txt <- c(1993, 1995, 2000, 2002, 2005, 2006)
 #' par(mfrow = c(3, 2));par(mex = 0.01)
-#' bwps(file = "hadcatchutbr.ps", height = 6.8, width = 6.5, horizontal = FALSE)
+#' bwps(file = 'hadcatchutbr.ps', height = 6.8, width = 6.5, horizontal = FALSE)
 #' for(i in 1:6) {
 #'  SMB.std.background(grid = FALSE, axlabels = FALSE)
 #'  geocontour.fill(hadcatch[[i]], levels = lev, col = col,
@@ -186,9 +186,9 @@
 #' dev.off()
 #' 
 #' # plot x, y data
-#' geoplot(x$x, x$y, projection = "none", type = "n")
+#' geoplot(x$x, x$y, projection = 'none', type = 'n')
 #' 
-#' geoplot(x, projection = "none", type = "n")
+#' geoplot(x, projection = 'none', type = 'n')
 #' # does the same thing.
 #' 
 #' # The packages maps and mapdata need to be installed
@@ -198,50 +198,50 @@
 #' library(map) # world coastlines and programs
 #' library(mapdata) # more detailed coastlines
 #' geoplot(xlim = c(20, 70), ylim = c(15, 34))
-#' geoworld(database = "worldHires", fill = TRUE, col = 30, allowed.size = 30000)
+#' geoworld(database = 'worldHires', fill = TRUE, col = 30, allowed.size = 30000)
 #' 
 #' geoplot(xlim = c(20, 70), ylim = c(15, 34), dlat = 10, dlon = 10)
-#' geoworld(database = "world", fill = TRUE, col = 30) #
+#' geoworld(database = 'world', fill = TRUE, col = 30) #
 #' 
 #' geoplot(xlim = c(-10, 70), ylim = c(71, 81), b0 = 80,
 #'   dlat = 2, dlon = 10) # 0 must be high here else
-#' geoworld(database = "world", fill = TRUE, col = 30) #the plot fails.
+#' geoworld(database = 'world', fill = TRUE, col = 30) #the plot fails.
 #' 
 #' # Lambert projection,
 #' geoplot(xlim = c(-10, 70), ylim = c(71, 81),
-#'   dlat = 2, dlon = 10, projection = "Lambert")
-#' geoworld(database = "world", fill = TRUE, col = 30)
+#'   dlat = 2, dlon = 10, projection = 'Lambert')
+#' geoworld(database = 'world', fill = TRUE, col = 30)
 #' 
 #' # Lambert projection, get the axis closer with the mgp command
 #' par(mgp = c(2, 0, 0))
 #' geoplot(xlim = c(-10, 70), ylim = c(71, 81),
-#'   dlat = 2, dlon = 10, projection = "Lambert", cex = 1.1)
-#' geoworld(database = "world", fill = TRUE, col = 30)
+#'   dlat = 2, dlon = 10, projection = 'Lambert', cex = 1.1)
+#' geoworld(database = 'world', fill = TRUE, col = 30)
 #' 
 #' # Example with capelin data.  (lodna meanns capelin).  lodna.2 is a
 #' # data.frame with components lat,  lon and z.
-#' geoplot(lodna.2, type = "l")
+#' geoplot(lodna.2, type = 'l')
 #' geopoints(lodna.2)
 #' geosymbols(lodna.2, z = lodna.2$z, colplot = TRUE,
 #'   parbars = 0.05, levels = vor.levels, label.location = labloc)
 #' 
 #' 
-#' geoplot(lodna.2, type = "l")
+#' geoplot(lodna.2, type = 'l')
 #'  geosymbols(lodna.2, z = lodna.2$z, perbars = 0.1)
 #' 
-#' geoplot(lodna.2, type = "l")
+#' geoplot(lodna.2, type = 'l')
 #'  geosymbols(lodna.2, z = log(1+lodna.2$z), perbars = 0.1)
 #' 
 #' 
 #' limits <- list(lat = c(63, 68), lon = c(-30, -10))
-#' geoplot(xlim = limits, type = "n", grid = FALSE, axlabels = TRUE, plot = FALSE)
+#' geoplot(xlim = limits, type = 'n', grid = FALSE, axlabels = TRUE, plot = FALSE)
 #' tmp <- geoexpand(lodna.2.grd) # expand the grid
 #' # has defined ther area vor.area and data outside it are set  to NA.
 #' i <- geoinside(tmp, vor.area.new, option = 0)
 #' zgr <- z.lodna.2;zgr[-i] <- NA
 #' geocontour.fill(lodna.2.grd, z = zgr, white = TRUE,
 #'   label.location = labloc, levels = vor.levels)
-#' geoplot(xlim = limits, type = "n", grid = FALSE, axlabels = TRUE, new = TRUE)
+#' geoplot(xlim = limits, type = 'n', grid = FALSE, axlabels = TRUE, new = TRUE)
 #' #geolines(lodna.2, lwd = 1)
 #' gbplot(c(200, 500)) # Depth contours.
 #' 
@@ -251,11 +251,11 @@
 #' #cod below number of square).  Apply.shrink is similar to tapply
 #' #returning the data in different form and is included with the geo library
 #' 
-#' geoplot(island, r = 1.2, type = "n", reitur = TRUE)
+#' geoplot(island, r = 1.2, type = 'n', reitur = TRUE)
 #' x <- apply.shrink(data$torskur.stk, data$reitur, sum,
-#'   names = c("reitur", "torskur.stk"))
+#'   names = c('reitur', 'torskur.stk'))
 #' x1 <- r2d(x$reitur)
-#' geotext(x1, z = paste(x$reitur, round(x$torskur.stk, 1), sep = "\n"))
+#' geotext(x1, z = paste(x$reitur, round(x$torskur.stk, 1), sep = '\n'))
 #' 
 #' # Plot filled circles.  The color scheme used is the same as described
 #' # color 0 white, 1 black and 2 - 155 white-black see bwps
@@ -273,17 +273,17 @@
 #' tmp4 <- AfliBySquareMonthYear
 #' tmp4$catch <- tmp4$catch/1000
 #' for (ar in yy) {
-#'   bwps(file = paste(ar, ".ps", sep = ""))
+#'   bwps(file = paste(ar, '.ps', sep = ''))
 #'   par(omi = c(0, 0, 0, 2))
 #'   par(mfrow = c(4, 3))
 #'   par(mex = 0.01)
 #' 
 #'   for(man in 1:12){
 #'     tmp1 <- tmp4[tmp4$year == ar & tmp4$month == man, ]
-#'     SMB.std.background(axlabels = FALSE, country = "none", plotit = FALSE)
+#'     SMB.std.background(axlabels = FALSE, country = 'none', plotit = FALSE)
 #'     if(nrow(tmp1) > 0) {
 #'       tmp2 <- apply.shrink(tmp1$catch, tmp1$square, sum,
-#'         names = c("square", "catch"))
+#'         names = c('square', 'catch'))
 #'       tmp2 <- tmp2[order(-tmp2$catch), ]
 #' 
 #'       tmp3 <- data.frame(r2d(tmp2$square))
@@ -299,109 +299,118 @@
 #'           angle = 45, csi = 0.1)
 #'       }
 #'       geotext(lat = c(65.2), lon = (-18), z = paste(month.abb[man],
-#'         round(sum(tmp2$catch, na.rm = TRUE)), sep = "\n"), csi = 0.2)
+#'         round(sum(tmp2$catch, na.rm = TRUE)), sep = '\n'), csi = 0.2)
 #'     }
 #'     else {geotext(lat = c(65.2), lon = (-18),
-#'             z = paste(month.abb[man], "0", sep = "\n"), csi = 0.2)}
+#'             z = paste(month.abb[man], '0', sep = '\n'), csi = 0.2)}
 #'   }
 #'   geotext(63, -10, ar, adj = 1, csi = 0.18)
 #'   dev.off()
 #' }
 #' }
 #' @export geoplot
-geoplot <-
-function(lat = NULL, lon = 0, type = "p", pch = "*", xlim = c(0, 0), 
-  ylim = c(0, 0), b0 = 65, r = 1.05, country = "default", xlab = " ", 
-  ylab = " ", option = "cut", grid = TRUE, new = FALSE, cont = FALSE,
-  cex = 0.9,col = 1, lcont= c(0.13, 0.21), plotit = TRUE, 
-  reitur = FALSE, smareitur = FALSE, reittext = FALSE, cexrt = 0.7, 
-  csirt=NULL, axratio = 1, lwd = 0, lwd1 = 0, locator = FALSE, 
-  axlabels = TRUE, projection = "Mercator", b1 = b0, dlat = 0, dlon = 0, 
-  jitter = 0, zoom, csi = NULL, xaxdist = 0.2, yaxdist = 0.3)
-{
+geoplot <- function(lat = NULL, lon = 0, type = "p", pch = "*", xlim = c(0, 
+  0), ylim = c(0, 0), b0 = 65, r = 1.05, country = "default", xlab = " ", 
+  ylab = " ", option = "cut", grid = TRUE, new = FALSE, cont = FALSE, 
+  cex = 0.9, col = 1, lcont = c(0.13, 0.21), plotit = TRUE, reitur = FALSE, 
+  smareitur = FALSE, reittext = FALSE, cexrt = 0.7, csirt = NULL, axratio = 1, 
+  lwd = 0, lwd1 = 0, locator = FALSE, axlabels = TRUE, projection = "Mercator", 
+  b1 = b0, dlat = 0, dlon = 0, jitter = 0, zoom, csi = NULL, xaxdist = 0.2, 
+  yaxdist = 0.3)
+  {
   geopar <- getOption("geopar")
-  if(!is.null(csirt)) cexrt <- cexrt*csirt/0.12
-  if(!is.null(csi)) cex <- cex*csi/0.12
-  if(!plotit) axlabels <- FALSE  # not plot axes if ther is no plot.  
-  if(!missing(zoom)) {
+  if (!is.null(csirt)) 
+    cexrt <- cexrt * csirt/0.12
+  if (!is.null(csi)) 
+    cex <- cex * csi/0.12
+  if (!plotit) 
+    axlabels <- FALSE  # not plot axes if ther is no plot.  
+  if (!missing(zoom))
+  {
     xlim <- geolocator(n = 2)
   }
-	oldpar.1 <- par(no.readonly = TRUE)
- 	# first version of old parameters
-	command <- sys.call()
-	if((oldpar.1$fig[2] - oldpar.1$fig[1]) <= 0.6 || (oldpar.1$fig[4] -
-		oldpar.1$fig[3]) <= 0.6)
-		multfig <- TRUE
-	else multfig <- FALSE
-	if(projection == "none") {
-                if(is.list(xlim) &&  any(!is.na(match(c("x","y"),names(xlim))))){
-                  ylim <- xlim$y
-                  xlim <- xlim$x
-		}
-	}
-	else {
-                if(is.list(xlim) &&  any(!is.na(match(c("lat","lon"),names(xlim))))){
-                  ylim <- xlim$lat
-                  xlim <- xlim$lon
-		}
-	}
-	if(is.null(lat) && xlim[2] == xlim[1] && ylim[2] == ylim[1] && !locator
-		) {
-		#std plot
-		if(!multfig) par(fig = geo::geopar.std$fig)
-		if(!multfig)
-			par(plt = geo::geopar.std$plt)
-		xlim <- geo::geopar.std$xlim
-		ylim <- geo::geopar.std$ylim
-		if(!multfig)
-			par(mex = geo::geopar.std$mex)
-	}
-	if(is.null(lat)) {
-		lat <- c(65, 66)
-		lon <- c(-28, -27)
-		type <- "n"
-	}
-	oldpar <- selectedpar()
-	if(locator & missing(zoom)) {
-		limits <- geolocator(n = 2)
-		if(geopar$projection == "none") {
-			xlim <- limits$x
-			ylim <- limits$y
-		}
-		else {
-			xlim <- limits$lon
-			ylim <- limits$lat
-		}
-	}
-	xlim <- sort(xlim)
-	ylim <- c(ylim)
-	if(projection == "none") {
-		if(length(country) == 1)
-			if(country == "default")
-				country <- "none"
-	}
-	else {
-		if(length(country) == 1)
-                  if(country == "default")
-                    eval(parse(text = paste("country <- ",geo::COUNTRY.DEFAULT)))
-	}
-	init(lat, lon = lon, type = type, pch = pch, xlim = xlim, ylim = ylim,
-		b0 = b0, r = r, xlab = xlab, ylab = ylab,
-		option = option, grid = grid, new = new, cont = cont, cex = cex,
-		col = col, lcont = lcont, plotit = plotit, reitur = reitur,
-		smareitur = smareitur, reittext = reittext, axratio = axratio,
-		lwd = lwd, axlabels = axlabels, oldpar = oldpar, projection = 
-		projection, b1 = b1, dlat = dlat, dlon = dlon, command = 
-		command, jitter = jitter, xaxdist = xaxdist, yaxdist = yaxdist)
-        oldpar.1 <- Elimcomp(oldpar.1)
-	par(oldpar.1)
-#        par(new = TRUE)
-	if(reittext)
-		plot_reitnr(cexrt, lwd = lwd)
-	# number of squares
-	if(length(country) > 1 && plotit) geolines(country, col = col, lwd = 
-			lwd1)
-	# plot country
-	return(invisible())
+  oldpar.1 <- par(no.readonly = TRUE)
+  # first version of old parameters
+  command <- sys.call()
+  if ((oldpar.1$fig[2] - oldpar.1$fig[1]) <= 0.6 || (oldpar.1$fig[4] - 
+    oldpar.1$fig[3]) <= 0.6) 
+    multfig <- TRUE else multfig <- FALSE
+  if (projection == "none")
+  {
+    if (is.list(xlim) && any(!is.na(match(c("x", "y"), names(xlim)))))
+    {
+      ylim <- xlim$y
+      xlim <- xlim$x
+    }
+  } else
+  {
+    if (is.list(xlim) && any(!is.na(match(c("lat", "lon"), names(xlim)))))
+    {
+      ylim <- xlim$lat
+      xlim <- xlim$lon
+    }
+  }
+  if (is.null(lat) && xlim[2] == xlim[1] && ylim[2] == ylim[1] && !locator)
+  {
+    # std plot
+    if (!multfig) 
+      par(fig = geo::geopar.std$fig)
+    if (!multfig) 
+      par(plt = geo::geopar.std$plt)
+    xlim <- geo::geopar.std$xlim
+    ylim <- geo::geopar.std$ylim
+    if (!multfig) 
+      par(mex = geo::geopar.std$mex)
+  }
+  if (is.null(lat))
+  {
+    lat <- c(65, 66)
+    lon <- c(-28, -27)
+    type <- "n"
+  }
+  oldpar <- selectedpar()
+  if (locator & missing(zoom))
+  {
+    limits <- geolocator(n = 2)
+    if (geopar$projection == "none")
+    {
+      xlim <- limits$x
+      ylim <- limits$y
+    } else
+    {
+      xlim <- limits$lon
+      ylim <- limits$lat
+    }
+  }
+  xlim <- sort(xlim)
+  ylim <- c(ylim)
+  if (projection == "none")
+  {
+    if (length(country) == 1) 
+      if (country == "default") 
+        country <- "none"
+  } else
+  {
+    if (length(country) == 1) 
+      if (country == "default") 
+        eval(parse(text = paste("country <- ", geo::COUNTRY.DEFAULT)))
+  }
+  init(lat, lon = lon, type = type, pch = pch, xlim = xlim, ylim = ylim, 
+    b0 = b0, r = r, xlab = xlab, ylab = ylab, option = option, grid = grid, 
+    new = new, cont = cont, cex = cex, col = col, lcont = lcont, plotit = plotit, 
+    reitur = reitur, smareitur = smareitur, reittext = reittext, axratio = axratio, 
+    lwd = lwd, axlabels = axlabels, oldpar = oldpar, projection = projection, 
+    b1 = b1, dlat = dlat, dlon = dlon, command = command, jitter = jitter, 
+    xaxdist = xaxdist, yaxdist = yaxdist)
+  oldpar.1 <- Elimcomp(oldpar.1)
+  par(oldpar.1)
+  # par(new = TRUE)
+  if (reittext) 
+    plot_reitnr(cexrt, lwd = lwd)
+  # number of squares
+  if (length(country) > 1 && plotit) 
+    geolines(country, col = col, lwd = lwd1)
+  # plot country
+  return(invisible())
 }
-
+ 

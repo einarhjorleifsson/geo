@@ -1,4 +1,24 @@
 --------------------------------------------------------------------------------
+geo 1.4-5 (2016-03-07)
+--------------------------------------------------------------------------------
+o Remove functions 'inside' and 'geoinside.old', perform accompanying changes.
+o Fix links in rect2deg doc, add 'suppressWarnings' arg to geoconvert.1.
+o Run formatR::tidy_source on all functions.
+o Clean-up/format 'geo.c'.
+
+
+--------------------------------------------------------------------------------
+geo 1.4-4 (2016-03-01)
+--------------------------------------------------------------------------------
+o Move packages 'maps' and 'mapdata' from 'Depends' to 'Imports'.
+o Remove redundant help lines from adj.grd.R.
+o Switch to 'pkg::fun' notation, link to [pkg]-help.
+o Remove function 'ices' (at least temporarily).
+o Add github.com/Hafro-URL to DESCRIPTION
+
+
+
+--------------------------------------------------------------------------------
 geo 1.4-3 (2015-07-03)
 --------------------------------------------------------------------------------
 o NAMESPACE and import changes, dataset documentations tidying.

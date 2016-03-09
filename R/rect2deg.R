@@ -29,13 +29,13 @@
 #' @name rect2deg
 #' @aliases r2d sr2d mr2d dr2d
 #' @param r Rectangle code \code{r} in the 'tillkynningaskyldu-system', e.g
-#' from \code{\link{deg2rect}}.
+#' from \code{\link{d2r}}.
 #' @param sr Rectangle code \code{sr} for subrectangle in
-#' 'tilkynningaskyldu-system', e.g. from \code{\link{deg2rect}}.
+#' 'tilkynningaskyldu-system', e.g. from \code{\link{d2sr}}.
 #' @param mr Rectangle code \code{mr} based on minutes, e.g. from
-#' \code{\link{deg2rect}}.
+#' \code{\link{d2mr}}.
 #' @param dr Rectangle code \code{dr} based on degrees, e.g. from
-#' \code{\link{deg2rect}}.
+#' \code{\link{d2dr}}.
 #' @param dlat Rectangle height in minutes or degrees latitude for \code{mr2d}
 #' and \code{dr2d} respectively.
 #' @param dlon As \code{dlat} except now width in longitude.
@@ -56,28 +56,26 @@
 
 #' @export r2d
 #' @rdname rect2deg
-r2d <-
-function(r)
+r2d <- function(r)
 {
-	lat <- floor(r/100)
-	lon <- (r - lat * 100) %% 50
-	halfb <- (r - 100 * lat - lon)/100
-	lon <-  - (lon + 0.5)
-	lat <- lat + 60 + halfb + 0.25
-	data.frame(lat = lat, lon = lon)
+  lat <- floor(r/100)
+  lon <- (r - lat * 100)%%50
+  halfb <- (r - 100 * lat - lon)/100
+  lon <- -(lon + 0.5)
+  lat <- lat + 60 + halfb + 0.25
+  data.frame(lat = lat, lon = lon)
 }
 
 #' @export sr2d
 #' @rdname rect2deg
-sr2d <-
-function(sr)
+sr2d <- function(sr)
 {
   r <- floor(sr/10)
   sr <- sr - r * 10
   lat <- floor(r/100)
-  lon <- (r - lat * 100) %% 50
+  lon <- (r - lat * 100)%%50
   halfb <- (r - 100 * lat - lon)/100
-  lon <-  - (lon + 0.5)
+  lon <- -(lon + 0.5)
   lat <- lat + 60 + halfb + 0.25
   l1.lat <- c(0, 0.125, 0.125, -0.125, -0.125)
   l1.lon <- c(0, -0.25, 0.25, -0.25, 0.25)
@@ -88,28 +86,26 @@ function(sr)
 
 #' @export mr2d
 #' @rdname rect2deg
-mr2d <-
-function(mr, dlat = 5, dlon = 10)
+mr2d <- function(mr, dlat = 5, dlon = 10)
 {
-  lat <- mr %/% 1000000
-  mr <- mr %% 1000000
-  mlat <- mr %/% 10000
-  mr <- mr %% 10000
-  lon <- mr %/% 100
-  mlon <- mr %% 100
+  lat <- mr%/%1e+06
+  mr <- mr%%1e+06
+  mlat <- mr%/%10000
+  mr <- mr%%10000
+  lon <- mr%/%100
+  mlon <- mr%%100
   lat <- 10000 * lat + 100 * (dlat * mlat + dlat/2)
   lon <- 10000 * lon + 100 * (dlon * mlon + dlon/2)
-  data.frame(lat = geoconvert(lat), lon =  - geoconvert(lon))
+  data.frame(lat = geoconvert(lat), lon = -geoconvert(lon))
 }
 
 #' @export dr2d
 #' @rdname rect2deg
-dr2d <-
-function(dr, dlat = 1, dlon = 2, startLat = 50)
+dr2d <- function(dr, dlat = 1, dlon = 2, startLat = 50)
 {
   hemi <- sign(dr + 1e-06)
-  lat <- startLat + dlat*(abs(dr)%/%100)
-  lon <- dlon*(dr%%(hemi*100))
-  data.frame(lat = lat + dlat/2, lon =  lon + dlon/2)
+  lat <- startLat + dlat * (abs(dr)%/%100)
+  lon <- dlon * (dr%%(hemi * 100))
+  data.frame(lat = lat + dlat/2, lon = lon + dlon/2)
 }
-
+ 

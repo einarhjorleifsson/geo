@@ -8,9 +8,9 @@
 #' @seealso \code{\link{colps}}, \code{\link{hsv}}
 #' @keywords ~kwd1
 #' @export geoplotpalette
-geoplotpalette <-
-function(){
-  x  <- hsv(geo::postcol[,1],geo::postcol[,2],geo::postcol[,3])
+geoplotpalette <- function()
+{
+  x <- hsv(geo::postcol[, 1], geo::postcol[, 2], geo::postcol[, 3])
   palette(x)
 }
-
+ 

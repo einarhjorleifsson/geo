@@ -4,7 +4,7 @@
 #' 
 #' @name COUNTRY.DEFAULT
 #' @docType data
-#' @format The format is: chr "island"
+#' @format The format is: chr 'island'
 #' @keywords datasets
 #' 
 NULL
@@ -61,7 +61,7 @@ NULL
 #' # islands in the Breidafjordur region
 #' geoplot(xlim = list(lat = c(64.85, 65.65), lon = c(-24.6, -21.7)),
 #'   country = bisland, grid = FALSE)
-#' geolines(eyjar, col = "magenta")
+#' geolines(eyjar, col = 'magenta')
 #' ## maybe str(eyjar) ; plot(eyjar) ...
 #' 
 NULL
@@ -335,8 +335,8 @@ NULL
 #' 
 #' @name nonsetpar
 #' @docType data
-#' @format The format is: chr [1:8] "omd" "oma" "omi" "fin" "fig" "mfcol"
-#' "mfrow" ...
+#' @format The format is: chr [1:8] 'omd' 'oma' 'omi' 'fin' 'fig' 'mfcol'
+#' 'mfrow' ...
 #' @keywords datasets
 #' @examples
 #' 
@@ -353,8 +353,8 @@ NULL
 #' @name postcol
 #' @docType data
 #' @format The format is: num [1:169, 1:3] 0.667 0.667 0.660 0.654 0.647 ...  -
-#' attr(*, "dimnames")=List of 2 ..$ : chr [1:169] "1" "2" "3" "4" ...  ..$ :
-#' chr [1:3] "H" "S" "V"
+#' attr(*, 'dimnames')=List of 2 ..$ : chr [1:169] '1' '2' '3' '4' ...  ..$ :
+#' chr [1:3] 'H' 'S' 'V'
 #' @keywords datasets
 #' @examples
 #' 
@@ -404,8 +404,8 @@ NULL
 #' 2 variables: ..$ lat: num [1:1010] 63 63 63 63 63 ...  ..$ lon: num [1:1010]
 #' -25 -25 -25 -25 -25 ...  $ Nordur.Dypi :'data.frame': 7 obs. of 2 variables:
 #' ..$ lat: num [1:7] 68.5 70 72.5 72.5 70 68.5 68.5 ..$ lon: num [1:7] -8 -4
-#' -4 -21 -21 -27 -8 - attr(*, "area")= num [1:16] 50437 31953 22803 10501
-#' 16024 ...  - attr(*, "txtloc")=List of 2 ..$ lat: num [1:16] 64.6 66.6 67
+#' -4 -21 -21 -27 -8 - attr(*, 'area')= num [1:16] 50437 31953 22803 10501
+#' 16024 ...  - attr(*, 'txtloc')=List of 2 ..$ lat: num [1:16] 64.6 66.6 67
 #' 66.3 67 ...  ..$ lon: num [1:16] -25.6 -24.2 -19.2 -19.4 -15.6 ...
 #' @examples
 #' 
@@ -457,4 +457,4 @@ NULL
 #' implemented. Compare with what's on \url{www.marineregions.org}.
 #' 
 NULL
-
+ 

@@ -9,7 +9,5 @@
 #' \code{\link{Elimcomp}}.
 #' @keywords device
 #' @export selectedpar
-selectedpar <-
-function() 
-  return(Elimcomp(par(no.readonly=T)))
-
+selectedpar <- function() return(Elimcomp(par(no.readonly = T)))
+ 

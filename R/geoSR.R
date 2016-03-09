@@ -44,7 +44,7 @@
 #' @seealso \code{\link{geoplot}} and \code{\link{reitaplott}} are
 #' the underlying drawing functions.
 #' 
-#' \code{\link{colorRampPalette}} can be used to create a ramp of
+#' \code{\link[grDevices]{colorRampPalette}} can be used to create a ramp of
 #' level-specific colors.
 #' @keywords hplot spatial
 #' @examples
@@ -54,7 +54,7 @@
 #' 
 #' # Pass colors along with levels
 #' lev <- c(0, 1, 10)
-#' names(lev) <- c("brown", "orange", NA)
+#' names(lev) <- c('brown', 'orange', NA)
 #' geoSR(561:560, c(0.3,3), lev)
 #' 
 #' # Subsquares
@@ -63,22 +63,23 @@
 #' # Color ramp
 #' z <- (0:10) / 10
 #' lev <- (0:10) / 10
-#' ramp <- colorRampPalette(c("khaki1","gold","orange","darkorange2","red",
-#'                            "darkred","black"))
+#' ramp <- grDevices::colorRampPalette(c('khaki1','gold','orange','darkorange2','red',
+#'                            'darkred','black'))
 #' names(lev) <- ramp(length(lev))
 #' geoSR(724:715, z, lev)
 #' 
 #' @export geoSR
-geoSR <- function(sr, z, levels, grid=FALSE, ...)
+geoSR <- function(sr, z, levels, grid = FALSE, ...)
 {
-  if(!is.null(names(levels)))
+  if (!is.null(names(levels)))
   {
     opal <- palette(c("black", names(levels)))
     on.exit(palette(opal))
   }
-
-  geoplot(grid=grid, ...)
-  invisible(capture.output(reitaplott(reitur=sr, smareitur=NULL, z=z, levels=levels, colors=seq(levels), density=0)))
+  
+  geoplot(grid = grid, ...)
+  invisible(capture.output(reitaplott(reitur = sr, smareitur = NULL, 
+    z = z, levels = levels, colors = seq(levels), density = 0)))
   geopolygon(geo::island)
   geolines(geo::island)
-}
+} 

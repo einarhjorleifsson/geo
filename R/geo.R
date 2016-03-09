@@ -9,4 +9,4 @@
 #' @author Höskuldur Björnsson
 #' @import maps mapdata splines methods utils grDevices graphics stats
 #' @useDynLib geo
-NULL
+NULL 
