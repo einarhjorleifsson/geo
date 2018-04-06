@@ -145,7 +145,7 @@ function(lat, lon, z, xgr, vagram, maxnumber = 16, scale = "km", option = 1,
 	ind <- c(1:length(areas$lat))
 		ind <- ind[is.na(areas$lat)]
 		if(length(ind) == 0)
-			break()
+#			break()
 		nareas <- length(ind) + 1
 		#number of areas
 		ind <- c(0, ind, (length(areas$lat) + 1))

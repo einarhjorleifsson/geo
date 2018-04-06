@@ -73,7 +73,7 @@ function(vagram, model = 1, option = 2, interactivt = F, sill = 0)
 			ans <- readline()
 			k <- k + 1
 			if(k == 10)
-				break()
+#				break()
 		}
 		nm <- 0
 		cat("Give the number of the best model, default the last one:")
