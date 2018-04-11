@@ -72,7 +72,7 @@ function(vagram, model = 1, option = 2, interactivt = F, sill = 0)
 			cat(" \n Try again y/n  : ")
 			ans <- readline()
 			k <- k + 1
-			if(k == 10)
+			if(k == 10) NULL
 #				break()
 		}
 		nm <- 0
