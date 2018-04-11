@@ -1,3 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+.Rbuildignore
+geo.Rproj
+src/geo.o
+src/geo.so
