@@ -4,7 +4,8 @@
 \alias{extract}
 \title{Extract a grid (?)}
 \usage{
-extract(grd, z, maxn = 10000, limits = NULL, col.names = c("lon", "lat"))
+extract(grd, z, maxn = 10000, limits = NULL, col.names = c("lon",
+  "lat"))
 }
 \arguments{
 \item{grd}{Grid}

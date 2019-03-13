@@ -3,7 +3,6 @@
 \name{d2ir}
 \alias{d2ir}
 \alias{ir2d}
-\alias{ir2d}
 \title{Convert between Geographic Coordinates and ICES Rectangles}
 \usage{
 d2ir(lat, lon = NULL, useI = FALSE)

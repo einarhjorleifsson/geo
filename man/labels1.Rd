@@ -4,8 +4,8 @@
 \alias{labels1}
 \title{Label plots}
 \usage{
-labels1(cont, digits, colors, xlim = c(0, 1), ylim = c(0, 1), fill = F,
-  minsym = "<", label.resolution = 0, labtxt = NULL,
+labels1(cont, digits, colors, xlim = c(0, 1), ylim = c(0, 1),
+  fill = F, minsym = "<", label.resolution = 0, labtxt = NULL,
   first.color.trans = T, mai = c(0, 1, 0, 1), leftrat = 0.1)
 }
 \arguments{

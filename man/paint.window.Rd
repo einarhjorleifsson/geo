@@ -4,8 +4,8 @@
 \alias{paint.window}
 \title{Paint window for label?}
 \usage{
-paint.window(listi, col = 0, border = T, poly = T, col.names = c("lon",
-  "lat"))
+paint.window(listi, col = 0, border = T, poly = T,
+  col.names = c("lon", "lat"))
 }
 \arguments{
 \item{listi}{Label location ?}

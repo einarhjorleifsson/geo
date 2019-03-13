@@ -4,9 +4,9 @@
 \alias{geotext}
 \title{Plots text on a drawing defined by geoplot.}
 \usage{
-geotext(lat, lon = 0, z, cex = 0.7, adj = 0.5, col = 1, digits = 0,
-  pretext = "", lwd = 0, aftertext = "", outside = F, angle = 0,
-  jitter = NULL, csi = NULL)
+geotext(lat, lon = 0, z, cex = 0.7, adj = 0.5, col = 1,
+  digits = 0, pretext = "", lwd = 0, aftertext = "", outside = F,
+  angle = 0, jitter = NULL, csi = NULL)
 }
 \arguments{
 \item{lat, lon}{Latitude and longitude of data ( or x and y coordinates),

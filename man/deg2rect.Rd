@@ -6,9 +6,6 @@
 \alias{d2sr}
 \alias{d2mr}
 \alias{d2dr}
-\alias{d2sr}
-\alias{d2mr}
-\alias{d2dr}
 \title{Given position return rectangle code.}
 \usage{
 d2r(lat, lon = NULL)

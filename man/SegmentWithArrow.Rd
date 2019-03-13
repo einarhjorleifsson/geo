@@ -4,7 +4,8 @@
 \alias{SegmentWithArrow}
 \title{Plot line segment with arrow at the end.}
 \usage{
-SegmentWithArrow(pos, angle = 15, size = 0.2, col = "blue", lwd = 2)
+SegmentWithArrow(pos, angle = 15, size = 0.2, col = "blue",
+  lwd = 2)
 }
 \arguments{
 \item{pos}{Segment positions.}

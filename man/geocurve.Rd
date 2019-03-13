@@ -5,8 +5,8 @@
 \title{Smooth curves and put arrows in the beginning and end.}
 \usage{
 geocurve(data, df = nrow(data)/2, n = 10, open = T, arrow = "none",
-  col = 1, lwd = 1, size = 0.2, angle = 15, smooth = T, plot = T,
-  ...)
+  col = 1, lwd = 1, size = 0.2, angle = 15, smooth = T,
+  plot = T, ...)
 }
 \arguments{
 \item{data}{Dataframe that must have columns lat and lon.}

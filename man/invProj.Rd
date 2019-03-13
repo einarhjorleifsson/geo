@@ -6,7 +6,8 @@
 \usage{
 invProj(x, y = NULL, scale = getOption("geopar")$scale,
   b0 = getOption("geopar")$b0, b1 = getOption("geopar")$b1,
-  l1 = getOption("geopar")$l1, projection = getOption("geopar")$projection)
+  l1 = getOption("geopar")$l1,
+  projection = getOption("geopar")$projection)
 }
 \arguments{
 \item{x, y}{The input data to be inversely projected, may be given as two

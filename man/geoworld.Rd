@@ -4,10 +4,10 @@
 \alias{geoworld}
 \title{Plots rough outline of the world.}
 \usage{
-geoworld(regions = ".", exact = FALSE, boundary = TRUE, fill = FALSE,
-  color = 1, lwd = 1, lty = 1, plot = TRUE, type = "l", pch = ".",
-  database = "world", return.data = FALSE, outside = FALSE,
-  allowed.size = 80000)
+geoworld(regions = ".", exact = FALSE, boundary = TRUE,
+  fill = FALSE, color = 1, lwd = 1, lty = 1, plot = TRUE,
+  type = "l", pch = ".", database = "world", return.data = FALSE,
+  outside = FALSE, allowed.size = 80000)
 }
 \arguments{
 \item{regions}{Allows plotting only a certain part of the world to speed up
